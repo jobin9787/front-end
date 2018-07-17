@@ -1,0 +1,169 @@
+<div class="container">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">WebSiteName</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#">Page 1</a></li>
+	      <li><a href="#">Page 2</a></li>
+	      <li><a href="#">Page 3</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<div class="col-md-12">
+<div>
+	<form (ngSubmit)="onKeywordSearch()">
+
+
+ <div class="row">
+      <div class="col-sm-6">
+    		 <label for="carmake">Mark</label>
+         <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
+          <option [ngValue]="null" >---- Other ----</option>
+          <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
+           {{ crm.makeName }}
+          </option>
+         </select>
+      </div>
+      <div class="col-sm-6">
+    	<div class="form-group">
+    		 <label for="carmodel">Model</label>
+         <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
+          <option [ngValue]="null" >---- Other ----</option>
+          <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
+           {{ mdl.modelname }}
+          </option>
+         </select>
+      </div>
+    </div>
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
+    More option
+  </a>
+</p>
+<div class="collapse" id="collapseAdSearch">
+  <div class="col-sm-4">
+  <label>Price</label>
+ </div>
+       <div class="col-sm-4">
+      <div class="form-group">
+         <label for="minPrice">Min:</label>
+	       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
+       </div>
+      </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="MaxPrice">Max:</label>
+	      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
+     </div>
+    </div>
+<br>
+<div class="col-sm-4">
+  <label>Kilometers</label>
+ </div>
+       <div class="col-sm-4">
+      <div class="form-group">
+         <label for="MinKilo">Min:</label>
+	       <input type="text" class="form-control" [(ngModel)]="search.element5" id="MinKilo" name="MinKilo"/>
+       </div>
+      </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="maxKilo">Max:</label>
+	      <input  type="text" class="form-control" [(ngModel)]="search.element6" id="maxKilo" name="maxKilo"/>
+     </div>
+    </div>
+
+<div class="col-sm-4">
+  <label>Year</label>
+ </div>
+       <div class="col-sm-4">
+      <div class="form-group">
+         <label for="minYear">Min:</label>
+	       <input type="text" class="form-control" [(ngModel)]="search.element7" id="minYear" name="minYear"/>
+       </div>
+      </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="maxYear">Max:</label>
+	      <input  type="text" class="form-control" [(ngModel)]="search.element8" id="maxYear" name="maxYear"/>
+     </div>
+    </div>
+</div>
+
+
+    <div class="col-sm-6">
+   			<mat-grid-list cols="20" rowHeight="60px">
+				<mat-grid-tile [colspan]="4" [rowspan]="1">
+						<button class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
+				</mat-grid-tile>
+			</mat-grid-list>
+    </div>
+</div>
+
+
+
+
+
+</form>
+
+</div>
+
+<div class="table-responsive" style="margin-top: 30px;">
+
+
+<div *ngFor="let caraditem of caradList| paginate:{ itemsPerPage:10, currentPage:p}">
+
+<div class="col-md-10">
+<div class="adcontainer" data-id="1222225119">
+<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
+<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
+<div class="adimage">
+<img src="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" style="max-width:224px;max-height:150px;" alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" title="BMW Série 3 3000 46100 Figeac" onerror="this.src='../../../assets/image/no-image.jpg'">
+
+</div>
+<div class="adetails">
+<div class="flol" >
+<h3 style="padding:0 !important;">
+{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
+
+</h3>
+<p class="infoVers">{{caraditem.model}} 318i</p>
+<cite>
+{{caraditem.body}} - {{caraditem.year}} - {{caraditem.kilometers}} Km
+ Berline - Essence - Year {{caraditem.year}} - 173 200 km
+</cite>
+<h3 class="lo">
+Figeac
+(46100)
+</h3>
+</div>
+<div class="ergov3-priceannonce">
+{{caraditem.price}} 3 000 $
+</div>
+<div class="fin"></div>
+<cite class="texte">
+BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
+</cite>
+</div>
+<div class="fin"></div>
+
+</a>
+</div>
+</div>
+
+<div class="clear"></div>
+<hr>
+ </div>
+<pagination-controls (pageChange)="p = $event"
+previousLabel=""
+                      nextLabel="">
+
+</pagination-controls>
+
+</div>
+</div>
+</div>

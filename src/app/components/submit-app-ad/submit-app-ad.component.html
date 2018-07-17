@@ -1,0 +1,96 @@
+<div class="container">
+
+<div class="col-xs-9" >
+<form    #carForm="ngForm" >
+
+  <div class="panel-group">
+  <div class="well well-lg">
+
+  <label for="title">Add Title</label>
+  <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
+  </div>
+  </div>
+
+  <div class="row well">
+   <label for="rentby">Type : </label>
+    <section>
+    <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
+    <mat-radio-button value="offer" color="primary">I am offering</mat-radio-button><br/>
+    <mat-radio-button value="want" color="accent">I want</mat-radio-button>
+    </mat-radio-group>
+   </section>
+  </div>
+
+
+  <div class="row well">
+   <label for="rentby">Rent by</label>
+    <section>
+    <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
+    <mat-radio-button value="prof" color="primary">Professional</mat-radio-button><br/>
+    <mat-radio-button value="own" color="accent">Owner</mat-radio-button>
+    </mat-radio-group>
+   </section>
+  </div>
+
+
+  <div class="row well">
+    <div class="col-sm-12">
+       <label for="appart">App </label>
+       <select class="form-control"  name="appadtitle" [(ngModel)]="appad.room">
+        <option [ngValue]="null" >---- Other ----</option>
+        <option *ngFor="let app of appList " [ngValue]="app.value">
+         {{ app.name }}
+        </option>
+       </select>
+     </div>
+</div>
+
+<div class="row well">
+  <div class="col-sm-12">
+     <label for="appart">price  </label>
+     <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
+
+   </div>
+</div>
+
+<div class="row well">
+<div class="col-sm-12">
+   <label for="appbath">Bathroom  </label>
+   <input typr="text" class="form-control"  name="appadbathroom" [(ngModel)]="appad.bathroom"/>
+ </div>
+</div>
+
+
+
+  <div class="row well">
+   <label for="rentby">Furnished</label>
+    <section>
+    <mat-radio-group [(ngModel)]="appad.furnished" name="furnished">
+    <mat-radio-button value="1" color="primary">Yes</mat-radio-button><br/>
+    <mat-radio-button value="0" color="accent">No</mat-radio-button>
+    </mat-radio-group>
+   </section>
+  </div>
+
+  <div class="row well">
+    <div class="col-sm-12">
+       <label for="appdesc">Descr  </label>
+       <textarea  class="form-control"  name="appaddescr" [(ngModel)]="appad.descr">
+       </textarea>
+     </div>
+</div>
+
+
+<div class="col-sm-6">
+    <mat-grid-list cols="20" rowHeight="60px">
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+        <button (click)="onSubmit()"     class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+      <a class="mat-warn" mat-raised-button routerLink="/">Cancel</a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+</form>
+</div>
+</div>

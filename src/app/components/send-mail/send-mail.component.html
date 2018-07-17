@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSendMessage()">
+	<div class="row">
+	 <div class="col-sm-12">
+		 <label>Name</label>
+     <input type="text"  name="textname" [(ngModel)]="outgoingMassge.name" class="input form-control">
+		 <label>Email address</label>
+     <input type="text"  name="textemail" [(ngModel)]="outgoingMassge.sender" class="input form-control">
+		 <textarea [(ngModel)]="outgoingMassge.text" name="textetextarea" rows="4" cols="50" class="input">
+
+		 </textarea>
+      <button type="submit" class="button btn btn-success">Submit</button>
+	 </div>
+	</div>
+</form>

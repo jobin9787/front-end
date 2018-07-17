@@ -1,0 +1,62 @@
+<div class="container">
+
+<div class="col-md-12">
+
+  <div class="table-responsive" style="margin-top: 30px;">
+
+
+  <div *ngFor="let appaditem of appadList| paginate:{ itemsPerPage:10, currentPage:p}">
+
+  <div class="col-md-10">
+  <div class="adcontainer" data-id="1222225119">
+  <!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
+  <a [routerLink]=""  (click)="onSelect(appaditem)" class="list-group-item clearfix" title="4 & 1/2 Condo">
+  <div class="adimage">
+  <img src="{{serverPath}}/image/carad/{{appaditem.id}}/{{appaditem.id}}1.png" style="max-width:224px;max-height:150px;" alt="{{serverPath}}/image/carad/{{appaditem.id}}/{{appaditem.id}}1.png" title="4 & 1/2 appartement " onerror="this.src='../../../assets/image/no-image.jpg'">
+
+  </div>
+  <div class="adetails">
+  <div class="flol" >
+  <h3 style="padding:0 !important;">
+  {{appaditem.adtitle}} :
+  </h3>
+  <p class="infoVers"><span [innerText]="getAppLabel(appaditem.room)"> </span> : {{appaditem.room}}  </p>
+  <cite>
+  {{appaditem.rentby}} - {{appaditem.adtype}} -
+    {{appaditem.pet}}
+  </cite>
+  <h3 class="lo">
+  Figeac
+  (46100)
+  </h3>
+  </div>
+  <div class="ergov3-priceannonce">
+  {{appaditem.price}}   $
+  </div>
+  <div class="fin"></div>
+  <cite class="texte">
+  BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
+  </cite>
+  </div>
+  <div class="fin"></div>
+
+  </a>
+  </div>
+  </div>
+
+  <div class="clear"></div>
+  <hr>
+   </div>
+  <pagination-controls (pageChange)="p = $event"
+  previousLabel=""
+                        nextLabel="">
+
+  </pagination-controls>
+
+  </div>
+
+
+
+</div>
+
+</div>

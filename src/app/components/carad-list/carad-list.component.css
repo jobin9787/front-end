@@ -1,0 +1,25 @@
+.adimage{
+	float:left;
+	background-color:blue;
+}
+
+.adetails{
+	float:left;
+}
+
+.clear{
+clear:both;
+}
+
+.container{
+	background-color:ede6e6; 
+}
+
+.adcontainer{
+	
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+}

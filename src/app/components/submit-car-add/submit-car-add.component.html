@@ -1,0 +1,205 @@
+<div class="container">
+
+
+ <div class="col-xs-9" >
+
+<form    #carForm="ngForm" >
+  <div class="panel-group">
+	<div class="well well-lg">
+
+  <label for="title">Add Title</label>
+	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="title" name="firstName"/>
+    </div>
+  </div>
+   <div class="row well">
+    <label for="soldby">Sold by</label>
+     <section>
+     <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
+     <mat-radio-button value="deal" color="primary">Dealer</mat-radio-button><br/>
+     <mat-radio-button value="own" color="accent">Owner</mat-radio-button>
+     </mat-radio-group>
+    </section>
+   </div>
+
+
+    <div class="row well">
+      <div class="col-sm-6">
+    		 <label for="carmake">Mark</label>
+         <select class="form-control" name="carmake" [(ngModel)]="carad.make" (change)="onMakeChange($event.target.value)">
+          <option [ngValue]="null" >---- Other ----</option>
+          <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
+           {{ crm.makeName }}
+          </option>
+         </select>
+       </div>
+
+     <div class="col-sm-6">
+    	<div class="form-group">
+    		 <label for="carmodel">Model</label>
+         <select class="form-control" name="carmodel" [(ngModel)]="carad.model">
+          <option [ngValue]="null" >---- Other ----</option>
+          <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
+           {{ mdl.modelname }}
+          </option>
+         </select>
+      </div>
+    </div>
+</div>
+
+<div class="row well">
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="trans">Transmission</label>
+         <select class="form-control" name="trans" [(ngModel)]="carad.trans">
+          <option value="oth" >---- Other ----</option>
+          <option value="auto">Automatic  </option>
+          <option value="manu">Manual  </option>
+         </select>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="drive">Drivetrain</label>
+	       <select class="form-control" name="drive" [(ngModel)]="carad.drivetrain">
+          <option value="oth" >---- Other ----</option>
+          <option value="awd">All-wheel Drive AWD </option>
+          <option value="fwd">Front-Wheel drive  </option>
+          <option value="rwd">Rear-Wheel drive  </option>
+          <option value="xxx">4X4  </option>
+        </select>
+      </div>
+    </div>
+    </div>
+
+    <div class="row well">
+    <div class="col-sm-6">
+         <div class="form-group">
+          <label for="body">Body Type</label>
+          <select class="form-control" name="body" [(ngModel)]="carad.body">
+          <option value="oth" >---- Other ----</option>
+          <option value="coup">coupe (2 doors) </option>
+          <option value="conv">Convertible  </option>
+          <option value="van">Mini Van  </option>
+          <option value="sed">Sedan  </option>
+     </select>
+    </div>
+    </div>
+    <div class="col-sm-6">
+       <div class="form-group">
+        <label for="fuel">Fuel Type</label>
+	        <select class="form-control" name="fuel" [(ngModel)]="carad.fuel">
+          <option value="oth" >---- Other ----</option>
+          <option value="gaz">Gaz</option>
+          <option value="ess">Essence</option>
+          <option value="hyb">Hybrid </option>
+          <option value="elec">Electric  </option>
+         </select>
+      </div>
+   </div>
+   </div>
+    <div class="row">
+
+     <div class="col-sm-6">
+      <div class="form-group">
+       <label for="year">Year</label>
+          <select class="form-control" name="carmodel" [(ngModel)]="carad.year">
+          <option [ngValue]="null" >---- Other ----</option>
+          <option *ngFor="let yr of yearsList" [ngValue]="yr.value">
+           {{ yr.name }}
+          </option>
+         </select>
+        </div>
+      </div>
+
+     <div class="col-sm-6">
+       <div class="form-group">
+         <label for="color">Colour</label>
+        	<select class="form-control" name="color" [(ngModel)]="carad.color">
+          <option value="oth" >---- Other ----</option>
+          <option value="whi">White</option>
+          <option value="blac">Black</option>
+          <option value="blu">Blue </option>
+          <option value="red">Red</option>
+         </select>
+       </div>
+      </div>
+     <div class="col-sm-6">
+      <div class="form-group">
+         <label for="Kilometers">Kilometers</label>
+	       <input type="text" class="form-control" [(ngModel)]="carad.kilometers" id="Kilometers" name="Kilometers"/>
+       </div>
+      </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="DoorsNo">No. of Doors:</label>
+	      <input  type="text" class="form-control" [(ngModel)]="carad.doorNo" id="DoorsNo" name="DoorsNo"/>
+     </div>
+    </div>
+
+     <div class="col-sm-6">
+      <div class="form-group">
+         <label for="postalCode">Postal code</label>
+         <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
+
+         <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
+             class="alert alert-danger">
+         <div *ngIf="postalcode.errors.required">
+             Name is required.
+         </div>
+         </div>
+
+     </div>
+
+      </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="Address">Address:</label>
+        <input  type="text" class="form-control" [(ngModel)]="carad.address" id="Address" name="Address"/>
+     </div>
+    </div>
+
+
+  <br><br>
+
+   </div>
+
+<div class="album text-muted">
+<div calss="container">
+<div class="fileinput fileinput-new" data-provides="fileinput">
+  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+  <div>
+    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
+    (change)="uploadImageService.fileChangeEvent($event)"></span>
+    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput" name="file1" (click)="uploadImageService.removeImage($event)">Remove</a>
+  </div>
+</div>
+
+<div class="fileinput fileinput-new" data-provides="fileinput">
+  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+  <div>
+    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
+    (change)="uploadImageService.fileChangeEvent2($event)"></span>
+    <a href="#" name="file2" class="btn btn-default fileinput-exists" data-dismiss="fileinput" (click)="uploadImageService.removeImage($event)">Remove</a>
+  </div>
+</div>
+</div>
+  <br><br>
+</div>
+
+
+
+    <div class="col-sm-6">
+   			<mat-grid-list cols="20" rowHeight="60px">
+				<mat-grid-tile [colspan]="4" [rowspan]="1">
+						<button (click)="onSubmit()"   [disabled]="carForm.invalid" class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
+				</mat-grid-tile>
+				<mat-grid-tile [colspan]="6" [rowspan]="1">
+					<a class="mat-warn" mat-raised-button routerLink="/">Cancel</a>
+				</mat-grid-tile>
+			</mat-grid-list>
+    </div>
+
+</form>
+</div>
+</div>
