@@ -43,7 +43,8 @@ private carad: Carad =new Carad() ;
 private fileNumber : number;
 private numberList : number[] = [1,2,3,4,5,6,7,8,9];
 private serverPath: string = AppConst.serverPath;
-private imagesArray: Array<Image> = [];
+private imagesArray1:  Image[]= [];
+private imagesArray:  Image[] = [];
 //Image gallery
   openModalWindow: boolean = false;
   imagePointer: number = 0;
@@ -60,11 +61,9 @@ private imagesArray: Array<Image> = [];
   ) {}
 
   ngOnInit() {
-
     this.route.params.forEach((params:Params)=>{
 	     this.caradId= params['id'] ;
    });
-
   this.carAdService.getCarad(this.caradId).subscribe(
     res=>{
     this.carad=res.json();
@@ -74,29 +73,34 @@ private imagesArray: Array<Image> = [];
      err=>{
      console.log(err)
    }
-
    );
-
-
   };
 
 
 // Image gallery
 
-	  imageInit(fNumber:number){
-	     let init:number = 1;
 
-	   for(let i:number=init;i<=fNumber;i++)
+
+
+	  imageInit(fNumber:number){
+	     let init:number = 0;
+
+      console.log('file number--->'+  fNumber);
+      console.log('  caradId--->'+  this.caradId);
+	   for(let i:number=init;i<fNumber;i++)
 	    {
-	    this.imagesArray.push(
+      let j :number=i+1;
+ 	    this.imagesArray1.push(
 	       new Image(i,{
-	         img:this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+i+'.png',
+	         img:this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png',
 	        description:'',
-          extUrl: this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+i+'.png'
+          extUrl: this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png'
 	        }
-	       )
-	      )
+        ))
+       console.log('path--->'+ this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png')
 	     }
+
+        this.imagesArray=Array.from(this.imagesArray1);
 	    }
 
       plainGalleryRowATags: PlainGalleryConfig = {

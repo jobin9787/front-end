@@ -12,6 +12,7 @@ import {ResultComponent} from './components/result/result.component';
 import {SubmitAppAdComponent} from './components/submit-app-ad/submit-app-ad.component';
 import {AppadListComponent} from './components/appad-list/appad-list.component';
 import {AppadDetailComponent} from './components/appad-detail/appad-detail.component';
+import {CaradSearchComponent} from './components/carad-search/carad-search.component';
 
 const appRoutes : Routes = [
 
@@ -64,6 +65,10 @@ const appRoutes : Routes = [
 {
   path:'appadDetail/:id',
   component:AppadDetailComponent
+},
+{
+  path:'caradSearch',
+  component:CaradSearchComponent
 }
 
 ];

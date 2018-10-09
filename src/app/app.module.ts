@@ -41,6 +41,7 @@ import { AppComponent } from './app.component';
 import { SubmitAppAdComponent } from './components/submit-app-ad/submit-app-ad.component';
 import { AppadListComponent } from './components/appad-list/appad-list.component';
 import { AppadDetailComponent } from './components/appad-detail/appad-detail.component';
+import { CaradSearchComponent } from './components/carad-search/carad-search.component';
 
 
 
@@ -60,7 +61,8 @@ import { AppadDetailComponent } from './components/appad-detail/appad-detail.com
     ResultComponent,
     SubmitAppAdComponent,
     AppadListComponent,
-    AppadDetailComponent
+    AppadDetailComponent,
+    CaradSearchComponent
 
   ],
   imports: [

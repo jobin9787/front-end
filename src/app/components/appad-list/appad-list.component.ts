@@ -13,6 +13,7 @@ import {AppConst} from '../../const/app-const';
 })
 export class AppadListComponent implements OnInit {
 selectedAppad : Appad;
+public serverPath: string = AppConst.serverPath;
 appadList : Appad[];
  applist: string[] = ['','1 1/2', '2 1/2','3 1/2', '4 1/2','5 1/2','6 1/2','7 1/2'];
   constructor(private appAdservice:AppAdService,
@@ -24,6 +25,7 @@ appadList : Appad[];
      this.appAdservice.getAll().subscribe(
      res=>{
        this.appadList =res.json();
+      console.log(this.appadList);
      },
      err=>{
        console.log(err)

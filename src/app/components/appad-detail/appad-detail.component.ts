@@ -39,7 +39,9 @@ private appadId : Number;
 appad: Appad = new Appad();
 private fileNumber : number;
 private serverPath: string = AppConst.serverPath;
-private imagesArray: Array<Image> = [];
+public imagesArray1: Image[] = [];
+
+public imagesArray: Array<Image> = [];
   constructor(private appAdService:AppAdService,
     private router:Router,
 		private http:Http,
@@ -56,14 +58,13 @@ private imagesArray: Array<Image> = [];
     this.appad=res.json();
     this.fileNumber= JSON.parse(JSON.stringify(res.json())).fileNumber;
     this.imageInit(this.fileNumber);
+
     },
      err=>{
      console.log(err)
    }
 
    );
-
-
   };
 
 
@@ -71,18 +72,24 @@ private imagesArray: Array<Image> = [];
 
 	  imageInit(fNumber:number){
 	     let init:number = 1;
-
+       let index:number=0;
+       let myImage:Image;
 	   for(let i:number=init;i<=fNumber;i++)
 	    {
+      console.log('insert image---> '+ i);
+
 	    this.imagesArray.push(
-	       new Image(i,{
-	         img:this.serverPath+'/image/appad/'+this.appadId+'/'+this.appadId+i+'.png',
-	        description:'',
-          extUrl: this.serverPath+'/image/appad/'+this.appadId+'/'+this.appadId+i+'.png'
-	        }
-	       )
-	      )
+    new  Image(
+      i,
+       { img:this.serverPath+'/image/appad/'+this.appadId+'/'+this.appadId+i+'.png',
+       description: ''  },
+      { img: this.serverPath+'/image/appad/'+this.appadId+'/'+this.appadId+i+'.png'}
+       )
+      )
+      index++;
 	     }
+
+    this.imagesArray1=   Array.from(this.imagesArray);
 	    }
 
       plainGalleryRowATags: PlainGalleryConfig = {
@@ -102,7 +109,7 @@ private imagesArray: Array<Image> = [];
 
         openImageModalRowDescription(image: Image) {
           console.log('Opening modal gallery from custom plain gallery row and description, with image: ', image);
-          const index: number = this.getCurrentIndexCustomLayout(image, this.imagesArray);
+          const index: number = this.getCurrentIndexCustomLayout(image, this.imagesArray1);
           this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(index, true) });
         }
 

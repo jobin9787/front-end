@@ -46,7 +46,7 @@
     //  console.log('Car add --->' + this.carad)
      this.carAdService.sendAd(this.carad).subscribe(
       (res:Response)=>{
-     this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+     this.uploadImageService.upload("http://localhost:8181/carad/add/image?id=",JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
         console.log('Succes' + JSON.stringify(res));
         const data = res.json();
         console.log('Response: ' + JSON.parse(JSON.stringify(data)).id);

@@ -3,7 +3,7 @@ import { Appad } from '../../models/appad';
 import {AppAdService} from '../../services/app-ad.service';
 import { Response } from '@angular/http';
 import { Router} from '@angular/router';
-
+import {UploadImageService} from '../../services/upload-image.service';
 
 @Component({
   selector: 'app-submit-app-ad',
@@ -17,7 +17,9 @@ appList =[{value:1,name:'1 1/2'},
 {value:2,name:'2 1/2'}, {value:3,name:'3 1/2'},{value:4,name:'4 1/2'}, {value:5,name:'5 1/2'},
 {value:6,name:'6 1/2'}
 ]
-  constructor(private appAdservice:AppAdService, private router: Router) { }
+  constructor(private appAdservice:AppAdService,
+              private router: Router,
+              private uploadImageService:UploadImageService) { }
 
   ngOnInit() {
   }
@@ -28,9 +30,9 @@ appList =[{value:1,name:'1 1/2'},
       this.appAdservice.sendAd(this.appad).subscribe(
 
         (res:Response)=>{
-    //   this.uploadImageService.upload(JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+       const data = res.json();
+        this.uploadImageService.upload("http://localhost:8181/appad/add/image?id=",JSON.parse(JSON.stringify(data)).id);
           console.log('Succes' + JSON.stringify(res));
-          const data = res.json();
           console.log('Response: ' + JSON.parse(JSON.stringify(data)).id);
          this.router.navigate(['/result']);
         },

@@ -9,14 +9,14 @@
 
    file1:File;
    file2:File;
-   
+
     constructor() {
-    this.filesToUpload=[]; 
+    this.filesToUpload=[];
     }
 
-  upload(adId:string){
-  	
-    	this.makeFileRequest("http://localhost:8181/carad/add/image?id="+adId, [], this.filesToUpload).then((result) => {
+  upload(url:string, adId:string){
+
+    	this.makeFileRequest(url+adId, [], this.filesToUpload).then((result) => {
        this.filesToUpload=[];
     		console.log(result);
     	}, (error) => {
@@ -36,7 +36,7 @@
 
   removeImage(file: any) {
    let filename:string = file.target.attributes.name.value;
-   let  index: number; 
+   let  index: number;
    console.log(filename);
         if(filename =='file1')
            index=this.filesToUpload.indexOf(this.file1)
@@ -48,7 +48,7 @@
       if (index !== -1) {
          this.filesToUpload.splice(index, 1);
 
-      } 
+      }
   }
 
 
@@ -80,5 +80,3 @@
     }
 
   }
-
-

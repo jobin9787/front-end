@@ -1,35 +1,25 @@
 <div class="container">
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">WebSiteName</a>
-	    </div>
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#">Page 1</a></li>
-	      <li><a href="#">Page 2</a></li>
-	      <li><a href="#">Page 3</a></li>
-	    </ul>
-	  </div>
-	</nav>
+
 <div class="col-md-12">
 <div>
 	<form (ngSubmit)="onKeywordSearch()">
 
+<!--  search -->
+<div class="row equal searchdiv">
 
- <div class="row">
-      <div class="col-sm-6">
-    		 <label for="carmake">Mark</label>
+<div class="col-sm-4">
+    		 <label for="carmake" class="title">Mark</label>
          <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
           <option [ngValue]="null" >---- Other ----</option>
           <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
            {{ crm.makeName }}
           </option>
          </select>
-      </div>
-      <div class="col-sm-6">
+</div>
+
+<div class="col-sm-4">
     	<div class="form-group">
-    		 <label for="carmodel">Model</label>
+    		 <label for="carmodel" class="title">Model</label>
          <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
           <option [ngValue]="null" >---- Other ----</option>
           <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
@@ -37,74 +27,81 @@
           </option>
          </select>
       </div>
-    </div>
+</div>
 
+<div class="col-sm-4 " align="right">
+	<div class="row">
+	    <div class="col-lg-1 col-centered">
+
+	 <label class="title"></label>
+				<button class="mat-primary " mat-raised-button type="submit">Search </button>
+					</div>
+	</div>
+</div>
+
+<div class="col-sm-12" align="center">
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
-    More option
+  <a class="btn btn-link" data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
+  <span class="glyphicon glyphicon-collapse-down"></span> + Options
   </a>
 </p>
+</div>
+
 <div class="collapse" id="collapseAdSearch">
-  <div class="col-sm-4">
-  <label>Price</label>
+<div class="col-sm-2 col-form-label">
+  <label class="title">Price</label>
  </div>
-       <div class="col-sm-4">
+     <div class="col-sm-5">
       <div class="form-group">
-         <label for="minPrice">Min:</label>
+         <label for="minPrice" class="title">Min:</label>
 	       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
        </div>
       </div>
-    <div class="col-sm-4">
+    <div class="col-sm-5">
       <div class="form-group">
-        <label for="MaxPrice">Max:</label>
+        <label class="title" for="MaxPrice">Max:</label>
 	      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
      </div>
     </div>
 <br>
 <div class="col-sm-4">
-  <label>Kilometers</label>
+  <label class="title">Kilometers</label>
  </div>
        <div class="col-sm-4">
       <div class="form-group">
-         <label for="MinKilo">Min:</label>
+         <label for="MinKilo" class="title">Min:</label>
 	       <input type="text" class="form-control" [(ngModel)]="search.element5" id="MinKilo" name="MinKilo"/>
        </div>
       </div>
     <div class="col-sm-4">
       <div class="form-group">
-        <label for="maxKilo">Max:</label>
+        <label for="maxKilo" class="title">Max:</label>
 	      <input  type="text" class="form-control" [(ngModel)]="search.element6" id="maxKilo" name="maxKilo"/>
      </div>
     </div>
 
 <div class="col-sm-4">
-  <label>Year</label>
+  <label class="title">Year</label>
  </div>
        <div class="col-sm-4">
       <div class="form-group">
-         <label for="minYear">Min:</label>
+         <label for="minYear" class="title">Min:</label>
 	       <input type="text" class="form-control" [(ngModel)]="search.element7" id="minYear" name="minYear"/>
        </div>
       </div>
     <div class="col-sm-4">
       <div class="form-group">
-        <label for="maxYear">Max:</label>
+        <label for="maxYear" class="title">Max:</label>
 	      <input  type="text" class="form-control" [(ngModel)]="search.element8" id="maxYear" name="maxYear"/>
      </div>
     </div>
 </div>
 
 
-    <div class="col-sm-6">
-   			<mat-grid-list cols="20" rowHeight="60px">
-				<mat-grid-tile [colspan]="4" [rowspan]="1">
-						<button class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
-				</mat-grid-tile>
-			</mat-grid-list>
-    </div>
+
 </div>
 
-
+<!-- End search -->
 
 
 
@@ -115,7 +112,7 @@
 <div class="table-responsive" style="margin-top: 30px;">
 
 
-<div *ngFor="let caraditem of caradList| paginate:{ itemsPerPage:10, currentPage:p}">
+<div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
 
 <div class="col-md-10">
 <div class="adcontainer" data-id="1222225119">
@@ -158,7 +155,7 @@ BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
 <div class="clear"></div>
 <hr>
  </div>
-<pagination-controls (pageChange)="p = $event"
+<pagination-controls (pageChange)="pageChange($event)"
 previousLabel=""
                       nextLabel="">
 
@@ -166,4 +163,5 @@ previousLabel=""
 
 </div>
 </div>
+
 </div>
