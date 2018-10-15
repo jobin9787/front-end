@@ -36,7 +36,7 @@
   	private route: ActivatedRoute,
   	private carmakeService: CarmakeService
   	) {
-  		let currentPage = localStorage.getItem('currentPage');
+  		let currentPage = localStorage.getItem('SearchCurrentPage');
   		this.config = {
   				currentPage: currentPage ? currentPage : 1 ,
   						};
@@ -59,15 +59,15 @@
 
 
   	 pageChange(newPage: string) {
-  			 localStorage.setItem('currentPage', newPage);
+  			 localStorage.setItem('SearchCurrentPage', newPage);
   			 this.config.currentPage = newPage;
 
   	 }
 
   	 onKeywordSearch(){
-       localStorage.setItem('currentPage', '1');
+       localStorage.setItem('SearchCurrentPage', '1');
         this.config.currentPage = 1;
-  		this.carAdService.sendAdSearch(this.search).subscribe(
+  		  this.carAdService.sendAdSearch(this.search).subscribe(
   	res=>{
   		console.log('Succes' + JSON.stringify(res));
   		this.caradList=res.json();
@@ -83,23 +83,28 @@
 
   		ngOnInit() {
         this.allCarmake = this.carmakeService.getCarmake();
+        this.route.params.subscribe(params => {
+
+        if(params['caradList']){
+        console.log("Filtred car ad list");
+        this.caradList=JSON.parse(params['caradList']);
+         }else{
+           console.log("ffff -------> fffff",params['id']);
+           }
+         });
   		}
 
   	onMakeChange(makeid){
-  		console.log('onMakeChange '+ this.search.element1);
+
   		this.modellist=[];
   		this.modellist=this.carmakeService.getCarmodel(this.search.element1);
-
-  		console.log('modellist '+ JSON.stringify(this.modellist));
   		return this.modellist;
   	 }
 
 
 
   onSubmit(){
-  	 console.log("Send search key" + this.search);
-
-  		this.carAdService.sendAdSearch(this.search).subscribe(
+  	 	this.carAdService.sendAdSearch(this.search).subscribe(
   		res=>{
   			console.log('Succes' + JSON.stringify(res));
   		},
@@ -111,7 +116,6 @@
   	 }
 
    getCarLabel(label:string){
-   console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
   	return this.carmakeService.getCarLabels(label);
    }
 

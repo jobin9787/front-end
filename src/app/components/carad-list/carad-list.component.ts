@@ -61,10 +61,10 @@ export class CaradListComponent implements OnInit {
 	 onKeywordSearch(){
 		this.carAdService.sendAdSearch(this.search).subscribe(
 	res=>{
-		console.log('Succes' + JSON.stringify(res));
+		console.log('Succes get------->' + JSON.stringify(res));
 		this.caradList=res.json();
-		 this.caradList=res.json()
-			 this.router.navigate(['/caradSearch',this.caradList]);
+
+			 this.router.navigate(['/caradSearch',{ caradList:JSON.stringify(this.caradList)}]);
 	 },
 	error=>{
 	 console.log('Error '+ error);
@@ -79,7 +79,7 @@ export class CaradListComponent implements OnInit {
 		this.allCarmake = this.carmakeService.getCarmake();
 		this.route.queryParams.subscribe(params => {
 		if(params['caradList']){
-		console.log("Filtred car ad list");
+		console.log("Filtred car ad list---> "+ params['caradList']);
 		this.caradList=JSON.parse(params['caradList']);
 		 }else{
 			 this.carAdService.getCaradList().subscribe(
