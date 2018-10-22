@@ -110,46 +110,48 @@
 </div>
 
 <div class="table-responsive" style="margin-top: 30px;">
-
+<div *ngIf="caradList">
 
 <div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
 
 <div class="col-md-10">
-<div class="adcontainer" data-id="1222225119">
-<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
-<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
-<div class="adimage">
-<img src="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" style="max-width:224px;max-height:150px;" alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" title="BMW Série 3 3000 46100 Figeac" onerror="this.src='../../../assets/image/no-image.jpg'">
+	<div class="adcontainer" data-id="1222225119">
+		<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
+		<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
+			<div class="adimage">
+		  	<img src="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" style="max-width:224px;max-height:150px;" alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" title="BMW Série 3 3000 46100 Figeac" onerror="this.src='../../../assets/image/no-image.jpg'">
+			</div>
+			<div class="adetails">
+				<div class="flol" >
+					<h3 style="padding:0 !important;">
+				  	{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
 
-</div>
-<div class="adetails">
-<div class="flol" >
-<h3 style="padding:0 !important;">
-{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
+					</h3>
+					<p class="infoVers">{{caraditem.model}} 318i</p>
+					<cite>
+						{{caraditem.body}} - {{caraditem.year}} - {{caraditem.kilometers}} Km
+						 Berline - Essence - Year {{caraditem.year}} - 173 200 km
+					</cite>
 
-</h3>
-<p class="infoVers">{{caraditem.model}} 318i</p>
-<cite>
-{{caraditem.body}} - {{caraditem.year}} - {{caraditem.kilometers}} Km
- Berline - Essence - Year {{caraditem.year}} - 173 200 km
-</cite>
-<h3 class="lo">
-Figeac
-(46100)
-</h3>
-</div>
-<div class="ergov3-priceannonce">
-{{caraditem.price}} 3 000 $
-</div>
-<div class="fin"></div>
-<cite class="texte">
-BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
-</cite>
-</div>
-<div class="fin"></div>
+					<h3 class="lo">
+				    	Figeac
+				    	(46100)
+					</h3>
+				</div>
+				<div class="ergov3-priceannonce">
+			  	{{caraditem.price}} 3 000 $
+				</div>
 
-</a>
-</div>
+				<div class="fin"></div>
+
+				<cite class="texte">
+			  	BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
+				</cite>
+			</div>
+			<div class="fin"></div>
+
+		</a>
+	</div>
 </div>
 
 <div class="clear"></div>
@@ -161,6 +163,46 @@ previousLabel=""
 
 </pagination-controls>
 
+
+</div>
+<div *ngIf="!caradList">
+	<main role="main">
+
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="display-3">Hello, world!</h1>
+				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="col-md-4">
+					<h2>Heading</h2>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2>Heading</h2>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2>Heading</h2>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div>
+			</div>
+
+			<hr>
+
+		</div> <!-- /container -->
+
+	</main>
+</div>
 </div>
 </div>
 

@@ -44,27 +44,40 @@ export class CaradListComponent implements OnInit {
 				currentPage: currentPage ? currentPage : 1 ,
 						};
 
+	let lcaradList : Carad[];
+	 lcaradList = JSON.parse(localStorage.getItem("caradList"));
+				if (lcaradList){
+					this.caradList=lcaradList;
+						}
+
 	 }
 
-
+/*
 	onSelect(carad:Carad){
 	 this.selectedCarad=carad;
 	 this.router.navigate(['/caradDetail',this.selectedCarad.id]);
-	 }
+ }*/
+
+ onSelect(carad:Carad){
+	 console.log("la liste  a enregistrer--->" + JSON.stringify(this.caradList));
+		localStorage.setItem('caradList', JSON.stringify(this.caradList));
+	this.selectedCarad=carad;
+	this.router.navigate(['/caradDetail',this.selectedCarad.id]);
+	}
 
 
 	 pageChange(newPage: string) {
 			 localStorage.setItem('currentPage', newPage);
 			 this.config.currentPage = newPage;
 	 }
-
+/*
 	 onKeywordSearch(){
 		this.carAdService.sendAdSearch(this.search).subscribe(
 	res=>{
 		console.log('Succes get------->' + JSON.stringify(res));
 		this.caradList=res.json();
 
-			 this.router.navigate(['/caradSearch',{ caradList:JSON.stringify(this.caradList)}]);
+			// this.router.navigate(['/caradSearch',{ caradList:JSON.stringify(this.caradList)}]);
 	 },
 	error=>{
 	 console.log('Error '+ error);
@@ -72,8 +85,24 @@ export class CaradListComponent implements OnInit {
 
 	);
 
-	 }
+}*/
 
+
+
+  	 onKeywordSearch(){
+       localStorage.setItem('currentPage', '1');
+        this.config.currentPage = 1;
+  		  this.carAdService.sendAdSearch(this.search).subscribe(
+  	res=>{
+  		console.log('Succes' + JSON.stringify(res));
+  		this.caradList=res.json();
+  		 },
+  	error=>{
+  	 console.log('Error '+ error);
+  	 }
+
+  	);
+}
 
 		ngOnInit() {
 		this.allCarmake = this.carmakeService.getCarmake();
@@ -81,17 +110,23 @@ export class CaradListComponent implements OnInit {
 		if(params['caradList']){
 		console.log("Filtred car ad list---> "+ params['caradList']);
 		this.caradList=JSON.parse(params['caradList']);
-		 }else{
-			 this.carAdService.getCaradList().subscribe(
+		 }
+
+		 /*else{
+		   this.carAdService.getCaradList().subscribe(
 			 res=>{
 			 console.log(res.json());
 			 this.caradList=res.json()
+			 	console.log("Back ---> ");
 			},
 			 err=>{
 			 console.log(err);
 			 }
 		)
-			 }
+	}*/
+
+
+			 console.log("Backt---> ");
 		 });
 
 
