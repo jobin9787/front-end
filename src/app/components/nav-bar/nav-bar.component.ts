@@ -7,7 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-private loggedIn : boolean;
+public loggedIn : boolean;
   constructor(private loginService : LoginService,
               private translate: TranslateService ) {
               translate.setDefaultLang('en'); }

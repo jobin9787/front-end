@@ -8,7 +8,7 @@
   <div class="row equal searchdiv">
 
   <div class="col-sm-4">
-      		  <label for="appart">App </label>
+      		  <label for="appart" class="title">App </label>
             <select class="form-control"  name="appadtitle"  [(ngModel)]="search.element1" >
             <option [ngValue]="null" >---- Other ----</option>
             <option *ngFor="let app of appList " [ngValue]="app.value">
@@ -81,7 +81,7 @@
 
   <div class="table-responsive" style="margin-top: 30px;">
 
-  <div *ngFor="let appaditem of appadList| paginate:{ itemsPerPage:10, currentPage:p}">
+  <div *ngFor="let appaditem of appadList| paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
 
   <div class="col-md-10">
   <div class="adcontainer" data-id="1222225119">
@@ -123,7 +123,7 @@
   <div class="clear"></div>
   <hr>
    </div>
-  <pagination-controls (pageChange)="p = $event"
+  <pagination-controls (pageChange)="pageChange($event)"
   previousLabel=""
                         nextLabel="">
 

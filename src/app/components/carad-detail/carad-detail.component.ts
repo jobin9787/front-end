@@ -39,12 +39,12 @@ export class CaradDetailComponent implements OnInit {
 
 private caradId : Number;
 private test;
-private carad: Carad =new Carad() ;
+ carad: Carad =new Carad() ;
 private fileNumber : number;
 private numberList : number[] = [1,2,3,4,5,6,7,8,9];
-private serverPath: string = AppConst.serverPath;
+ serverPath: string = AppConst.serverPath;
 private imagesArray1:  Image[]= [];
-private imagesArray:  Image[] = [];
+ imagesArray:  Image[] = [];
 //Image gallery
   openModalWindow: boolean = false;
   imagePointer: number = 0;

@@ -15,8 +15,9 @@ declare var $: any;
 export class AppadListComponent implements OnInit {
 selectedAppad : Appad;
 
-private search:Search = new Search();
+ public search:Search = new Search();
 public serverPath: string = AppConst.serverPath;
+public config:any;
 appadList : Appad[];
 appList =[{value:1,name:'1 1/2'},
 {value:2,name:'2 1/2'}, {value:3,name:'3 1/2'},{value:4,name:'4 1/2'}, {value:5,name:'5 1/2'},
@@ -31,17 +32,30 @@ areaList=[{value:1, name:'Pointe-aux-Trembles'},
   constructor(private appAdservice:AppAdService,
     private router: Router,
     private http:Http,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute) {
+
+  		let currentPage = localStorage.getItem('currentPage');
+  		this.config = {
+  				currentPage: currentPage ? currentPage : 1 ,
+  						};
+
+    let lappadList : Appad[];
+  	 lappadList = JSON.parse(localStorage.getItem("appadList"));
+  				if (lappadList){
+  					this.appadList=lappadList;
+  						}
+
+  	 }
 
   ngOnInit() {
-     this.appAdservice.getAll().subscribe(
-     res=>{
-       this.appadList =res.json();
-      console.log(this.appadList);
-     },
-     err=>{
-       console.log(err)
-     }
+       this.appAdservice.getAll().subscribe(
+       res=>{
+         this.appadList =res.json();
+        console.log(this.appadList);
+       },
+       err=>{
+         console.log(err)
+       }
      );
 
 
@@ -62,9 +76,29 @@ areaList=[{value:1, name:'Pointe-aux-Trembles'},
 
 onSelect(appad:Appad){
  this.selectedAppad=appad;
-   console.log(this.selectedAppad.id);
+	localStorage.setItem('caradList', JSON.stringify(this.appadList));
  this.router.navigate(['/appadDetail',this.selectedAppad.id]);
  }
+
+ pageChange(newPage: string) {
+     localStorage.setItem('currentPage', newPage);
+     this.config.currentPage = newPage;
+ }
+
+ 	onKeywordSearch(){
+    	console.log('Succes-->  ' + this.search);
+ 		       localStorage.setItem('currentPage', '1');
+ 		        this.config.currentPage = 1;
+ 		  		  this.appAdservice.sendAdSearch(this.search).subscribe(
+ 		  	res=>{
+ 		  		console.log('Succes' + JSON.stringify(res));
+ 		  		this.appadList=res.json();
+ 		  		 },
+ 		  	error=>{
+ 		  	 console.log('Error '+ error);
+ 		  	 }
+ 		  	);
+ 	}
 
 
 }

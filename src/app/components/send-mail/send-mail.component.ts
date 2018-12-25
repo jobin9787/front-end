@@ -10,7 +10,7 @@ export class SendMailComponent implements OnInit {
 private _userEmail : string;
 private clientEmail : string;
 
-private outgoingMassge : Message = new Message();
+ outgoingMassge : Message = new Message();
   constructor(private emailSender: EmailHelperService) { }
 
 

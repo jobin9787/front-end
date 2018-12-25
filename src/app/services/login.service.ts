@@ -35,7 +35,20 @@ export class LoginService {
 
   	return this.http.get(url, {headers: headers});
   }
-
+/*
+  checkSession() {
+    const url = 'http://localhost:8181/checkSession';
+    const xToken = localStorage.getItem('xAuthToken');
+    const basicHeader = 'Basic ' + localStorage.getItem('credentials');
+    const headers = new Headers({
+      'x-auth-token' : xToken,
+      'Authorization' : basicHeader
+    });
+    console.log(url);
+    console.log(headers);
+    return this.http.get(url, {headers: headers});
+  }
+*/
     logout() {
   	let url = this.serverPath+'/user/logout';
   	let headers = new Headers({

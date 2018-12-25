@@ -13,7 +13,7 @@ export class MyProfileComponent implements OnInit {
 
 
 	private serverPath = AppConst.serverPath;
-	private dataFetched = false;
+	 dataFetched = false;
 	private loginError:boolean;
 	private loggedIn:boolean;
 	private credential = {'username':'', 'password':''};

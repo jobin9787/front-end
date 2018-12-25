@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Appad} from '../models/appad';
 import {Http,Headers} from '@angular/http';
 import {AppConst} from '../const/app-const';
-
+import {Search} from '../models/search';
 
 
 @Injectable()
@@ -42,6 +42,18 @@ getAppad(id: Number){
   return this.http.get(url, {headers:headers});
       //return this.http.get(url);
  }
+
+ sendAdSearch(search:Search){
+  let url = this.serverPath+'/appad/searchAppad/key';
+  let headers = new Headers ({
+  'Content-Type':'application/json',
+  'x-auth-token':localStorage.getItem('xAuthToken')
+   });
+
+   return this.http.post(url,search, {headers:headers});
+  //return this.http.post(url,search);
+ }
+
 
 
 }

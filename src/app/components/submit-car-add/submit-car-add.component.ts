@@ -9,6 +9,8 @@
   import { Router} from '@angular/router';
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
+  import {AppConst} from '../../const/app-const';
+
   @Component({
     selector: 'app-submit-car-add',
     templateUrl: './submit-car-add.component.html',
@@ -21,10 +23,12 @@
    yearsList =[{value:1,name:'1'}];
    cartransmission :  Map<String,String>;
    modelListMap : Map<String, Carmodel[]>;
-   private carad:Carad = new Carad();
+    carad:Carad = new Carad();
+    private serverPath:string = AppConst.serverPath;
    // carForm: FormGroup;
 
-    constructor(private carmakeService: CarmakeService, private carAdService :CarAdService, private uploadImageService: UploadImageService,private router: Router) { }
+    constructor(private carmakeService: CarmakeService, private carAdService :CarAdService, public uploadImageService: UploadImageService,private router: Router)
+     { }
 
     ngOnInit(): void{
      this.allCarmake = this.carmakeService.getCarmake();
@@ -46,7 +50,7 @@
     //  console.log('Car add --->' + this.carad)
      this.carAdService.sendAd(this.carad).subscribe(
       (res:Response)=>{
-     this.uploadImageService.upload("http://localhost:8181/carad/add/image?id=",JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
+     this.uploadImageService.upload(this.serverPath+"/carad/add/image?id=",JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
         console.log('Succes' + JSON.stringify(res));
         const data = res.json();
         console.log('Response: ' + JSON.parse(JSON.stringify(data)).id);

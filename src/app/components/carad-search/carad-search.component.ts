@@ -25,9 +25,9 @@
   	public config:any;
   	allCarmake: Carmake[];
   	modellist: Carmodel[];
-  	private search:Search = new Search();
+  	public search:Search = new Search();
   	private selectedCarad : Carad;
-  	private caradList : Carad[];
+  	 caradList : Carad[];
     private serverPath:string = AppConst.serverPath;
   	constructor(
   	private carAdService: CarAdService,

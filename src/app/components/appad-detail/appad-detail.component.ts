@@ -38,7 +38,7 @@ export class AppadDetailComponent implements OnInit {
 private appadId : Number;
 appad: Appad = new Appad();
 private fileNumber : number;
-private serverPath: string = AppConst.serverPath;
+public serverPath: string = AppConst.serverPath;
 public imagesArray1: Image[] = [];
 
 public imagesArray: Array<Image> = [];

@@ -12,20 +12,20 @@ import {AppConst} from '../../const/app-const';
 export class MyAccountComponent implements OnInit {
 
 private serverPath = AppConst.serverPath;
-private loginError:boolean = false;
-private loggedIn=false;
-private credential ={'username':'','password':''};
-private emailSent:boolean=false;
+public loginError:boolean = false;
+public loggedIn=false;
+public credential ={'username':'','password':''};
+public emailSent:boolean=false;
 
-private usernameExists:boolean;
-private emailExists:boolean;
-private username:string;
-private password:string;
+public usernameExists:boolean;
+public emailExists:boolean;
+public username:string;
+public password:string;
 
-private emailNotExists:boolean=false;
-private forgetPasswordEmailSent:boolean;
-private email:string;
-private recoverEmail:string;
+ emailNotExists:boolean=false;
+ forgetPasswordEmailSent:boolean;
+ email:string;
+ recoverEmail:string;
 
 
   constructor(
@@ -52,6 +52,23 @@ onLogin(){
 	);
 }
 
+/*
+onSubmit() {
+    this.loginService
+      .sendCredential(this.credential.username, this.credential.password)
+      .subscribe(
+        res => {
+          localStorage.setItem('xAuthToken', res.json().token);
+          this.loggedIn = true;
+          const encodedCredentials = btoa(this.credential.username + ':' + this.credential.password);
+          localStorage.setItem('credentials', encodedCredentials);
+          // location.reload();
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }*/
 
 onNewAccount() {
   	this.usernameExists = false;

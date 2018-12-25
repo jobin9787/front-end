@@ -28,9 +28,9 @@ export class CaradListComponent implements OnInit {
 	public config:any;
 	allCarmake: Carmake[];
 	modellist: Carmodel[];
-	private search:Search = new Search();
+	 search:Search = new Search();
 	private selectedCarad : Carad;
-	private caradList : Carad[];
+	 caradList : Carad[];
 	private serverPath:string = AppConst.serverPath;
 	constructor(
 	private carAdService: CarAdService,
@@ -39,12 +39,13 @@ export class CaradListComponent implements OnInit {
 	private route: ActivatedRoute,
 	private carmakeService: CarmakeService
 	) {
+
 		let currentPage = localStorage.getItem('currentPage');
 		this.config = {
 				currentPage: currentPage ? currentPage : 1 ,
 						};
 
-	let lcaradList : Carad[];
+  let lcaradList : Carad[];
 	 lcaradList = JSON.parse(localStorage.getItem("caradList"));
 				if (lcaradList){
 					this.caradList=lcaradList;
@@ -89,20 +90,19 @@ export class CaradListComponent implements OnInit {
 
 
 
-  	 onKeywordSearch(){
-       localStorage.setItem('currentPage', '1');
-        this.config.currentPage = 1;
-  		  this.carAdService.sendAdSearch(this.search).subscribe(
-  	res=>{
-  		console.log('Succes' + JSON.stringify(res));
-  		this.caradList=res.json();
-  		 },
-  	error=>{
-  	 console.log('Error '+ error);
-  	 }
-
-  	);
-}
+	onKeywordSearch(){
+		       localStorage.setItem('currentPage', '1');
+		        this.config.currentPage = 1;
+		  		  this.carAdService.sendAdSearch(this.search).subscribe(
+		  	res=>{
+		  		console.log('Succes' + JSON.stringify(res));
+		  		this.caradList=res.json();
+		  		 },
+		  	error=>{
+		  	 console.log('Error '+ error);
+		  	 }
+		  	);
+	}
 
 		ngOnInit() {
 		this.allCarmake = this.carmakeService.getCarmake();
