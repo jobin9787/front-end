@@ -60,8 +60,7 @@ export class CaradListComponent implements OnInit {
  }*/
 
  onSelect(carad:Carad){
-	 console.log("la liste  a enregistrer--->" + JSON.stringify(this.caradList));
-		localStorage.setItem('caradList', JSON.stringify(this.caradList));
+	localStorage.setItem('caradList', JSON.stringify(this.caradList));
 	this.selectedCarad=carad;
 	this.router.navigate(['/caradDetail',this.selectedCarad.id]);
 	}

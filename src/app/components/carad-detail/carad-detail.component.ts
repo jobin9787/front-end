@@ -92,12 +92,12 @@ private imagesArray1:  Image[]= [];
       let j :number=i+1;
  	    this.imagesArray1.push(
 	       new Image(i,{
-	         img:this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png',
+	         img:'../../../image/carad/'+this.caradId+'/'+this.caradId+j+'.png',
 	        description:'',
-          extUrl: this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png'
+          extUrl:'../../../image/carad/'+this.caradId+'/'+this.caradId+j+'.png'
 	        }
         ))
-       console.log('path--->'+ this.serverPath+'/image/carad/'+this.caradId+'/'+this.caradId+j+'.png')
+       console.log('path--->'+ '../../../image/carad/'+this.caradId+'/'+this.caradId+j+'.png')
 	     }
 
         this.imagesArray=Array.from(this.imagesArray1);

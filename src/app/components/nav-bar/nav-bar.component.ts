@@ -8,11 +8,14 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class NavBarComponent implements OnInit {
 public loggedIn : boolean;
+public langcode:string='en';
   constructor(private loginService : LoginService,
               private translate: TranslateService ) {
               translate.setDefaultLang('en'); }
 
 useLanguage(language: string) {
+                  localStorage.setItem('language', language);
+                  this.langcode=language;
                   this.translate.use(language);
               }
 
