@@ -4,13 +4,13 @@
  <div class="col-xs-9" >
 
 <form    #carForm="ngForm" >
-  <div class="panel-group">
-	<div class="well well-lg">
 
-  <label for="title">Add Title</label>
-	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="title" name="firstName"/>
+	  <div class="row well">
+     <label for="title">Add Title</label>
+    	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="title" name="firstName"/>
     </div>
-  </div>
+
+
    <div class="row well">
     <label for="soldby">Sold by</label>
      <section>
@@ -62,44 +62,43 @@
       <div class="form-group">
         <label for="drive">Drivetrain</label>
 	       <select class="form-control" name="drive" [(ngModel)]="carad.drivetrain">
-          <option value="oth" >---- Other ----</option>
-          <option value="awd">All-wheel Drive AWD </option>
-          <option value="fwd">Front-Wheel drive  </option>
-          <option value="rwd">Rear-Wheel drive  </option>
-          <option value="xxx">4X4  </option>
+           <option value="oth" >---- Other ----</option>
+           <option value="awd">All-wheel Drive AWD </option>
+           <option value="fwd">Front-Wheel drive  </option>
+           <option value="rwd">Rear-Wheel drive  </option>
+           <option value="xxx">4X4  </option>
         </select>
       </div>
     </div>
     </div>
 
     <div class="row well">
-    <div class="col-sm-6">
+      <div class="col-sm-6">
          <div class="form-group">
           <label for="body">Body Type</label>
           <select class="form-control" name="body" [(ngModel)]="carad.body">
-          <option value="oth" >---- Other ----</option>
-          <option value="coup">coupe (2 doors) </option>
-          <option value="conv">Convertible  </option>
-          <option value="van">Mini Van  </option>
-          <option value="sed">Sedan  </option>
-     </select>
-    </div>
-    </div>
-    <div class="col-sm-6">
-       <div class="form-group">
-        <label for="fuel">Fuel Type</label>
-	        <select class="form-control" name="fuel" [(ngModel)]="carad.fuel">
-          <option value="oth" >---- Other ----</option>
-          <option value="gaz">Gaz</option>
-          <option value="ess">Essence</option>
-          <option value="hyb">Hybrid </option>
-          <option value="elec">Electric  </option>
+            <option value="oth" >---- Other ----</option>
+            <option value="coup">coupe (2 doors) </option>
+            <option value="conv">Convertible  </option>
+            <option value="van">Mini Van  </option>
+            <option value="sed">Sedan  </option>
          </select>
-      </div>
+    </div>
+    </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="fuel">Fuel Type</label>
+	          <select class="form-control" name="fuel" [(ngModel)]="carad.fuel">
+              <option value="oth" >---- Other ----</option>
+              <option value="gaz">Gaz</option>
+              <option value="ess">Essence</option>
+              <option value="hyb">Hybrid </option>
+              <option value="elec">Electric  </option>
+           </select>
+       </div>
+     </div>
    </div>
-   </div>
-    <div class="row">
-
+    <div class="row well">
      <div class="col-sm-6">
       <div class="form-group">
        <label for="year">Year</label>
@@ -124,6 +123,8 @@
          </select>
        </div>
       </div>
+    
+
      <div class="col-sm-6">
       <div class="form-group">
          <label for="Kilometers">Kilometers</label>
@@ -149,8 +150,7 @@
          </div>
          </div>
 
-     </div>
-
+         </div>
       </div>
     <div class="col-sm-6">
       <div class="form-group">
