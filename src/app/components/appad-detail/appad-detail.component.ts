@@ -94,7 +94,7 @@ public imagesArray: Array<Image> = [];
 
       plainGalleryRowATags: PlainGalleryConfig = {
         strategy: PlainGalleryStrategy.ROW,
-        layout: new LineLayout({ width: '95px', height: '63px' }, { length: 17, wrap: true }, 'flex-start'),
+        layout: new LineLayout({ width: '150px', height: '150px' }, { length: 17, wrap: true }, 'flex-start'),
         // when advanced is defined, additionalBackground: '50% 50%/cover' will be used by default.
         // I added this here, to be more explicit.
         advanced: { aTags: true, additionalBackground: '50% 50%/cover' }

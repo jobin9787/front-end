@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
-@import '~bootstrap/dist/css/bootstrap.min.css'; 
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 .group{
 	width:675px;
@@ -20,4 +20,9 @@ footer {
 		color: white;
 		padding: 15px;
 		margin-top: 115px;
+	}
+	
+	#current-image {
+	  width: 400px !important;;
+	  height: 500px !important;
 	}
