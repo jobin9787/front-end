@@ -1,7 +1,9 @@
 {
     "nav": {
         "home": "Accueil",
-        "login": "Identifiez-vous"
+        "login": " Identifiez-vous",
+        "car" : "Autos et véhicules",
+        "realestate":"Immobilier"
     },
 
         "home":{
@@ -9,4 +11,3 @@
 
         }
     }
- 

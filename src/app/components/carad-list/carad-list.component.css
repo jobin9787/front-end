@@ -1,11 +1,12 @@
 .adimage{
 	float:left;
-	background-color:blue;
 }
 
 .adetails{
 	float:left;
 }
+
+
 
 .clear{
 clear:both;

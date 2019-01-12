@@ -1,8 +1,11 @@
 {
     "nav": {
         "home": "Home",
-        "login": "Login"
+        "login": " Login",
+        "car": " Cars & Vehicles",
+        "realestate":"Real Estate"
     },
+    
     "home":{
      "welcome":"Welcome"
 

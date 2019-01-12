@@ -21,8 +21,14 @@ footer {
 		padding: 15px;
 		margin-top: 115px;
 	}
-	
+
 	#current-image {
 	  width: 400px !important;;
 	  height: 500px !important;
+	}
+	
+	.imagelist{
+	margin: 5px;
+	width:250px;
+	height:250px;
 	}
