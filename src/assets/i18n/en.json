@@ -36,7 +36,8 @@
     "postalcode":"Postal code",
     "address":"Street address",
     "cancel":"Cancel",
-    "submit":"Submit"
+    "submit":"Submit",
+    "selectimg":"Select image"
   }
 
 }

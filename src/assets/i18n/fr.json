@@ -36,6 +36,7 @@
           "postalcode":"Code postal",
           "address":"adresse",
           "cancel":"Annuler",
-          "submit":"Soumettre"
+          "submit":"Soumettre",
+          "selectimg":"Sélectionner une image"
       }
     }
