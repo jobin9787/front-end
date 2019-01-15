@@ -37,6 +37,7 @@
           "address":"adresse",
           "cancel":"Annuler",
           "submit":"Soumettre",
-          "selectimg":"Sélectionner une image"
+          "selectimg":"Sélectionner une image",
+          "change":"Change"
       }
     }
