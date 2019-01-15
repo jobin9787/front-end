@@ -3,11 +3,40 @@
         "home": "Home",
         "login": " Login",
         "car": " Cars & Vehicles",
-        "realestate":"Real Estate"
+        "realestate":"Real Estate",
+        "postAd":"Post Ad"
     },
-    
+
     "home":{
      "welcome":"Welcome"
 
-    }
+   },
+   "post":{
+    "postcarad":"Post car ad",
+    "postrealad":"Post realestate ad",
+    "adtype":"Ad Type",
+    "price":"Price",
+    "saleby":"For Sale By",
+    "owner":"Owner",
+    "dealer":"Dealer",
+    "make":"Make",
+    "transmission":"Transmission",
+    "model":"Model",
+    "drivetrain":"Drivetrain",
+    "trim":"Trim",
+    "colour":"Colour",
+    "bodytype":"Body Type",
+    "fueltype":"Fuel Type",
+    "year":"Year",
+    "numdoors":"No. of Doors",
+    "numseats":"No. of Seats:",
+    "kilometers":"Kilometers",
+    "adtitle":"Ad Title",
+    "description":"Description",
+    "postalcode":"Postal code",
+    "address":"Street address",
+    "cancel":"Cancel",
+    "submit":"Submit"
+  }
+
 }

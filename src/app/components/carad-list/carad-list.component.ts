@@ -132,10 +132,10 @@ export class CaradListComponent implements OnInit {
 
 		 $(document).ready(function(){
 		   $("#collapseAdSearch").on("hide.bs.collapse", function(){
-		     $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> + Options');
+		     $("#optionsec").html('<span class="glyphicon glyphicon-collapse-down"></span> + Options');
 		   });
 		   $("#collapseAdSearch").on("show.bs.collapse", function(){
-		     $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> - Options');
+		     $("#optionsec").html('<span class="glyphicon glyphicon-collapse-up"></span> - Options');
 		   });
 		 });
 

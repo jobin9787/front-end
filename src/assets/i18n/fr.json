@@ -3,11 +3,39 @@
         "home": "Accueil",
         "login": " Identifiez-vous",
         "car" : "Autos et véhicules",
-        "realestate":"Immobilier"
+        "realestate":"Immobilier",
+        "postAd":"Poster une annonce"
     },
 
         "home":{
          "welcome":"Bienvenue"
+        },
 
-        }
+        "post":{
+         "postcarad":"Poster une annonce Autos et véhicules",
+         "postrealad":"Poster une annonce Immobilier",
+          "adtype":"Type d'annonce",
+          "price":"Prix",
+          "saleby":"À vendre par",
+          "owner":"Propriétaire",
+          "dealer":"Concessionnaire",
+          "make":"Marque",
+          "transmission":"Boite de vitesse",
+          "model":"Modèle",
+          "drivetrain":"Transmission",
+          "trim":"Trim",
+          "colour":"Couleur",
+          "bodytype":"Type de carrosserie",
+          "fueltype":"Type de carburant",
+          "year":"Année",
+          "numdoors":"Nombre de portes ",
+          "numseats":"Nombre de places",
+          "kilometers":"Kilomètres",
+          "adtitle":"Titre de l'annonce",
+          "description":"Description",
+          "postalcode":"Code postal",
+          "address":"adresse",
+          "cancel":"Annuler",
+          "submit":"Soumettre"
+      }
     }

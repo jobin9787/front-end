@@ -19,11 +19,14 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-				<a mat-button routerLink="/submitCaradd">Submit add</a>
+				 <a mat-button routerLink="/submitCaradd">Post car ad</a>
 				</li>
         <li>
-      <a mat-button routerLink="/submitAppad">Submit App add</a>
-      </li>
+          <a mat-button routerLink="/submitAppad">Post realestate ad</a>
+        </li>
+        <li>
+          <a  routerLink="/postAd" [translate]="'nav.postAd'"></a>
+        </li>
 				<li *ngIf="!loggedIn">
           <a routerLink="/myAccount"><span class="glyphicon glyphicon-log-in" [translate]="'nav.login'"></span></a>
         </li>

@@ -7,67 +7,63 @@
   <!--  search -->
   <div class="row equal searchdiv">
 
-  <div class="col-sm-4">
-      		  <label for="appart" class="title">App </label>
-            <select class="form-control"  name="appadtitle"  [(ngModel)]="search.element1" >
-            <option [ngValue]="null" >---- Other ----</option>
-            <option *ngFor="let app of appList " [ngValue]="app.value">
-             {{ app.name }}
-            </option>
-           </select>
-  </div>
+      <div class="col-sm-4">
+          		  <label for="appart" class="title">App </label>
+                <select class="form-control"  name="appadtitle"  [(ngModel)]="search.element1" >
+                <option [ngValue]="null" >---- Other ----</option>
+                <option *ngFor="let app of appList " [ngValue]="app.value">
+                 {{ app.name }}
+                </option>
+               </select>
+      </div>
 
-  <div class="col-sm-4">
-      	<div class="form-group">
-      		 <label for="carmodel" class="title">Area</label>
-           <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
-            <option [ngValue]="null" >---- Other ----</option>
-            <option *ngFor="let area of areaList" [ngValue]="area.value">
-             {{ area.name }}
-            </option>
-           </select>
-        </div>
-  </div>
-
-  <div class="col-sm-4 " align="right">
-  	<div class="row">
-  	    <div class="col-lg-1 col-centered">
-
-  	 <label class="title"></label>
-  				<button class="mat-primary " mat-raised-button type="submit">Search </button>
-  					</div>
-  	</div>
-  </div>
-
-  <div class="col-sm-12" align="center">
-    <p>
-      <a class="btn btn-link" data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
-      <span class="glyphicon glyphicon-collapse-down"></span> + Options
-      </a>
-    </p>
-  </div>
-
-  <div class="collapse" id="collapseAdSearch">
-      <div class="col-sm-2 col-form-label">
-        <label class="title">Rent</label>
-       </div>
-           <div class="col-sm-5">
-            <div class="form-group">
-               <label for="minPrice" class="title">Min:</label>
-      	       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
-             </div>
+      <div class="col-sm-4">
+          	<div class="form-group">
+          		 <label for="carmodel" class="title">Area</label>
+               <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
+                <option [ngValue]="null" >---- Other ----</option>
+                <option *ngFor="let area of areaList" [ngValue]="area.value">
+                 {{ area.name }}
+                </option>
+               </select>
             </div>
-          <div class="col-sm-5">
-            <div class="form-group">
-              <label class="title" for="MaxPrice">Max:</label>
-      	      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
-           </div>
-          </div>
-      <br>
+      </div>
 
-  </div>
+      <div class="col-sm-4 " align="right">
+      	<div class="row">
+      	    <div class="col-lg-1 col-centered">
+            	 <label class="title"></label>
+      			  	<button class="mat-primary " mat-raised-button type="submit">Search </button>
+      			 </div>
+      	</div>
+      </div>
 
+      <div class="col-sm-12" align="center">
+        <p>
+          <a class="btn btn-link" id="optionsec" data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
+          <span class="glyphicon glyphicon-collapse-down"></span> + Options
+          </a>
+        </p>
+      </div>
 
+        <div class="collapse" id="collapseAdSearch">
+              <div class="col-sm-2 col-form-label">
+                <label class="title">Rent</label>
+               </div>
+               <div class="col-sm-5">
+                <div class="form-group">
+                   <label for="minPrice" class="title">Min:</label>
+          	       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
+                 </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label class="title" for="MaxPrice">Max:</label>
+            	      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
+                 </div>
+                </div>
+            <br>
+        </div>
 
   </div>
 
