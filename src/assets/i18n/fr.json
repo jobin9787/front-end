@@ -50,9 +50,19 @@
           "van":"Mini Van",
           "sed":"Berline",
           "dis":"Diesel",
-          "ess":"Essence",
+          "gas":"Essence",
           "hyb":"Hybride",
-          "elec":"Electrique"
+          "elec":"Electrique",
+          "beige":"Beige" ,
+          "black":"Noir",
+          "blue":"Blue",
+          "brown":"Brown",
+          "Gold":"Or",
+          "Green":"Vert",
+          "Grey":"Gris",
+          "Red":"Rouge",
+          "silver":"Argent",
+          "white":"Blanc",
 
       }
     }

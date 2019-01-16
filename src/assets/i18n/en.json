@@ -50,9 +50,19 @@
     "van":"Mini Van",
     "sed":"Sedan",
     "dis":"Diesel",
-    "ess":"Gazoline",
+    "gas":"Gasoline",
     "hyb":"Hybrid",
-    "elec":"Electric"
+    "elec":"Electric",
+    "beige":"Beige" ,
+    "black":"Black",
+    "blue":"Blue",
+    "brown":"Brown",
+    "Gold":"Gold",
+    "Green":"Green",
+    "Grey":"Grey",
+    "Red":"Red",
+    "silver":"Silver",
+    "white":"White",
 
   }
 

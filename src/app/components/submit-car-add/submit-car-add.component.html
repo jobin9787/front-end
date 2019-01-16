@@ -63,9 +63,9 @@
               <label for="drive" [translate]="'post.drivetrain'"></label>
       	       <select class="form-control" name="drive" [(ngModel)]="carad.drivetrain">
                  <option value="oth" [translate]="'post.other'"></option>
-                 <option value="awd" [translate]="'awd'"></option>
-                 <option value="fwd"></option>
-                 <option value="rwd"></option>
+                 <option value="awd" [translate]="'post.awd'"></option>
+                 <option value="fwd"  [translate]="'post.fwd'"></option>
+                 <option value="rwd" [translate]="'post.rwd'"></option>
                  <option value="xxx">4X4  </option>
               </select>
             </div>
@@ -91,7 +91,7 @@
     	          <select class="form-control" name="fuel" [(ngModel)]="carad.fuel">
                   <option value="oth" [translate]="'post.other'"></option>
                   <option value="dis" [translate]="'post.dis'"></option>
-                  <option value="ess" [translate]="'post.ess'"></option>
+                  <option value="gas" [translate]="'post.gas'"></option>
                   <option value="hyb" [translate]="'post.hyb'"></option>
                   <option value="elec"  [translate]="'post.elec'"></option>
                </select>
@@ -113,48 +113,48 @@
           </div>
         </div>
 
-         <div class="col-sm-6">
-           <div class="form-group">
-             <label for="color" [translate]="'post.colour'"></label>
-            	<select class="form-control" name="color" [(ngModel)]="carad.color">
-               <option value="oth" >---- Other ----</option>
-               <option value="whi">White</option>
-               <option value="blac">Black</option>
-               <option value="blu">Blue </option>
-               <option value="red">Red</option>
-              </select>
-            </div>
-           </div>
+           <div class="col-sm-6">
+               <div class="form-group">
+                 <label for="color" [translate]="'post.colour'"></label>
+                	<select class="form-control" name="color" [(ngModel)]="carad.color">
+                   <option value="oth"  [translate]="'post.other'"></option>
+                   <option value="whit"  [translate]="'post.white'"></option>
+                   <option value="blac" [translate]="'post.black'"></option>
+                   <option value="silv"  [translate]="'post.silver'"></option>
+                   <option value="grey"  [translate]="'post.grey'"></option>
+                   <option value="grey"  [translate]="'post.grey'"></option>
+                   <option value="gree"  [translate]="'post.green'"></option>
+                   <option value="Brow"  [translate]="'post.brown'"></option>
+                  </select>
+                </div>
+             </div>
 
+             <div class="col-sm-6">
+               <div class="form-group">
+                  <label for="Kilometers" [translate]="'post.kilometers'"></label>
+        	        <input type="text" class="form-control" [(ngModel)]="carad.kilometers" id="Kilometers" name="Kilometers"/>
+                </div>
+             </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="DoorsNo" [translate]="'post.numdoors'"></label>
+        	      <input  type="text" class="form-control" [(ngModel)]="carad.doorNo" id="DoorsNo" name="DoorsNo"/>
+             </div>
+            </div>
 
            <div class="col-sm-6">
              <div class="form-group">
-                <label for="Kilometers" [translate]="'post.kilometers'"></label>
-      	        <input type="text" class="form-control" [(ngModel)]="carad.kilometers" id="Kilometers" name="Kilometers"/>
-              </div>
+               <label for="postalCode" [translate]="'post.postalcode'"></label>
+               <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
+               <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
+                   class="alert alert-danger">
+                <div *ngIf="postalcode.errors.required">
+                   Postal code is required.
+                </div>
+               </div>
+             </div>
            </div>
-
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="DoorsNo" [translate]="'post.numdoors'"></label>
-      	      <input  type="text" class="form-control" [(ngModel)]="carad.doorNo" id="DoorsNo" name="DoorsNo"/>
-           </div>
-          </div>
-
-         <div class="col-sm-6">
-          <div class="form-group">
-             <label for="postalCode" [translate]="'post.postalcode'"></label>
-             <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
-
-             <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
-                 class="alert alert-danger">
-             <div *ngIf="postalcode.errors.required">
-                 Postal code is required.
-             </div>
-             </div>
-
-             </div>
-          </div>
 
           <div class="col-sm-6">
             <div class="form-group">
@@ -175,30 +175,27 @@
    </div>
 
       <div class="album text-muted">
-      <div calss="container">
-      <div class="fileinput fileinput-new" data-provides="fileinput">
-        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-        <div>
-          <span class="btn btn-default btn-file"><span class="fileinput-new" [translate]="'post.selectimg'"></span><span class="fileinput-exists" [translate]="'post.change'"></span><input type="file" name="file"
-          (change)="uploadImageService.fileChangeEvent($event)"></span>
-          <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput" name="file1" (click)="uploadImageService.removeImage($event)">Remove</a>
+        <div calss="container">
+         <div class="fileinput fileinput-new" data-provides="fileinput">
+           <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+           <div>
+            <span class="btn btn-default btn-file"><span class="fileinput-new" [translate]="'post.selectimg'"></span><span class="fileinput-exists" [translate]="'post.change'"></span><input type="file" name="file"
+            (change)="uploadImageService.fileChangeEvent($event)"></span>
+            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput" name="file1" (click)="uploadImageService.removeImage($event)">Remove</a>
+           </div>
         </div>
-      </div>
 
-      <div class="fileinput fileinput-new" data-provides="fileinput">
-        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-        <div>
-          <span class="btn btn-default btn-file"><span class="fileinput-new" [translate]="'post.selectimg'"></span><span class="fileinput-exists" [translate]="'post.change'"></span><input type="file" name="file"
-          (change)="uploadImageService.fileChangeEvent2($event)"></span>
-          <a href="#" name="file2" class="btn btn-default fileinput-exists" data-dismiss="fileinput" (click)="uploadImageService.removeImage($event)">Remove</a>
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+          <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+          <div>
+            <span class="btn btn-default btn-file"><span class="fileinput-new" [translate]="'post.selectimg'"></span><span class="fileinput-exists" [translate]="'post.change'"></span><input type="file" name="file"
+            (change)="uploadImageService.fileChangeEvent2($event)"></span>
+            <a href="#" name="file2" class="btn btn-default fileinput-exists" data-dismiss="fileinput" (click)="uploadImageService.removeImage($event)">Remove</a>
+          </div>
         </div>
-      </div>
-
-      </div>
+       </div>
         <br><br>
       </div>
-
-
 
     <div class="col-sm-6">
 					<button (click)="onSubmit()"   [disabled]="carForm.invalid" class="btn btn-primary"  type="submit" [translate]="'post.submit'"></button>
