@@ -38,6 +38,7 @@
           "cancel":"Annuler",
           "submit":"Soumettre",
           "selectimg":"Sélectionner une image",
-          "change":"Change"
+          "change":"Change",
+          "other":"---- Autre ----"
       }
     }

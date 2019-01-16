@@ -38,7 +38,9 @@
     "cancel":"Cancel",
     "submit":"Submit",
     "selectimg":"Select image",
-    "change":"Change"
+    "change":"Change",
+    "other":"---- Other ----"
+
   }
 
 }
