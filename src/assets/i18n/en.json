@@ -37,7 +37,8 @@
     "address":"Street address",
     "cancel":"Cancel",
     "submit":"Submit",
-    "selectimg":"Select image"
+    "selectimg":"Select image",
+    "change":"Change"
   }
 
 }
