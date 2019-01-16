@@ -42,17 +42,17 @@
           "other":"---- Autre ----",
           "automatic":"Automatique",
           "manual":"Manuelle",
-          "awd":"All-wheel Drive AWD",
+          "awd":"Traction intégrale",
           "fwd":"Front-Wheel drive",
           "rwd":"Rear-Wheel drive",
-          "coup":"coupe (2 doors)",
-          "conv":"Convertible",
+          "coup":"coupé (2 portes)",
+          "conv":"Décapotable",
           "van":"Mini Van",
-          "sed":"Sedan",
-          "gaz":"Gaz",
+          "sed":"Berline",
+          "dis":"Diesel",
           "ess":"Essence",
-          "hyb":"Hybrid",
-          "elec":"Electric"
+          "hyb":"Hybride",
+          "elec":"Electrique"
 
       }
     }

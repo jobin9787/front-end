@@ -49,8 +49,8 @@
     "conv":"Convertible",
     "van":"Mini Van",
     "sed":"Sedan",
-    "gaz":"Gaz",
-    "ess":"Essence",
+    "dis":"Diesel",
+    "ess":"Gazoline",
     "hyb":"Hybrid",
     "elec":"Electric"
 
