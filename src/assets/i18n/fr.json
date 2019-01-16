@@ -39,6 +39,20 @@
           "submit":"Soumettre",
           "selectimg":"Sélectionner une image",
           "change":"Change",
-          "other":"---- Autre ----"
+          "other":"---- Autre ----",
+          "automatic":"Automatique",
+          "manual":"Manuelle",
+          "awd":"All-wheel Drive AWD",
+          "fwd":"Front-Wheel drive",
+          "rwd":"Rear-Wheel drive",
+          "coup":"coupe (2 doors)",
+          "conv":"Convertible",
+          "van":"Mini Van",
+          "sed":"Sedan",
+          "gaz":"Gaz",
+          "ess":"Essence",
+          "hyb":"Hybrid",
+          "elec":"Electric"
+
       }
     }
