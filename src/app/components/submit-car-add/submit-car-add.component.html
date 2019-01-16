@@ -15,7 +15,7 @@
     <label for="soldby"  [translate]="'post.saleby'">Sold by</label>
      <section>
       <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
-         <mat-radio-button value="own" color="accent" [translate]="'post.owner'"></mat-radio-button>
+         <mat-radio-button value="own" color="accent" ><span  [translate]="'post.owner'"></span> </mat-radio-button>
          <mat-radio-button value="deal" color="primary" [translate]="'post.dealer'"></mat-radio-button><br/>
       </mat-radio-group>
     </section>
