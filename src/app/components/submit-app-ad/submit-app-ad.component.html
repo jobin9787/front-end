@@ -66,15 +66,15 @@
    <label for="rentby" [translate]="'post.furn'"></label>
     <section>
     <mat-radio-group [(ngModel)]="appad.furnished" name="furnished">
-    <mat-radio-button value="1" color="primary"><span [translate]="post.yes"></span></mat-radio-button><br/>
-    <mat-radio-button value="0" color="accent"><span [translate]="post.no"></span></mat-radio-button>
+    <mat-radio-button value="1" color="primary"><span [translate]="'post.yes'"></span></mat-radio-button><br/>
+    <mat-radio-button value="0" color="accent"><span [translate]="'post.no'"></span></mat-radio-button>
     </mat-radio-group>
    </section>
   </div>
 
   <div class="row well">
     <div class="col-sm-12">
-       <label for="appdesc" [translate]="post.description"></label>
+       <label for="appdesc" [translate]="'post.description'"></label>
        <textarea  class="form-control"  name="appaddescr" [(ngModel)]="appad.descr">
        </textarea>
      </div>
