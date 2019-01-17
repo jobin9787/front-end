@@ -69,7 +69,9 @@
           "bath":"Salle de bains",
           "furn":"Meublé",
           "yes":"Oui",
-          "no":"Non"
+          "no":"Non",
+          "offering":"J'offre",
+          "look":"Je cherche"
 
 
       }

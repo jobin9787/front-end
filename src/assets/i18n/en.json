@@ -69,7 +69,9 @@
     "bath":"Bathroom",
     "furn":"Furnished",
     "yes":"Yes",
-    "no":"No"
+    "no":"No",
+    "offering":"I am offering",
+    "looking":"Looking for"
 
   }
 

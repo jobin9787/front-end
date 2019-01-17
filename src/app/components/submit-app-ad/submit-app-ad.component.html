@@ -15,8 +15,8 @@
    <label for="adtype" [translate]="'post.adtype'"></label>
     <section>
     <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
-    <mat-radio-button value="offer" color="primary">I am offering</mat-radio-button><br/>
-    <mat-radio-button value="want" color="accent">I want</mat-radio-button>
+    <mat-radio-button value="offer" color="primary"><span [translte]="'post.offering'"></span></mat-radio-button><br/>
+    <mat-radio-button value="want" color="accent"><span [translte]="'post.looking'"></span></mat-radio-button>
     </mat-radio-group>
    </section>
   </div>
