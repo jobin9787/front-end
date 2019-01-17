@@ -6,7 +6,7 @@
   <div class="panel-group">
   <div class="well well-lg">
 
-  <label for="title" [translate]="'post.title'"></label>
+  <label for="title" [translate]="'post.adtitle'"></label>
   <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
   </div>
   </div>
@@ -35,9 +35,9 @@
 
   <div class="row well">
     <div class="col-sm-12">
-       <label for="appart" [translate]="'post.apptype'">App </label>
+       <label for="appart" [translate]="'post.apptype'"></label>
        <select class="form-control"  name="appadtitle" [(ngModel)]="appad.room">
-        <option [ngValue]="null" >---- Other ----</option>
+        <option [ngValue]="null" [translate]="'post.other'"></option>
         <option *ngFor="let app of appList " [ngValue]="app.value">
          {{ app.name }}
         </option>
@@ -47,7 +47,7 @@
 
 <div class="row well">
   <div class="col-sm-12">
-     <label for="appart">price  </label>
+     <label for="appart" [translate]="'post.price'"></label>
      <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
 
    </div>
@@ -55,7 +55,7 @@
 
 <div class="row well">
 <div class="col-sm-12">
-   <label for="appbath">Bathroom  </label>
+   <label for="appbath" [translate]="'post.bath'"></label>
    <input typr="text" class="form-control"  name="appadbathroom" [(ngModel)]="appad.bathroom"/>
  </div>
 </div>
@@ -63,18 +63,18 @@
 
 
   <div class="row well">
-   <label for="rentby">Furnished</label>
+   <label for="rentby" [translate]="'post.furn'"></label>
     <section>
     <mat-radio-group [(ngModel)]="appad.furnished" name="furnished">
-    <mat-radio-button value="1" color="primary">Yes</mat-radio-button><br/>
-    <mat-radio-button value="0" color="accent">No</mat-radio-button>
+    <mat-radio-button value="1" color="primary"><span [translate]="post.yes"></span></mat-radio-button><br/>
+    <mat-radio-button value="0" color="accent"><span [translate]="post.no"></span></mat-radio-button>
     </mat-radio-group>
    </section>
   </div>
 
   <div class="row well">
     <div class="col-sm-12">
-       <label for="appdesc">Descr  </label>
+       <label for="appdesc" [translate]="post.description"></label>
        <textarea  class="form-control"  name="appaddescr" [(ngModel)]="appad.descr">
        </textarea>
      </div>

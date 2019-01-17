@@ -65,7 +65,11 @@
     "white":"White",
     "rentby":"Rent by",
     "prof":"Professional",
-    "apptype":"Appartement type"
+    "apptype":"Appartement type",
+    "Bath":"Bathroom",
+    "furn":"Furnished",
+    "yes":"Yes",
+    "no":"No"
 
   }
 
