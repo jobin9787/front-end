@@ -62,7 +62,10 @@
     "grey":"Grey",
     "red":"Red",
     "silver":"Silver",
-    "white":"White"
+    "white":"White",
+    "rentby":"Rent by",
+    "prof":"Professional",
+    "apptype":"Appartement type"
 
   }
 

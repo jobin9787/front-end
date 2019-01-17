@@ -6,13 +6,13 @@
   <div class="panel-group">
   <div class="well well-lg">
 
-  <label for="title">Add Title</label>
+  <label for="title" [translate]="'post.title'"></label>
   <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
   </div>
   </div>
 
   <div class="row well">
-   <label for="rentby">Type : </label>
+   <label for="adtype" [translate]="'post.adtype'"></label>
     <section>
     <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
     <mat-radio-button value="offer" color="primary">I am offering</mat-radio-button><br/>
@@ -23,11 +23,11 @@
 
 
   <div class="row well">
-   <label for="rentby">Rent by</label>
+   <label for="rentby" [translate]="'rentby'"></label>
     <section>
     <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
-    <mat-radio-button value="prof" color="primary">Professional</mat-radio-button><br/>
-    <mat-radio-button value="own" color="accent">Owner</mat-radio-button>
+    <mat-radio-button value="prof" color="primary" > <span [translate]="'post.prof'"></span></mat-radio-button><br/>
+    <mat-radio-button value="own" color="accent"><span [translate]="'post.owner'"></span></mat-radio-button>
     </mat-radio-group>
    </section>
   </div>
@@ -35,7 +35,7 @@
 
   <div class="row well">
     <div class="col-sm-12">
-       <label for="appart">App </label>
+       <label for="appart" [translate]="'post.apptype'">App </label>
        <select class="form-control"  name="appadtitle" [(ngModel)]="appad.room">
         <option [ngValue]="null" >---- Other ----</option>
         <option *ngFor="let app of appList " [ngValue]="app.value">
