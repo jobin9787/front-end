@@ -133,8 +133,7 @@ private imagesArray1:  Image[]= [];
       }
 
       getCarLabel(label:string){
-       console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
-       return this.carmakeService.getCarLabels(label);
+          return this.carmakeService.getCarLabels(label);
       }
 
 
