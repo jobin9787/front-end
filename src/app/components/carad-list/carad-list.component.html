@@ -8,9 +8,9 @@
 <div class="row equal searchdiv">
 
 <div class="col-sm-4">
-    		 <label for="carmake" class="title">Mark</label>
+    		 <label for="carmake" class="title" [translate]="'post.mark'"></label>
          <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
-          <option [ngValue]="null" >---- Other ----</option>
+          <option [ngValue]="null" [translate]="'post.other'"></option>
           <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
            {{ crm.makeName }}
           </option>
@@ -19,9 +19,9 @@
 
 <div class="col-sm-4">
     	<div class="form-group">
-    		 <label for="carmodel" class="title">Model</label>
+    		 <label for="carmodel" class="title" [translate]="'post.model'"></label>
          <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
-          <option [ngValue]="null" >---- Other ----</option>
+          <option [ngValue]="null" [translate]="'post.other'"></option>
           <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
            {{ mdl.modelname }}
           </option>
@@ -34,7 +34,7 @@
 	    <div class="col-lg-1 col-centered">
 
 	 <label class="title"></label>
-				<button class="mat-primary " mat-raised-button type="submit">Search </button>
+				<button class="mat-primary " mat-raised-button type="submit" [translate]="'post.search'"></button>
 					</div>
 	</div>
 </div>
@@ -49,7 +49,7 @@
 
 <div class="collapse" id="collapseAdSearch">
 <div class="col-sm-2 col-form-label">
-  <label class="title">Price</label>
+  <label class="title" [translate]="'post.price'"></label>
  </div>
      <div class="col-sm-5">
       <div class="form-group">
@@ -65,7 +65,7 @@
     </div>
 <br>
 <div class="col-sm-4">
-  <label class="title" [translate]="'kilometers'"></label>
+  <label class="title" [translate]="'post.kilometers'"></label>
  </div>
        <div class="col-sm-4">
       <div class="form-group">
@@ -81,7 +81,7 @@
     </div>
 
 <div class="col-sm-4">
-  <label class="title">Year</label>
+  <label class="title" [translate]="'post.year'"></label>
  </div>
        <div class="col-sm-4">
       <div class="form-group">

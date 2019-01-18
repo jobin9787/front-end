@@ -12,6 +12,7 @@
 
    },
    "post":{
+     "search":"Search",
     "postcarad":"Post car ad",
     "postrealad":"Post realestate ad",
     "adtype":"Ad Type",

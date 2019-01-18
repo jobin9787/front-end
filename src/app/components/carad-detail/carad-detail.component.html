@@ -24,17 +24,13 @@
     </div>
 
     <div class="col-sm-6">
-
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default text-left">
             <div class="panel-body">
-
             <img align="center" class="thumbnail" style="max-height: 350px" src="../../../image/carad/{{carad.id}}/{{carad.id}}1.png" onerror="this.src='../../../assets/image/no-image.jpg'"/>
-
             <ks-modal-gallery [modalImages]="imagesArray"
                       [plainGalleryConfig]="plainGalleryRowATags"></ks-modal-gallery>
-
             </div>
           </div>
         </div>
@@ -47,19 +43,19 @@
             <table class="table">
              <tbody>
                <tr>
-                 <th scope="row">Make</th>
+                 <th scope="row" [translate]="'post.make'"></th>
                  <td>{{carad.make}}</td>
                </tr>
                <tr>
-                 <th scope="row">Model</th>
+                 <th scope="row" [translate]="'post.model'"></th>
                  <td>{{carad.model}}</td>
                </tr>
                <tr>
-                 <th scope="row">Year</th>
+                 <th scope="row" [translate]="'post.year'"></th>
                  <td>{{carad.year}}</td>
                </tr>
                   <tr>
-                 <th scope="row">Fuel Type</th>
+                 <th scope="row" [translate]="'post.fueltype'"></th>
                  <td>{{carad.fuel}}</td>
                </tr>
              </tbody>
@@ -71,7 +67,7 @@
             <table class="table">
             <tbody>
               <tr>
-                <th scope="row">Body Type</th>
+                <th scope="row" [translate]="'post.bodytype'"></th>
                 <td>{{carad.body}}</td>
               </tr>
               <tr>

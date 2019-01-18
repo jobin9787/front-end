@@ -12,6 +12,7 @@
         },
 
         "post":{
+           "search":"Chercher",
          "postcarad":"Poster une annonce Autos et véhicules",
          "postrealad":"Poster une annonce Immobilier",
           "adtype":"Type d'annonce",
