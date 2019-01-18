@@ -77,7 +77,7 @@ private imagesArray1:  Image[]= [];
         );
 
 
-        console.log(getColorLabel("white","fr"));
+        console.log(this.getColorLabel("white","fr"));
   };
 
 
