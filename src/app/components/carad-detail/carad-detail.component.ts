@@ -138,8 +138,8 @@ private imagesArray1:  Image[]= [];
       }
 
 
-      getColorLabel(label:string,lang:string){
-        return this.carmakeService.ColorLabelsMap(lang).getItem(label);
+      getColorLabel(lang:string,label:string){
+        return this.carmakeService.getColorLabels(lang,label);
       }
 
 }

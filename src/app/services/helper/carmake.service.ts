@@ -6,14 +6,15 @@ import {CarLabels} from '../../const/car-labels';
 @Injectable()
 export class CarmakeService {
 private LabelsMap = CarLabels.CarLabelsMap;
+private colorLabelsMap = CarLabels.ColorLabelsMap;
 
    getCarmake(): Carmake[] {
       let carmake = [
 		 new Carmake('hond', 'Honda'),
 		 new Carmake('toyo', 'Toyota'),
 		 new Carmake('kia', 'Kia')
-      ]	 
-      return carmake;	  
+      ]
+      return carmake;
       };
 
    getCarmodel( makeid:String):   Carmodel[] {
@@ -22,13 +23,13 @@ private LabelsMap = CarLabels.CarLabelsMap;
 		     new Carmodel('acc','Accord'),
 		     new Carmodel('pil','pilot')
         ]	;
-   
+
 	 let carmodelkia= [
     new Carmodel('rio','Rio'),
     new Carmodel('rio','Rio'),
     new Carmodel('rio','Rio')
       ] ;
-	 
+
     let carmodeltoyota = [
 		new Carmodel('cor','Corola'),
 		new Carmodel('yar','Yaris'),
@@ -39,9 +40,9 @@ private LabelsMap = CarLabels.CarLabelsMap;
 	      m.set('hond',carmodelhonda);
         m.set('toyo',carmodeltoyota);
         m.set('kia',carmodelkia);
-      
-     
-      return m.get(makeid);	  
+
+
+      return m.get(makeid);
    };
 
 
@@ -57,7 +58,13 @@ private LabelsMap = CarLabels.CarLabelsMap;
     return this.LabelsMap.get(label);
    }
 
-   
+getColorLabels(lang,label){
+
+return this.colorLabelsMap.get(lang).get(label);  
+}
+
+
+
   constructor() { }
 
 
