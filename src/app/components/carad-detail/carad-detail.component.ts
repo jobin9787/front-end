@@ -63,18 +63,21 @@ private imagesArray1:  Image[]= [];
 
   ngOnInit() {
     this.route.params.forEach((params:Params)=>{
-	     this.caradId= params['id'] ;
-   });
-  this.carAdService.getCarad(this.caradId).subscribe(
-    res=>{
-    this.carad=res.json();
-    this.fileNumber= JSON.parse(JSON.stringify(res.json())).fileNumber;
-    this.imageInit(this.fileNumber);
-    },
-     err=>{
-     console.log(err)
-   }
-   );
+	           this.caradId= params['id'] ;
+          });
+    this.carAdService.getCarad(this.caradId).subscribe(
+      res=>{
+            this.carad=res.json();
+            this.fileNumber= JSON.parse(JSON.stringify(res.json())).fileNumber;
+            this.imageInit(this.fileNumber);
+           },
+      err=>{
+            console.log(err)
+           }
+        );
+
+
+        console.log(getColorLabel("white","fr"));
   };
 
 
@@ -130,9 +133,13 @@ private imagesArray1:  Image[]= [];
       }
 
       getCarLabel(label:string){
-      console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
+       console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
        return this.carmakeService.getCarLabels(label);
       }
 
+
+      getColorLabel(label:string,lang:string){
+        return this.carmakeService.ColorLabelsMap(lang).getItem(label);
+      }
 
 }
