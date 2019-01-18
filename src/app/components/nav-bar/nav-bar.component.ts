@@ -20,30 +20,26 @@ useLanguage(language: string) {
               }
 
   logout(){
-  this.loginService.logout().subscribe(
-    res=>{
-     location.reload();
-    },
-    err=>{
-     console.log();
-
-    }
-  );
-  }
+          this.loginService.logout().subscribe(
+         res=>{
+            location.reload();
+            },
+        err=>{
+         console.log();
+       }
+     );
+   }
 
   ngOnInit() {
-   this.loginService.checkSession().subscribe(
-    res => {
-    this.loggedIn=true;
-
-    },
-    err=>{
-     this.loggedIn=false;
-     console.log(err);
-    }
-
-   );
-
+       this.loginService.checkSession().subscribe(
+        res => {
+             this.loggedIn=true;
+            },
+       err=>{
+            this.loggedIn=false;
+            console.log(err);
+          }
+     );
   }
 
 }

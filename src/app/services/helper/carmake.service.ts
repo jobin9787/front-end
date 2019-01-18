@@ -58,10 +58,9 @@ private colorLabelsMap = CarLabels.ColorLabelsMap;
     return this.LabelsMap.get(label);
    }
 
-getColorLabels(lang,label){
-
-return this.colorLabelsMap.get(lang).get(label);  
-}
+  getColorLabels(lang,label){
+     return this.colorLabelsMap.get(localStorage.getItem('language')).get(label);
+   }
 
 
 
