@@ -60,9 +60,9 @@ export class CaradListComponent implements OnInit {
  }*/
 
  onSelect(carad:Carad){
-	localStorage.setItem('caradList', JSON.stringify(this.caradList));
-	this.selectedCarad=carad;
-	this.router.navigate(['/caradDetail',this.selectedCarad.id]);
+  	localStorage.setItem('caradList', JSON.stringify(this.caradList));
+	  this.selectedCarad=carad;
+	  this.router.navigate(['/caradDetail',this.selectedCarad.id]);
 	}
 
 
@@ -90,26 +90,26 @@ export class CaradListComponent implements OnInit {
 
 
 	onKeywordSearch(){
-		       localStorage.setItem('currentPage', '1');
-		        this.config.currentPage = 1;
-		  		  this.carAdService.sendAdSearch(this.search).subscribe(
-		  	res=>{
-		  		console.log('Succes' + JSON.stringify(res));
-		  		this.caradList=res.json();
-		  		 },
-		  	error=>{
-		  	 console.log('Error '+ error);
-		  	 }
+		    localStorage.setItem('currentPage', '1');
+		     this.config.currentPage = 1;
+		  	 this.carAdService.sendAdSearch(this.search).subscribe(
+		    	  res=>{
+		  	      	console.log('Succes' + JSON.stringify(res));
+		  		      this.caradList=res.json();
+		  		      },
+		       	error=>{
+		  	        console.log('Error '+ error);
+		  	    }
 		  	);
-	}
+    	}
 
 		ngOnInit() {
-		this.allCarmake = this.carmakeService.getCarmake();
-		this.route.queryParams.subscribe(params => {
-		if(params['caradList']){
-		console.log("Filtred car ad list---> "+ params['caradList']);
-		this.caradList=JSON.parse(params['caradList']);
-		 }
+		    this.allCarmake = this.carmakeService.getCarmake();
+	    	this.route.queryParams.subscribe(params => {
+		    if(params['caradList']){
+		   /*  console.log("Filtred car ad list---> "+ params['caradList']);*/
+	      	this.caradList=JSON.parse(params['caradList']);
+		    }
 
 		 /*else{
 		   this.carAdService.getCaradList().subscribe(
@@ -123,9 +123,6 @@ export class CaradListComponent implements OnInit {
 			 }
 		)
 	}*/
-
-
-			 console.log("Backt---> ");
 		 });
 
 
@@ -133,19 +130,17 @@ export class CaradListComponent implements OnInit {
 		 $(document).ready(function(){
 		   $("#collapseAdSearch").on("hide.bs.collapse", function(){
 		     $("#optionsec").html('<span class="glyphicon glyphicon-collapse-down"></span> + Options');
-		   });
+		    });
 		   $("#collapseAdSearch").on("show.bs.collapse", function(){
 		     $("#optionsec").html('<span class="glyphicon glyphicon-collapse-up"></span> - Options');
+		    });
 		   });
-		 });
-
-		}
+  		}
 
 	onMakeChange(makeid){
 		console.log('onMakeChange '+ this.search.element1);
 		this.modellist=[];
 		this.modellist=this.carmakeService.getCarmodel(this.search.element1);
-
 		console.log('modellist '+ JSON.stringify(this.modellist));
 		return this.modellist;
 	 }
@@ -153,22 +148,18 @@ export class CaradListComponent implements OnInit {
 
 
  onSubmit(){
-	 console.log("Send search key" + this.search);
-
-		this.carAdService.sendAdSearch(this.search).subscribe(
-		res=>{
-			console.log('Succes' + JSON.stringify(res));
-		},
-		error=>{
-		console.log('Error '+ error);
-		}
-
-	 );
-	 }
+       this.carAdService.sendAdSearch(this.search).subscribe(
+		        res=>{
+		          	console.log('Succes' + JSON.stringify(res));
+		        },
+	       	error=>{
+		        console.log('Error '+ error);
+	  	    }
+	      );
+	    }
 
  getCarLabel(label:string){
- console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
-	return this.carmakeService.getCarLabels(label);
+ 	return this.carmakeService.getCarLabels(label);
  }
 
 }

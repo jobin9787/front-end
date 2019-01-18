@@ -4,7 +4,7 @@ import {CarAdService} from '../../services/car-ad.service';
 import {AppConst} from '../../const/app-const';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 import {Http} from '@angular/http';
-
+import {CarmakeService} from '../../services/helper/carmake.service';
 import {
   AccessibilityConfig,
   Action,
@@ -55,6 +55,7 @@ private imagesArray1:  Image[]= [];
 
   constructor(
   	private carAdService:CarAdService,
+    private carmakeService:CarmakeService,
 		private router:Router,
 		private http:Http,
 		private route:ActivatedRoute
@@ -126,6 +127,11 @@ private imagesArray1:  Image[]= [];
 
         private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
         return image ? images.indexOf(image) : -1;
+      }
+
+      getCarLabel(label:string){
+      console.log("call label function ---> "+ this.carmakeService.getCarLabels(label));
+       return this.carmakeService.getCarLabels(label);
       }
 
 

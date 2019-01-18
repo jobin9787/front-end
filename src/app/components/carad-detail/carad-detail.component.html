@@ -6,7 +6,6 @@
 <div class="container-fluid text-center">
   <div class="row">
 
-
     <div class="col-sm-2 well">
       <div class="thumbnail">
         <p>Upcoming Events:</p>
@@ -44,7 +43,7 @@
              <tbody>
                <tr>
                  <th scope="row" [translate]="'post.make'"></th>
-                 <td>{{carad.make}}</td>
+                 <td><span [innerText]="getCarLabel(carad.make)"> </span></td>
                </tr>
                <tr>
                  <th scope="row" [translate]="'post.model'"></th>
