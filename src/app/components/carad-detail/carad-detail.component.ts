@@ -75,7 +75,7 @@ private imagesArray1:  Image[]= [];
             console.log(err)
            }
         );
-       console.info("----> "+ localStorage.getItem('language'));
+       console.info("----> "+ this.getColorLabel('whit'));
   };
 
 
