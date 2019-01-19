@@ -145,7 +145,7 @@ private imagesArray1:  Image[]= [];
           }
 
       getFuelTypeLabel(label:string){
-          return this.CarmakeService.getFuelTypeLabels(label);
+          return this.carmakeService.getFuelTypeLabels(label);
           }
 
 }
