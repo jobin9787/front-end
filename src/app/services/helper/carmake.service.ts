@@ -7,6 +7,10 @@ import {CarLabels} from '../../const/car-labels';
 export class CarmakeService {
 private LabelsMap = CarLabels.CarLabelsMap;
 private colorLabelsMap = CarLabels.ColorLabelsMap;
+private transmissionLabelsMap = CarLabels.TransmissionLabelsMap;
+private drivetrainLabelsMap = CarLabels.DrivetrainLabelsMap;
+private bodyTypeLabelsMap =CarLabels.BodyTypeLabelsMap;
+private fuelTypeLabelsMap=CarLabels.FuelTypeLabelsMap;
 
    getCarmake(): Carmake[] {
       let carmake = [
@@ -58,11 +62,27 @@ private colorLabelsMap = CarLabels.ColorLabelsMap;
     return this.LabelsMap.get(label);
    }
 
-  getColorLabels(label){
+  getColorLabels(label:string){
      return this.colorLabelsMap.get(localStorage.getItem('language')).get(label);
    }
 
+  getTransmissionLabels(label:string){
+    return this.transmissionLabelsMap.get(localStorage.getItem('language')).get(label);
+  }
 
+  getDrivetrainLabels(label:string){
+    return this.drivetrainLabelsMap.get(localStorage.getItem('language')).get(label);
+  }
+
+
+  getBodyTypeLabels(label:string){
+    return this.bodyTypeLabelsMap.get(localStorage.getItem('language')).get(label);
+  }
+
+
+  getBodyTypeLabels(label:string){
+    return this.fuelTypeLabelsMap.get(localStorage.getItem('language')).get(label);
+  }
 
   constructor() { }
 

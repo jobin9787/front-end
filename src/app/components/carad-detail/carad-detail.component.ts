@@ -75,7 +75,6 @@ private imagesArray1:  Image[]= [];
             console.log(err)
            }
         );
-       console.info("----> "+ this.getColorLabel('whit'));
   };
 
 
@@ -86,9 +85,8 @@ private imagesArray1:  Image[]= [];
 
 	  imageInit(fNumber:number){
 	     let init:number = 0;
-
-      console.log('file number--->'+  fNumber);
-      console.log('  caradId--->'+  this.caradId);
+       console.log('file number--->'+  fNumber);
+       console.log('  caradId--->'+  this.caradId);
 	   for(let i:number=init;i<fNumber;i++)
 	    {
       let j :number=i+1;
@@ -101,7 +99,6 @@ private imagesArray1:  Image[]= [];
         ))
        console.log('path--->'+ '../../../image/carad/'+this.caradId+'/'+this.caradId+j+'.png')
 	     }
-
         this.imagesArray=Array.from(this.imagesArray1);
 	    }
 
@@ -138,5 +135,17 @@ private imagesArray1:  Image[]= [];
       getColorLabel(label:string){
         return this.carmakeService.getColorLabels(label);
       }
+
+      getTransmissionLabel(label:string){
+        return  this.carmakeService.getTransmissionLabels(label);
+      }
+
+      getBodyTypeLabel(label:string){
+        return this.carmakeService.getBodyTypeLabels(label);
+          }
+
+      getFuelTypeLabel(label:string){
+          return this.CarmakeService.getFuelTypeLabels(label);
+          }
 
 }

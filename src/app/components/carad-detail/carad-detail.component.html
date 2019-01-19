@@ -55,7 +55,7 @@
                </tr>
                   <tr>
                  <th scope="row" [translate]="'post.fueltype'"></th>
-                 <td>{{carad.fuel}}</td>
+                 <td><span [innerText]="getFuelTypeLabel(carad.fuel)"></span></td>
                </tr>
              </tbody>
            </table>
@@ -67,7 +67,7 @@
             <tbody>
               <tr>
                 <th scope="row" [translate]="'post.bodytype'"></th>
-                <td>{{carad.body}}</td>
+                <td><span [innerText]="getBodyType(carad.body)"</td>
               </tr>
               <tr>
                 <th scope="row" [translate]="'post.colour'"></th>
@@ -79,7 +79,7 @@
               </tr>
               <tr>
                 <th scope="row" [translate]="'post.transmission'"></th>
-                <td>{{carad.trans}}</td>
+                <td><span [innerText]="getTransmissionLabel(carad.trans)"</td>
               </tr>
             </tbody>
           </table>
