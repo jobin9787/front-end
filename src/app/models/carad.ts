@@ -1,7 +1,7 @@
 export class Carad {
 
-	    public  id: String;
-        public  make: String;
+	  public  id: String;
+    public  make: String;
 		public  body: String;
 		public  model: String;
 		public  type: String;
@@ -23,5 +23,5 @@ export class Carad {
 		public  drivetrain: String;
 		public  doorNo: String;
     public  fileNumber: number;
-    public postalcode: String;
+    public  postalcode: String;
 }
