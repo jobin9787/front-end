@@ -26,7 +26,7 @@
             <div class="col-sm-6">
           		 <label for="carmake" [translate]="'post.make'"></label>
                <select class="form-control" name="carmake" [(ngModel)]="carad.make" (change)="onMakeChange($event.target.value)">
-                <option [ngValue]="null"  [translate]="'post.other'"></option>
+                <option [ngValue]="null"  [translate]="'post.oth'"></option>
                 <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
                  {{ crm.makeName }}
                 </option>
@@ -37,7 +37,7 @@
           	<div class="form-group">
           		 <label for="carmodel" [translate]="'post.model'"></label>
                <select class="form-control" name="carmodel" [(ngModel)]="carad.model">
-                <option [ngValue]="null" [translate]="'post.other'"></option>
+                <option [ngValue]="null" [translate]="'post.oth'"></option>
                 <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
                  {{ mdl.modelname }}
                 </option>
@@ -51,9 +51,9 @@
             <div class="form-group">
                <label for="trans" [translate]="'post.transmission'"></label>
                <select class="form-control" name="trans" [(ngModel)]="carad.trans">
-                <option value="oth" [translate]="'post.other'"></option>
-                <option value="auto" [translate]="'post.automatic'"></option>
-                <option value="manu" [translate]="'post.manual'">  </option>
+                <option value="oth" [translate]="'post.oth'"></option>
+                <option value="auto" [translate]="'post.auto'"></option>
+                <option value="manu" [translate]="'post.manu'">  </option>
                </select>
             </div>
           </div>
@@ -62,7 +62,7 @@
             <div class="form-group">
               <label for="drive" [translate]="'post.drivetrain'"></label>
       	       <select class="form-control" name="drive" [(ngModel)]="carad.drivetrain">
-                 <option value="oth" [translate]="'post.other'"></option>
+                 <option value="oth" [translate]="'post.oth'"></option>
                  <option value="awd" [translate]="'post.awd'"></option>
                  <option value="fwd"  [translate]="'post.fwd'"></option>
                  <option value="rwd" [translate]="'post.rwd'"></option>
@@ -77,7 +77,7 @@
              <div class="form-group">
               <label for="body" [translate]="'post.bodytype'"></label>
               <select class="form-control" name="body" [(ngModel)]="carad.body">
-                <option value="oth" [translate]="'post.other'"></option>
+                <option value="oth" [translate]="'post.oth'"></option>
                 <option value="coup" [translate]="'post.coup'"></option>
                 <option value="conv" [translate]="'post.conv'"></option>
                 <option value="van" [translate]="'post.conv'"></option>
@@ -89,7 +89,7 @@
             <div class="form-group">
               <label for="fuel" [translate]="'post.fueltype'"></label>
     	          <select class="form-control" name="fuel" [(ngModel)]="carad.fuel">
-                  <option value="oth" [translate]="'post.other'"></option>
+                  <option value="oth" [translate]="'post.oth'"></option>
                   <option value="dis" [translate]="'post.dis'"></option>
                   <option value="gas" [translate]="'post.gas'"></option>
                   <option value="hyb" [translate]="'post.hyb'"></option>
@@ -105,7 +105,7 @@
         <div class="form-group">
          <label for="year" [translate]="'post.year'"></label>
             <select class="form-control" name="carmodel" [(ngModel)]="carad.year">
-            <option [ngValue]="null" [translate]="'post.other'"></option>
+            <option [ngValue]="null" [translate]="'post.oth'"></option>
             <option *ngFor="let yr of yearsList" [ngValue]="yr.value">
              {{ yr.name }}
             </option>
@@ -117,14 +117,14 @@
                <div class="form-group">
                  <label for="color" [translate]="'post.colour'"></label>
                 	<select class="form-control" name="color" [(ngModel)]="carad.color">
-                   <option value="oth"  [translate]="'post.other'"></option>
-                   <option value="whit"  [translate]="'post.white'"></option>
-                   <option value="blac" [translate]="'post.black'"></option>
-                   <option value="silv"  [translate]="'post.silver'"></option>
+                   <option value="oth"  [translate]="'post.oth'"></option>
+                   <option value="whit"  [translate]="'post.whit'"></option>
+                   <option value="blac" [translate]="'post.blac'"></option>
+                   <option value="silv"  [translate]="'post.silvr'"></option>
                    <option value="grey"  [translate]="'post.grey'"></option>
                    <option value="blue"  [translate]="'post.blue'"></option>
-                   <option value="gree"  [translate]="'post.green'"></option>
-                   <option value="Brow"  [translate]="'post.brown'"></option>
+                   <option value="gree"  [translate]="'post.gree'"></option>
+                   <option value="Brow"  [translate]="'post.brow'"></option>
                   </select>
                 </div>
              </div>
