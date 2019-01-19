@@ -80,7 +80,7 @@ private fuelTypeLabelsMap=CarLabels.FuelTypeLabelsMap;
   }
 
 
-  getBodyTypeLabels(label:string){
+  getFuelTypeLabels(label:string){
     return this.fuelTypeLabelsMap.get(localStorage.getItem('language')).get(label);
   }
 
