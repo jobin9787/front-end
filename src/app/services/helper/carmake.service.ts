@@ -58,29 +58,29 @@ private fuelTypeLabelsMap=CarLabels.FuelTypeLabelsMap;
       return carTransmission;
     }
 
-   getCarLabels(label:String){
+   getCarLabels(label:string){
     return this.LabelsMap.get(label);
    }
 
-  getColorLabels(label:String){
+  getColorLabels(label:string){
      return this.colorLabelsMap.get(localStorage.getItem('language')).get(label);
    }
 
-  getTransmissionLabels(label:String){
+  getTransmissionLabels(label:string){
     return this.transmissionLabelsMap.get(localStorage.getItem('language')).get(label);
   }
 
-  getDrivetrainLabels(label:String){
+  getDrivetrainLabels(label:string){
     return this.drivetrainLabelsMap.get(localStorage.getItem('language')).get(label);
   }
 
 
-  getBodyTypeLabels(label:String){
+  getBodyTypeLabels(label:string){
     return this.bodyTypeLabelsMap.get(localStorage.getItem('language')).get(label);
   }
 
 
-  getFuelTypeLabels(label:String){
+  getFuelTypeLabels(label:string){
     return this.fuelTypeLabelsMap.get(localStorage.getItem('language')).get(label);
   }
 

@@ -127,24 +127,24 @@ private imagesArray1:  Image[]= [];
         return image ? images.indexOf(image) : -1;
       }
 
-      getCarLabel(label:String){
+      getCarLabel(label:string){
           return this.carmakeService.getCarLabels(label);
       }
 
 
-      getColorLabel(label:String){
+      getColorLabel(label:string){
         return this.carmakeService.getColorLabels(label);
       }
 
-      getTransmissionLabel(label:String){
+      getTransmissionLabel(label:string){
         return  this.carmakeService.getTransmissionLabels(label);
       }
 
-      getBodyTypeLabel(label:String){
+      getBodyTypeLabel(label:string){
         return this.carmakeService.getBodyTypeLabels(label);
           }
 
-      getFuelTypeLabel(label:String){
+      getFuelTypeLabel(label:string){
           return this.carmakeService.getFuelTypeLabels(label);
           }
 
