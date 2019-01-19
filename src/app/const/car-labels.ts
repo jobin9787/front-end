@@ -15,11 +15,11 @@ public static CarLabelsMap = new Map([
 ]);
 
 public static ColorLabelsMap = new Map([
-["en",new Map([["beige","Beige"],["black","Black"],["blue","Blue"],["brown","Brown"],["gold","Gold"],["green","Green"], ["grey","Grey"],
-["red","Red"],["silver","Silver"], ["white","White"],["null",""],["",""],["undefined",""],["other",""] ])],
+["en",new Map([["beig","Beige"],["blac","Black"],["blue","Blue"],["brow","Brown"],["gold","Gold"],["gree","Green"], ["grey","Grey"],
+["red","Red"],["silve","Silver"], ["whit","White"],["null",""],["",""],["undefined",""],["other",""] ])],
 
-["fr",new Map([["beige","Beige"],["black","Noir"],["blue","Bleu"],["brown","Brun"],["gold","Or"],["green","Vert"], ["grey","Gris"],
-["red","Rouge"],["silver","Argent"], ["white","Blanc"],["null",""],["",""],["undefined",""],["other",""] ])]
+["fr",new Map([["beig","Beige"],["blac","Noir"],["blue","Bleu"],["brow","Brun"],["gold","Or"],["gree","Vert"], ["grey","Gris"],
+["red","Rouge"],["silve","Argent"], ["whit","Blanc"],["null",""],["",""],["undefined",""],["other",""] ])]
 
 ]);
 
