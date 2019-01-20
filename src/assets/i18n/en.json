@@ -83,7 +83,8 @@
           "myaccount":"My account",
           "incorrectpassword":"Incorrect username or password.",
           "enterpword":"Enter your password",
-          "login":"Log In"
+          "login":"Log In",
+          "emailsent":"An email has been sent to the email address you just registered. Please validate your email adderss and update your password info."
   }
 
 }

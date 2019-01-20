@@ -79,6 +79,10 @@
               "email":"Couriel",
               "password":"Mot de passe",
               "myaccount":"Mon compte",
-              "incorrectpassword":"Incorrect username or password."
+              "incorrectpassword":"Mot de pass ou Nom utilisateur incorrect.",
+              "enterpword":"Entrer votre mot de passe",
+              "login":"Connectez-vosu",
+              "emailsent":"An email has been sent to the email address you just registered. Please validate your email adderss and update your password info."
+        }
       }
     }
