@@ -1,6 +1,6 @@
 export class Carad {
 
-	  public  id: String;
+	  public  id: string;
     public  make: string;
 		public  body: string;
 		public  model: string;
@@ -8,17 +8,17 @@ export class Carad {
 		public  year: number;
 		public  price: number;
 		public  kilometers: number;
-		public  fuel: String ;
+		public  fuel: string ;
 		public  iduser: String;
 		public  adtitle: string;
-		public  descr: String;
+		public  descr: string;
 		public  adlocation: String;
-		public  address: String;
+		public  address: string;
 		public  phone: String;
 		public  email: String;
-		public  adtype: String;
+		public  adtype: string;
 		public  soldby: string;
-		public  trans: String;
+		public  trans: string;
 		public  color: string;
 		public  drivetrain: string;
 		public  doorNo: string;
