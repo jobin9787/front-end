@@ -74,6 +74,16 @@
     "offering":"I am offering",
     "looking":"Looking for"
 
+  },
+  "info":{"name":"Name",
+          "username":"User name *",
+          "enteruname":"Enter your username",
+          "email":"E-mail",
+          "password":"Password *",
+          "myaccount":"My account",
+          "incorrectpassword":"Incorrect username or password.",
+          "enterpword":"Enter your password",
+          "login":"Log In"
   }
 
 }
