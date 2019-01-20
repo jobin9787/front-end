@@ -41,7 +41,7 @@
 							</mat-tab>
 							<mat-tab label="New Account">
 								<div style="margin-top: 20px;">
-									<div class="alert alert-info" *ngIf="emailSent"><span [translate]="'emailsent'"></span></div>
+									<div class="alert alert-info" *ngIf="emailSent"><span [translate]="'info.emailsent'"></span></div>
 									<form (ngSubmit)="onNewAccount()">
 										<div class="form-group">
 											<label for="newUsername">Username *</label>&nbsp;<span *ngIf="usernameExists" style="color:red;">Username already exists. Choose a different one.</span>
