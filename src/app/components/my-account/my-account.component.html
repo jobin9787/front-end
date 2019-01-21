@@ -18,7 +18,7 @@
 				<div class="panel panel-default panel-faq" style="border:none;">
 				<div class="panel-body" style="background-color: #ededed; margin-top:20px;">
 						<mat-tab-group>
-							<mat-tab label="Login">
+							<mat-tab label="{{'info.login' | translate}}" >
 								<div style="margin-top:20px;">
 									<div *ngIf="loginError" style="color:red;">
 										<span [translate]="'info.incorrectpassword'"></span>
