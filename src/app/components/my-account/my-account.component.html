@@ -108,12 +108,27 @@
 										</div>
 										<div class="col-xs-8">
 									    <button mat-raised-button type="submit" class="mat-primary"><span [translate]="'info.login'"></span></button>
-                    </div>  
+                    </div>
 								</form>
 							</div>
 						</div>
 						<div class="tab-pane" id="2">
-							 <h3>Notice the gap between the content and tab after applying a background color</h3>
+							<div style="margin-top: 20px;">
+								<div class="alert alert-info" *ngIf="emailSent"><span [translate]="'info.emailsent'"></span></div>
+								<form (ngSubmit)="onNewAccount()">
+									<div class="form-group">
+										<label for="newUsername" [translate]="'info.username'"></label>&nbsp;<span *ngIf="usernameExists" style="color:red;" [translate]="'info.userexist'"></span>
+										<input type="text" class="form-control" id="newUsername" name="username" [(ngModel)]="username" required="required" >
+										<p style="color:#828282;" [translate]="'info.enteruname'"></p>
+									</div>
+									<div class="form-group">
+										<label for="email" [translate]="'info.email'"></label>&nbsp;<span *ngIf="emailExists" style="color:red;" [translate]="'info.emailexist'"></span>
+										<input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required="required" >
+										<p style="color:#828282;" []="'info.emailinstruction'"></p>
+									</div>
+									<button mat-raised-button type="submit" class="mat-primary" [transalte]="'info.createnewaccount'"></button>
+								</form>
+							</div>
 						</div>
 					  <div class="tab-pane" id="3">
 							  <h3>add clearfix to tab-content (see the css)</h3>

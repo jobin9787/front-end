@@ -78,15 +78,19 @@
   "info":{"name":"Name",
           "username":"User name *",
           "newaccount":"New account",
+          "userexist":"Username already exists. Choose a different one.",
           "forget":"Forget Password",
           "enteruname":"Enter your username",
-          "email":"E-mail",
+          "email":"Email Address *",
+          "emailexist":"Email already exists. Choose a different one.",
+          "emailinstruction":"A valid e-mail address. All e-mails from the system will be sent to this address.",
           "password":"Password *",
           "myaccount":"My account",
           "incorrectpassword":"Incorrect username or password.",
           "enterpword":"Enter your password",
           "login":"Log In",
-          "emailsent":"An email has been sent to the email address you just registered. Please validate your email adderss and update your password info."
+          "emailsent":"An email has been sent to the email address you just registered. Please validate your email adderss and update your password info.",
+          "createnewaccount":"Create new account"
   }
 
 }

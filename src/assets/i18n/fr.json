@@ -77,14 +77,18 @@
       "info":{"name":"Nom",
               "username":"Nom utilisateur *",
               "newaccount":"Nouveau compte",
+              "userexist":"Ce nom d'utilisateur existe déjà. Choisissez un autre.",
               "forget":"Mot de passe oublié",
               "enteruname":"Entrer votre Nom utilisateur",
+              "emailexist":"Cet couriel existe déjà. Choisissez un autre",
+              "emailinstruction":"Une adresse e-mail valide. Tous les courriels du système seront envoyés à cette adresse.",
               "email":"Couriel",
               "password":"Mot de passe",
               "myaccount":"Mon compte",
               "incorrectpassword":"Mot de pass ou Nom utilisateur incorrect.",
               "enterpword":"Entrer votre mot de passe",
               "login":"Connectez-vosu",
-              "emailsent":"Un Couriel a été envoyé à l'adresse que vous venez d'inscrire. Veuillez valider votre courriel et mittez à jour vos informations de mot de passe."
+              "emailsent":"Un Couriel a été envoyé à l'adresse que vous venez d'inscrire. Veuillez valider votre courriel et mittez à jour vos informations de mot de passe.",
+              "createnewaccount":"Créer un nouveau compte"
               }
       }
