@@ -89,6 +89,10 @@
               "enterpword":"Entrer votre mot de passe",
               "login":"Connectez-vosu",
               "emailsent":"Un Couriel a été envoyé à l'adresse que vous venez d'inscrire. Veuillez valider votre courriel et mittez à jour vos informations de mot de passe.",
-              "createnewaccount":"Créer un nouveau compte"
+              "createnewaccount":"Créer un nouveau compte",
+              "emailnotexist":"Adresse couriel n'existe pas",
+              "emailsent":"Courriel envoyé",
+              "youremail":"Votre courriel *",
+              "enterregistredemail":"Entrez votre adresse email enregistrée."
               }
       }

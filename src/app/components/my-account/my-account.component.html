@@ -131,7 +131,18 @@
 							</div>
 						</div>
 					  <div class="tab-pane" id="3">
-							  <h3>add clearfix to tab-content (see the css)</h3>
+							<div style="margin-top: 20px;">
+								<div class="alert alert-info" *ngIf="emailNotExists"><span [tanslate]="'info.emailnotexist'"></span></div>
+								<div class="alert alert-success" *ngIf="forgetPasswordEmailSent"><span [translate]="'info.emailsent'"></span></div>
+								<form (ngSubmit)="onForgetPassword()">
+									<div class="form-group">
+										<label for="recoverEmail" [translate]="'info.youremail'"></label>
+										<input type="email" class="form-control" id="recoverEmail" name="recoverEmail" [(ngModel)]="recoverEmail" required="required" >
+										<p style="color:#828282;"><span [translate]="'info.enterregistredemail'"></span></p>
+									</div>
+									<button mat-raised-button type="submit" class="mat-primary"><<span [translate]="'post.submit'"></span></button>
+								</form>
+							</div>
 						</div>
 				</div>
 	  </div>
