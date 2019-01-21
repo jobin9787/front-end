@@ -92,11 +92,13 @@
 								</div>
 
 								<form (ngSubmit)="onLogin()">
+                 <div class="col-xs-8">
 									<div class="form-group">
 										<label for ="username" [translate]="'info.username'"> </label>
 										<input type="text" class="form-control" id="username" name="username" [(ngModel)]="credential.username" required="required" autofocus="autofocus">
 										<p style="color:#828282;" ><span [translate]="'info.enteruname'"></span></p>
 									</div>
+								 </div>
 									<div class="form-group">
 										<label for ="password" [translate]="'info.password'"></label>
 										<input type="password" class="form-control" id="password" name="password" [(ngModel)]="credential.password" required="required" autofocus="autofocus">
