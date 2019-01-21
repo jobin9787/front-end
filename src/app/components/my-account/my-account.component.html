@@ -124,7 +124,7 @@
 									<div class="form-group">
 										<label for="email" [translate]="'info.email'"></label>&nbsp;<span *ngIf="emailExists" style="color:red;" [translate]="'info.emailexist'"></span>
 										<input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required="required" >
-										<p style="color:#828282;" [traslate]="'info.emailinstruction'"></p>
+										<p style="color:#828282;"><span [traslate]="'info.emailinstruction'"></span></p>
 									</div>
 									<button mat-raised-button type="submit" class="mat-primary"><span  [translate]="'info.createnewaccount'"></span></button>
 								</form>
