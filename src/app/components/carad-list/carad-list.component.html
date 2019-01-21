@@ -10,7 +10,7 @@
 <div class="col-sm-4">
     		 <label for="carmake" class="title" [translate]="'post.make'"></label>
          <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
-          <option [ngValue]="null" [translate]="'post.other'"></option>
+          <option [ngValue]="null" [translate]="'post.oth'"></option>
           <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
            {{ crm.makeName }}
           </option>
