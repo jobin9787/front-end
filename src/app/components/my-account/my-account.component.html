@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-8">
-			<h2 class="section-headline"><span [translate]="'myaccount'"></span></h2>
+			<h2 class="section-headline"><span [translate]="'info.myaccount'"></span></h2>
 		</div>
 		<div class="col-xs-4">
 			<img src="../../../assets/image/logo.png" class="img-responsive right" style="width:400px; z-index:1;" />
@@ -21,7 +21,7 @@
 
 
 						<mat-tab-group>
-							<mat-tab [translate]="'info.login'">
+							<mat-tab ><span [translate]="'info.login'"></span>
 								<div style="margin-top:20px;">
 									<div *ngIf="loginError" style="color:red;">
 										<span [translate]="'info.incorrectpassword'"></span>
