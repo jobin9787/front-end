@@ -76,6 +76,7 @@
       },
       "info":{"name":"Nom",
               "username":"Nom utilisateur *",
+              "newaccount":"Nouveau compte",
               "enteruname":"Entrer votre Nom utilisateur",
               "email":"Couriel",
               "password":"Mot de passe",

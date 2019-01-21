@@ -77,6 +77,8 @@
   },
   "info":{"name":"Name",
           "username":"User name *",
+          "newaccount":"New account",
+          "forget":"Forget Password",
           "enteruname":"Enter your username",
           "email":"E-mail",
           "password":"Password *",
