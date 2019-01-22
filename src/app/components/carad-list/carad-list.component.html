@@ -129,8 +129,8 @@
 					</h3>
 					<p class="infoVers"> <span [innerText]="getCarLabel(caraditem.model)"></span> </p>
 					<cite>
-						<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - {{caraditem.year}} - {{caraditem.kilometers}} Km
-						 Berline - Essence - Year {{caraditem.year}} - 173 200 km
+						<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
+						<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>   
 					</cite>
 
 					<h3 class="lo">

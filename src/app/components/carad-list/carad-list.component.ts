@@ -158,12 +158,16 @@ export class CaradListComponent implements OnInit {
 	      );
 	    }
 
- getCarLabel(label:string){
- 	return this.carmakeService.getCarLabels(label);
- }
+		 getCarLabel(label:string){
+		 	 return this.carmakeService.getCarLabels(label);
+		  }
 
- getBodyTypeLabel(label:string){
-	 return this.carmakeService.getBodyTypeLabels(label);
-		 }
+		 getBodyTypeLabel(label:string){
+			 return this.carmakeService.getBodyTypeLabels(label);
+				 }
+
+		 getFuelTypeLabel(label:string){
+				 return this.carmakeService.getFuelTypeLabels(label);
+		  }
 
 }
