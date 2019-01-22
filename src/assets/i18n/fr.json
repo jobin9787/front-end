@@ -4,7 +4,9 @@
         "login": " Identifiez-vous",
         "car" : "Autos et véhicules",
         "realestate":"Immobilier",
-        "postAd":"Poster une annonce"
+        "postAd":"Poster une annonce",
+        "myprofile":"Mom profile",
+        "logout":"Quitter"
     },
 
         "home":{

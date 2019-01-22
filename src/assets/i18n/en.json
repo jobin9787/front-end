@@ -4,7 +4,9 @@
         "login": " Login",
         "car": " Cars & Vehicles",
         "realestate":"Real Estate",
-        "postAd":"Post Ad"
+        "postAd":"Post Ad",
+        "myprofile":"My Profile",
+        "logout":"Logout"
     },
 
     "home":{

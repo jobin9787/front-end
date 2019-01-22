@@ -32,10 +32,10 @@
         </li>
 
         <li *ngIf="loggedIn">
-    			<a mat-button routerLink="/myProfile">My Profile</a>
+    			<a mat-button routerLink="/myProfile"><span [translate]="'nav.myprofile'"></span></a>
     		</li>
     		<li *ngIf="loggedIn">
-    			<a mat-button (click)="logout()">Logout</a>
+    			<a mat-button (click)="logout()"><span [translate]="'nav.logout'"></span></a>
     		</li>
         <li *ngIf="langcode=='fr'">
           <button style="margin-top:8px" type="button" class="btn btn-link" (click)="useLanguage('en')">en</button>
