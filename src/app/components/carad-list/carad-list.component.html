@@ -124,9 +124,9 @@
 			<div class="adetails">
 				<div class="flol" >
 					<h3 style="padding:10 !important;">
-				  	{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
+				  	{{caraditem.adtitle}} - <span [innerText]="getCarLabel(caraditem.make)"> </span>- <span [innerText]="getCarLabel(caraditem.model)"></span>
 					</h3>
-			
+
 					<cite>
 					<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
 						<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
