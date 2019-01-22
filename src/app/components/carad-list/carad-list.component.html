@@ -125,12 +125,11 @@
 				<div class="flol" >
 					<h3 style="padding:10 !important;">
 				  	{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
-
 					</h3>
-					<p class="infoVers"> <span [innerText]="getCarLabel(caraditem.model)"></span> </p>
+			
 					<cite>
-						<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
-						<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>   
+					<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
+						<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
 					</cite>
 
 					<h3 class="lo">
