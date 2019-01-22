@@ -123,13 +123,13 @@
 			</div>
 			<div class="adetails">
 				<div class="flol" >
-					<h3 style="padding:0 !important;">
+					<h3 style="padding:10 !important;">
 				  	{{caraditem.adtitle}} : <span [innerText]="getCarLabel(caraditem.make)"> </span>: <span [innerText]="getCarLabel(caraditem.model)"></span>
 
 					</h3>
 					<p class="infoVers"> <span [innerText]="getCarLabel(caraditem.model)"></span> </p>
 					<cite>
-						{{caraditem.body}} - {{caraditem.year}} - {{caraditem.kilometers}} Km
+						<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - {{caraditem.year}} - {{caraditem.kilometers}} Km
 						 Berline - Essence - Year {{caraditem.year}} - 173 200 km
 					</cite>
 
@@ -143,10 +143,6 @@
 				</div>
 
 				<div class="fin"></div>
-
-				<cite class="texte">
-			  	BMW 318i * (7 CV), Berline, Essence, Octobre/1998, 173 200 Km , 4 portes,...
-				</cite>
 			</div>
 			<div class="fin"></div>
 

@@ -162,4 +162,8 @@ export class CaradListComponent implements OnInit {
  	return this.carmakeService.getCarLabels(label);
  }
 
+ getBodyTypeLabel(label:string){
+	 return this.carmakeService.getBodyTypeLabels(label);
+		 }
+
 }
