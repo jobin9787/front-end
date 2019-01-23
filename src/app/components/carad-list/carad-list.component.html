@@ -1,204 +1,188 @@
 <div class="container">
+ <div class="col-md-12">
+  <div>
+	 <form (ngSubmit)="onKeywordSearch()">
 
-<div class="col-md-12">
-<div>
-	<form (ngSubmit)="onKeywordSearch()">
+		<!--  search -->
+		<div class="row equal searchdiv">
 
-<!--  search -->
-<div class="row equal searchdiv">
+			<div class="col-sm-4">
+			    		 <label for="carmake" class="title" [translate]="'post.make'"></label>
+			         <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
+			          <option [ngValue]="null" [translate]="'post.oth'"></option>
+			          <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
+			           {{ crm.makeName }}
+			          </option>
+			         </select>
+			</div>
 
-<div class="col-sm-4">
-    		 <label for="carmake" class="title" [translate]="'post.make'"></label>
-         <select class="form-control" name="carmake" [(ngModel)]="search.element1" (change)="onMakeChange($event.target.value)">
-          <option [ngValue]="null" [translate]="'post.oth'"></option>
-          <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
-           {{ crm.makeName }}
-          </option>
-         </select>
-</div>
+			<div class="col-sm-4">
+			    	<div class="form-group">
+			    		 <label for="carmodel" class="title" [translate]="'post.model'"></label>
+			         <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
+			          <option [ngValue]="null" [translate]="'post.oth'"></option>
+			          <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
+			           {{ mdl.modelname }}
+			          </option>
+			         </select>
+			      </div>
+			</div>
 
-<div class="col-sm-4">
-    	<div class="form-group">
-    		 <label for="carmodel" class="title" [translate]="'post.model'"></label>
-         <select class="form-control" name="carmodel" [(ngModel)]="search.element2">
-          <option [ngValue]="null" [translate]="'post.other'"></option>
-          <option *ngFor="let mdl of modellist" [ngValue]="mdl.modelid">
-           {{ mdl.modelname }}
-          </option>
-         </select>
-      </div>
-</div>
-
-<div class="col-sm-4 " align="right">
-	<div class="row">
-	    <div class="col-lg-1 col-centered">
-
-	 <label class="title"></label>
-				<button class="mat-primary " mat-raised-button type="submit" ><span [translate]="'post.search'"></span></button>
+			<div class="col-sm-4 " align="right">
+				<div class="row">
+				   <div class="col-lg-1 col-centered">
+    				 <label class="title"></label>
+						 <button class="mat-primary " mat-raised-button type="submit" ><span [translate]="'post.search'"></span></button>
 					</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div class="col-sm-12" align="center">
-<p>
-  <a class="btn btn-link" id="optionsec"  data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
-  <span class="glyphicon glyphicon-collapse-down"></span> + Options
-  </a>
-</p>
-</div>
+			<div class="col-sm-12" align="center">
+			 <p>
+			   <a class="btn btn-link" id="optionsec"  data-toggle="collapse" href="#collapseAdSearch" aria-expanded="false" aria-controls="collapseAdSearch">
+			   <span class="glyphicon glyphicon-collapse-down"></span> + Options
+			   </a>
+		   </p>
+			</div>
 
-<div class="collapse" id="collapseAdSearch">
-<div class="col-sm-2 col-form-label">
-  <label class="title" [translate]="'post.price'"></label>
- </div>
-     <div class="col-sm-5">
-      <div class="form-group">
-         <label for="minPrice" class="title">Min:</label>
-	       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
-       </div>
-      </div>
-    <div class="col-sm-5">
-      <div class="form-group">
-        <label class="title" for="MaxPrice">Max:</label>
-	      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
-     </div>
-    </div>
-<br>
-<div class="col-sm-4">
-  <label class="title" [translate]="'post.kilometers'"></label>
- </div>
-       <div class="col-sm-4">
-      <div class="form-group">
-         <label for="MinKilo" class="title">Min:</label>
-	       <input type="text" class="form-control" [(ngModel)]="search.element5" id="MinKilo" name="MinKilo"/>
-       </div>
-      </div>
-    <div class="col-sm-4">
-      <div class="form-group">
-        <label for="maxKilo" class="title">Max:</label>
-	      <input  type="text" class="form-control" [(ngModel)]="search.element6" id="maxKilo" name="maxKilo"/>
-     </div>
-    </div>
+		<div class="collapse" id="collapseAdSearch">
+		<div class="col-sm-2 col-form-label">
+		  <label class="title" [translate]="'post.price'"></label>
+		 </div>
+		     <div class="col-sm-5">
+		      <div class="form-group">
+		         <label for="minPrice" class="title">Min:</label>
+			       <input type="text" class="form-control" [(ngModel)]="search.element3" id="minPrice" name="minPrice"/>
+		       </div>
+		      </div>
+		    <div class="col-sm-5">
+		      <div class="form-group">
+		        <label class="title" for="MaxPrice">Max:</label>
+			      <input  type="text" class="form-control" [(ngModel)]="search.element4" id="MaxPrice" name="MaxPrice"/>
+		     </div>
+		    </div>
+		<br>
+		<div class="col-sm-4">
+		  <label class="title" [translate]="'post.kilometers'"></label>
+		 </div>
+		       <div class="col-sm-4">
+		      <div class="form-group">
+		         <label for="MinKilo" class="title">Min:</label>
+			       <input type="text" class="form-control" [(ngModel)]="search.element5" id="MinKilo" name="MinKilo"/>
+		       </div>
+		      </div>
+		    <div class="col-sm-4">
+		      <div class="form-group">
+		        <label for="maxKilo" class="title">Max:</label>
+			      <input  type="text" class="form-control" [(ngModel)]="search.element6" id="maxKilo" name="maxKilo"/>
+		     </div>
+		    </div>
 
-<div class="col-sm-4">
-  <label class="title" [translate]="'post.year'"></label>
- </div>
-       <div class="col-sm-4">
-      <div class="form-group">
-         <label for="minYear" class="title">Min:</label>
-	       <input type="text" class="form-control" [(ngModel)]="search.element7" id="minYear" name="minYear"/>
-       </div>
-      </div>
-    <div class="col-sm-4">
-      <div class="form-group">
-        <label for="maxYear" class="title">Max:</label>
-	      <input  type="text" class="form-control" [(ngModel)]="search.element8" id="maxYear" name="maxYear"/>
-     </div>
-    </div>
-</div>
+	  	<div class="col-sm-4">
+		   <label class="title" [translate]="'post.year'"></label>
+		   </div>
+		      <div class="col-sm-4">
+		      <div class="form-group">
+		         <label for="minYear" class="title">Min:</label>
+			       <input type="text" class="form-control" [(ngModel)]="search.element7" id="minYear" name="minYear"/>
+		       </div>
+		      </div>
+		    <div class="col-sm-4">
+		      <div class="form-group">
+		        <label for="maxYear" class="title">Max:</label>
+			      <input  type="text" class="form-control" [(ngModel)]="search.element8" id="maxYear" name="maxYear"/>
+		     </div>
+		    </div>
+	  	</div>
 
 
-
-</div>
+   </div>
 
 <!-- End search -->
-
-
-
-</form>
-
-</div>
-
-<div class="table-responsive" style="margin-top: 30px;">
-<div *ngIf="caradList">
-
-<div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
-
-<div class="col-md-10">
-	<div class="adcontainer">
-		<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
-		<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
-			<div class="adimage">
-		  	<img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="img-thumbnail imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
-			</div>
-			<div class="adetails">
-				<div>
-					<h3 style="padding:10 !important;">
-				  	{{caraditem.adtitle}} - <span [innerText]="getCarLabel(caraditem.make)"> </span>- <span [innerText]="getCarLabel(caraditem.model)"></span>
-					</h3>
-
-					<cite>
-					<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
-						<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
-					</cite>
-
-					<h3 class="lo">
-				    	Figeac
-				    	(46100)
-					</h3>
-				</div>
-				<div class="ergov3-priceannonce">
-			  	{{caraditem.price}} $
-				</div>
-
-				<div class="fin"></div>
-			</div>
-			<div class="fin"></div>
-
-		</a>
-	</div>
-</div>
-
-<div class="clear"></div>
-
+  </form>
  </div>
-<pagination-controls (pageChange)="pageChange($event)"
-previousLabel=""
-                      nextLabel="">
 
-</pagination-controls>
+  <div class="table-responsive" style="margin-top: 30px;">
+
+     <div *ngIf="caradList">
+      <div class="panel-body" style="background-color: #ededed; margin-top:20px;">
+        <div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
+    		 <div class="col-md-10">
+    		    <div class="adcontainer">
+    			<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
+    				<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
+    					<div class="adimage">
+    				  	<img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="img-thumbnail imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
+    					</div>
+    					<div class="adetails">
+    						<div>
+    							<h3 style="padding:10 !important;">
+    						  	{{caraditem.adtitle}} - <span [innerText]="getCarLabel(caraditem.make)"> </span>- <span [innerText]="getCarLabel(caraditem.model)"></span>
+    							</h3>
+    							<cite>
+    							<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
+    								<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
+    							</cite>
+    							<h3 class="lo">
+    						    	Figeac
+    						    	(46100)
+    							</h3>
+    						</div>
+    						<div class="ergov3-priceannonce">
+    					  	{{caraditem.price}} $
+    						</div>
+    						<div class="fin"></div>
+    					</div>
+    					<div class="fin"></div>
+    				</a>
+    	  	</div>
+      	</div>
+        <div class="clear"></div>
+       </div>
+    <pagination-controls (pageChange)="pageChange($event)"  previousLabel="" nextLabel=""> </pagination-controls>
+    </div>
+   </div>
 
 
-</div>
-<div *ngIf="!caradList">
-	<main role="main">
+    <div *ngIf="!caradList">
+      	<main role="main">
 
-		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="jumbotron">
-			<div class="container">
-				<h1 class="display-3">Hello, world!</h1>
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-			</div>
-		</div>
+      		<!-- Main jumbotron for a primary marketing message or call to action -->
+      		<div class="jumbotron">
+      			<div class="container">
+      				<h1 class="display-3">Hello, world!</h1>
+      				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      			</div>
+      		</div>
 
-		<div class="container">
-			<!-- Example row of columns -->
-			<div class="row">
-				<div class="col-md-4">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-				</div>
-				<div class="col-md-4">
-					<h2>Heading</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-				</div>
-				<div class="col-md-4">
-					<h2>Heading</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-				</div>
-			</div>
+      		<div class="container">
+      			<!-- Example row of columns -->
+      			<div class="row">
+      				<div class="col-md-4">
+      					<h2>Heading</h2>
+      					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      				</div>
+      				<div class="col-md-4">
+      					<h2>Heading</h2>
+      					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      				</div>
+      				<div class="col-md-4">
+      					<h2>Heading</h2>
+      					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      				</div>
+      			</div>
 
-			<hr>
+      			<hr>
 
-		</div> <!-- /container -->
+      		</div> <!-- /container -->
 
-	</main>
-</div>
-</div>
+      	</main>
+       </div>
+ </div>
 </div>
 
 </div>
