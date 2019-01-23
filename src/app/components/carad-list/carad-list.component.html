@@ -115,7 +115,7 @@
 <div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
 
 <div class="col-md-10">
-	<div class="adcontainer" data-id="1222225119">
+	<div class="adcontainer">
 		<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
 		<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
 			<div class="adimage">
