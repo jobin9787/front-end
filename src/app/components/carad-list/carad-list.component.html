@@ -101,11 +101,11 @@
 <!-- End search -->
   </form>
  </div>
-
+<div class="panel-body" style="background-color: #ededed; margin-top:20px;">
   <div class="table-responsive" style="margin-top: 30px;">
 
      <div *ngIf="caradList">
-      <div class="panel-body" style="background-color: #ededed; margin-top:20px;">
+
         <div *ngFor="let caraditem of caradList | paginate:{ itemsPerPage:10, currentPage:config.currentPage}">
     		 <div class="col-md-10">
     		    <div class="adcontainer">
@@ -140,7 +140,7 @@
         <div class="clear"></div>
        </div>
     <pagination-controls (pageChange)="pageChange($event)"  previousLabel="" nextLabel=""> </pagination-controls>
-    </div>
+
    </div>
 
 
@@ -183,6 +183,7 @@
       	</main>
        </div>
  </div>
+   </div>
 </div>
 
 </div>
