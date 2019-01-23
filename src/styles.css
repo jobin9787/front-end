@@ -14,17 +14,17 @@
 
 }
 
-body{
-background-color: #ededed;
-margin-top: 20px;
-}
-
-footer {
-		background-color: #555;
-		color: white;
-		padding: 15px;
-		margin-top: 115px;
+	body{
+		background-color: #ededed;
+		margin-top: 20px;
 	}
+
+	footer {
+			background-color: #555;
+			color: white;
+			padding: 15px;
+			margin-top: 115px;
+		}
 
 	#current-image {
 	  width: 400px !important;;
@@ -32,12 +32,12 @@ footer {
 	}
 
 	.imagelist{
-	margin: 5px;
-	width:120px;
-	height:120px;
+		margin: 5px;
+		width:120px;
+		height:120px;
 	}
+
 
 	.adcontainer{
-margin-bottom: 5px;
-
-	}
+	  margin-bottom: 10px;
+		}
