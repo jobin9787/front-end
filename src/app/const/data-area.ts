@@ -16,6 +16,6 @@ public static areaCodeMap = new Map([
 {value:"",name:""},
 {value:"undefined",name:""},
 {value:"other",name:""}]
-]);
+])
 
 }
