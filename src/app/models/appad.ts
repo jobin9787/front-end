@@ -17,4 +17,6 @@ public adress:string;
 public postalcode:string;
 public location:string;
 public furnished:number;
+public areacode:string;
+public addate: Date;
 }

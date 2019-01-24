@@ -166,7 +166,7 @@
 
            <div class="col-sm-6">
             <div class="form-group">
-             <label for="year" [translate]="'post.adarea'"></label>
+             <label for="areacode" [translate]="'post.adarea'"></label>
                 <select class="form-control" name="areacode" [(ngModel)]="carad.areacode">
                 <option [ngValue]="null" [translate]="'post.oth'"></option>
                 <option *ngFor="let area of areaList" [ngValue]="area.value">
