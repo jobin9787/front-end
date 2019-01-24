@@ -24,4 +24,6 @@ export class Carad {
 		public  doorNo: string;
     public  fileNumber: number;
     public  postalcode: String;
+		public areacode:sting;
+		public addate: Date;
 }
