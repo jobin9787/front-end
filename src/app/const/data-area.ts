@@ -8,6 +8,6 @@ public static areaCodeMap = new Map([
 //["fr",new Map([["beig","Beige"],["blac","Noir"],["blue","Bleu"],["brow","Brun"],["gold","Or"],["gree","Vert"], ["grey","Gris"],
 //["red","Rouge"],["silve","Argent"], ["whit","Blanc"],["null",""],["",""],["undefined",""],["other",""] ])]
 
-]);
+);
 
 }
