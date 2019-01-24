@@ -102,17 +102,17 @@
 
     <div class="row well">
 
-       <div class="col-sm-6">
-        <div class="form-group">
-         <label for="year" [translate]="'post.year'"></label>
-            <select class="form-control" name="carmodel" [(ngModel)]="carad.year">
-            <option [ngValue]="null" [translate]="'post.oth'"></option>
-            <option *ngFor="let yr of yearsList" [ngValue]="yr.value">
-             {{ yr.name }}
-            </option>
-           </select>
+         <div class="col-sm-6">
+          <div class="form-group">
+           <label for="year" [translate]="'post.year'"></label>
+              <select class="form-control" name="carmodel" [(ngModel)]="carad.year">
+              <option [ngValue]="null" [translate]="'post.oth'"></option>
+              <option *ngFor="let yr of yearsList" [ngValue]="yr.value">
+               {{ yr.name }}
+              </option>
+             </select>
+            </div>
           </div>
-        </div>
 
            <div class="col-sm-6">
                <div class="form-group">
@@ -163,6 +163,19 @@
               <input  type="text" class="form-control" [(ngModel)]="carad.address" id="Address" name="Address"/>
            </div>
            </div>
+
+           <div class="col-sm-6">
+            <div class="form-group">
+             <label for="year" [translate]="'post.adarea'"></label>
+                <select class="form-control" name="carmodel" [(ngModel)]="carad.year">
+                <option [ngValue]="null" [translate]="'post.oth'"></option>
+                <option *ngFor="let area of areaList" [ngValue]="area.value">
+                 {{ area.name }}
+                </option>
+               </select>
+              </div>
+            </div>
+
            <div class="col-sm-12">
             <div class="form-group">
               <label for="comment" [translate]="'post.description'"></label>
