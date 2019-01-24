@@ -6,7 +6,7 @@
   import {CarAdService} from '../../services/car-ad.service';
   import {UploadImageService} from '../../services/upload-image.service';
   import {years} from '../../const/data-years';
-    import {AreaCode} from '../../const/data-area';
+  import {AreaCode} from '../../const/data-area';
   import { Router} from '@angular/router';
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
