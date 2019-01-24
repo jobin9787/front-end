@@ -6,7 +6,7 @@
   import {CarAdService} from '../../services/car-ad.service';
   import {UploadImageService} from '../../services/upload-image.service';
   import {years} from '../../const/data-years';
-    import {years} from '../../const/data-area';
+    import {AreaCode} from '../../const/data-area';
   import { Router} from '@angular/router';
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
@@ -36,7 +36,7 @@
      this.allCarmake = this.carmakeService.getCarmake();
      this.cartransmission=this.carmakeService.getTransmission()
      this.yearsList=Array.from(years);
-     this.areaList=Array.from(areaCodeMap.get('en'));
+     this.areaList=Array.from(AreaCode.areaCodeMap.get('en'));
      // this.carForm=new FormGroup({
      //  'postalcode': new FormControl(this.carad.postalcode, Validators.required)
      //
