@@ -73,6 +73,27 @@
   </div>
 
   <div class="col-sm-6">
+    <div class="form-group">
+      <label for="postalCode" [translate]="'post.postalcode'"></label>
+      <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="appad.postalcode" #postalcode="ngModel">
+      <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
+          class="alert alert-danger">
+       <div *ngIf="postalcode.errors.required">
+          Postal code is required.
+       </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="col-sm-6">
+   <div class="form-group">
+     <label for="Address" [translate]="'post.address'"></label>
+     <input  type="text" class="form-control" [(ngModel)]="appad.address" id="Address" name="Address"/>
+  </div>
+  </div>
+
+
+  <div class="col-sm-6">
    <div class="form-group">
     <label for="areacode" [translate]="'post.adarea'"></label>
        <select class="form-control" name="areacode" [(ngModel)]="appad.areacode">
