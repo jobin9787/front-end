@@ -76,8 +76,9 @@
     "no":"No",
     "offering":"I am offering",
     "looking":"Looking for",
-    "adarea":"Your ad will be posted in"
-
+    "adarea":"Your ad will be posted in",
+    "email":"Email Address",
+    "phone":"Phone number"
   },
   "info":{"name":"Name",
           "username":"User name *",

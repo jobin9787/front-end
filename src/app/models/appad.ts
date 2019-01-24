@@ -19,4 +19,5 @@ public location:string;
 public furnished:number;
 public areacode:string;
 public addate: Date;
+public phone:string;
 }

@@ -37,7 +37,7 @@
             "adtitle":"Titre de l'annonce",
             "description":"Description",
             "postalcode":"Code postal",
-            "address":"adresse",
+            "address":"Adresse",
             "cancel":"Annuler",
             "submit":"Soumettre",
             "selectimg":"Sélectionner une image",
@@ -76,7 +76,9 @@
             "no":"Non",
             "offering":"J'offre",
             "looking":"Je cherche",
-            "adarea":"Votre annonce sera affichée à"
+            "adarea":"Votre annonce sera affichée à",
+            "email":"Adresse Couriel",
+            "phone":"Numéro de téléphone"
       },
       "info":{"name":"Nom",
               "username":"Nom utilisateur *",
@@ -86,7 +88,7 @@
               "enteruname":"Entrer votre Nom utilisateur",
               "emailexist":"Cet couriel existe déjà. Choisissez un autre",
               "emailinstruction":"Une adresse e-mail valide. Tous les courriels du système seront envoyés à cette adresse.",
-              "email":"Couriel",
+              "email":"Couriel *",
               "password":"Mot de passe",
               "myaccount":"Mon compte",
               "incorrectpassword":"Mot de pass ou Nom utilisateur incorrect.",
