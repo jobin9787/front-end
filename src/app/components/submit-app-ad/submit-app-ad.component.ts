@@ -26,27 +26,20 @@ areaList=[{value:'',name:''}];
 
   ngOnInit() {
          this.areaList=Array.from(AreaCode.areaCodeMap.get('en'));
-  }
+   }
 
     onSubmit()
     {
-
       this.appAdservice.sendAd(this.appad).subscribe(
-
         (res:Response)=>{
-       const data = res.json();
-        this.uploadImageService.upload(this.serverPath+"/appad/add/image?id=",JSON.parse(JSON.stringify(data)).id);
-          console.log('Succes' + JSON.stringify(res));
-          console.log('Response: ' + JSON.parse(JSON.stringify(data)).id);
-         this.router.navigate(['/result']);
-        },
+            const data = res.json();
+            this.uploadImageService.upload(this.serverPath+"/appad/add/image?id=",JSON.parse(JSON.stringify(data)).id);
+             this.router.navigate(['/result']);
+          },
         error=>{
-        console.log('Error '+ error);
+          console.log('Error '+ error);
         }
-
        );
-
-
     }
 
 }

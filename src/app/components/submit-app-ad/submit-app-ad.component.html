@@ -3,32 +3,31 @@
 <div class="col-xs-9" >
 <form    #carForm="ngForm" >
 
-  <div class="panel-group">
-  <div class="well well-lg">
 
-  <label for="title" [translate]="'post.adtitle'"></label>
-  <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
-  </div>
-  </div>
+     <div class="row well">
+        <label for="title" [translate]="'post.adtitle'"></label>
+        <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
+      </div>
 
-  <div class="row well">
-   <label for="adtype" [translate]="'post.adtype'"></label>
-    <section>
-    <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
-    <mat-radio-button value="offer" color="primary"><span [translate]="'post.offering'"></span></mat-radio-button><br/>
-    <mat-radio-button value="want" color="accent"><span [translate]="'post.looking'"></span></mat-radio-button>
-    </mat-radio-group>
-   </section>
-  </div>
+
+    <div class="row well">
+     <label for="adtype" [translate]="'post.adtype'"></label>
+      <section>
+        <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
+        <mat-radio-button value="offer" color="primary"><span [translate]="'post.offering'"></span></mat-radio-button><br/>
+        <mat-radio-button value="want" color="accent"><span [translate]="'post.looking'"></span></mat-radio-button>
+        </mat-radio-group>
+     </section>
+    </div>
 
 
   <div class="row well">
    <label for="rentby" [translate]="'rentby'"></label>
     <section>
-    <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
-    <mat-radio-button value="prof" color="primary" > <span [translate]="'post.prof'"></span></mat-radio-button><br/>
-    <mat-radio-button value="own" color="accent"><span [translate]="'post.owner'"></span></mat-radio-button>
-    </mat-radio-group>
+      <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
+      <mat-radio-button value="prof" color="primary" > <span [translate]="'post.prof'"></span></mat-radio-button><br/>
+      <mat-radio-button value="own" color="accent"><span [translate]="'post.owner'"></span></mat-radio-button>
+      </mat-radio-group>
    </section>
   </div>
 
@@ -43,15 +42,14 @@
         </option>
        </select>
      </div>
- </div>
+  </div>
 
-<div class="row well">
-  <div class="col-sm-12">
-     <label for="appart" [translate]="'post.price'"></label>
-     <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
-
-   </div>
-</div>
+  <div class="row well">
+    <div class="col-sm-12">
+       <label for="appart" [translate]="'post.price'"></label>
+       <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
+     </div>
+  </div>
 
 <div class="row well">
 <div class="col-sm-12">
