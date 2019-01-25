@@ -13,7 +13,7 @@ public room:string;
 public pet:number;
 public descr:string;
 public email:string;
-public adress:string;
+public address:string;
 public postalcode:string;
 public location:string;
 public furnished:number;
