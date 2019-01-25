@@ -1,150 +1,151 @@
 <div class="container">
-
-<div class="col-xs-6 align-middle" >
-<form    #carForm="ngForm" >
-
-
-     <div class="row well">
-        <label for="title" [translate]="'post.adtitle'"></label>
-        <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
-      </div>
+  <div class="d-flex justify-content-center">
+    <div class="col-xs-6 align-middle" >
+      <form    #carForm="ngForm" >
 
 
-    <div class="row well">
-     <label for="adtype" [translate]="'post.adtype'"></label>
-      <section>
-        <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
-        <mat-radio-button value="offer" color="primary"><span [translate]="'post.offering'"></span></mat-radio-button><br/>
-        <mat-radio-button value="want" color="accent"><span [translate]="'post.looking'"></span></mat-radio-button>
-        </mat-radio-group>
-     </section>
-    </div>
+           <div class="row well">
+              <label for="title" [translate]="'post.adtitle'"></label>
+              <input type="text" [(ngModel)]="appad.adtitle" class="form-control" id="title" name="firstName"/>
+            </div>
 
 
-  <div class="row well">
-   <label for="rentby" [translate]="'rentby'"></label>
-    <section>
-      <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
-      <mat-radio-button value="prof" color="primary" > <span [translate]="'post.prof'"></span></mat-radio-button><br/>
-      <mat-radio-button value="own" color="accent"><span [translate]="'post.owner'"></span></mat-radio-button>
-      </mat-radio-group>
-   </section>
-  </div>
+          <div class="row well">
+           <label for="adtype" [translate]="'post.adtype'"></label>
+            <section>
+              <mat-radio-group [(ngModel)]="appad.adtype" name="adtype">
+              <mat-radio-button value="offer" color="primary"><span [translate]="'post.offering'"></span></mat-radio-button><br/>
+              <mat-radio-button value="want" color="accent"><span [translate]="'post.looking'"></span></mat-radio-button>
+              </mat-radio-group>
+           </section>
+          </div>
 
 
-  <div class="row well">
-    <div class="col-sm-12">
-       <label for="appart" [translate]="'post.apptype'"></label>
-       <select class="form-control"  name="appadtitle" [(ngModel)]="appad.room">
-        <option [ngValue]="null" [translate]="'post.other'"></option>
-        <option *ngFor="let app of appList " [ngValue]="app.value">
-         {{ app.name }}
-        </option>
-       </select>
-     </div>
-  </div>
-
-  <div class="row well">
-    <div class="col-sm-12">
-       <label for="appart" [translate]="'post.price'"></label>
-       <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
-     </div>
-  </div>
-
-<div class="row well">
-<div class="col-sm-12">
-   <label for="appbath" [translate]="'post.bath'"></label>
-   <input typr="text" class="form-control"  name="appadbathroom" [(ngModel)]="appad.bathroom"/>
- </div>
-</div>
+        <div class="row well">
+         <label for="rentby" [translate]="'rentby'"></label>
+          <section>
+            <mat-radio-group [(ngModel)]="appad.rentby" name="rentby">
+            <mat-radio-button value="prof" color="primary" > <span [translate]="'post.prof'"></span></mat-radio-button><br/>
+            <mat-radio-button value="own" color="accent"><span [translate]="'post.owner'"></span></mat-radio-button>
+            </mat-radio-group>
+         </section>
+        </div>
 
 
+        <div class="row well">
+          <div class="col-sm-12">
+             <label for="appart" [translate]="'post.apptype'"></label>
+             <select class="form-control"  name="appadtitle" [(ngModel)]="appad.room">
+              <option [ngValue]="null" [translate]="'post.other'"></option>
+              <option *ngFor="let app of appList " [ngValue]="app.value">
+               {{ app.name }}
+              </option>
+             </select>
+           </div>
+        </div>
 
-  <div class="row well">
-   <label for="rentby" [translate]="'post.furn'"></label>
-    <section>
-      <mat-radio-group [(ngModel)]="appad.furnished" name="furnished">
-      <mat-radio-button value="1" color="primary"><span [translate]="'post.yes'"></span></mat-radio-button><br/>
-      <mat-radio-button value="0" color="accent"><span [translate]="'post.no'"></span></mat-radio-button>
-      </mat-radio-group>
-   </section>
-  </div>
+        <div class="row well">
+          <div class="col-sm-12">
+             <label for="appart" [translate]="'post.price'"></label>
+             <input typr="text" class="form-control"  name="appadprice" [(ngModel)]="appad.price"/>
+           </div>
+        </div>
 
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label for="postalCode" [translate]="'post.postalcode'"></label>
-      <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="appad.postalcode" #postalcode="ngModel">
-      <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
-          class="alert alert-danger">
-       <div *ngIf="postalcode.errors.required">
-          Postal code is required.
+      <div class="row well">
+      <div class="col-sm-12">
+         <label for="appbath" [translate]="'post.bath'"></label>
+         <input typr="text" class="form-control"  name="appadbathroom" [(ngModel)]="appad.bathroom"/>
        </div>
       </div>
+
+
+
+        <div class="row well">
+         <label for="rentby" [translate]="'post.furn'"></label>
+          <section>
+            <mat-radio-group [(ngModel)]="appad.furnished" name="furnished">
+            <mat-radio-button value="1" color="primary"><span [translate]="'post.yes'"></span></mat-radio-button><br/>
+            <mat-radio-button value="0" color="accent"><span [translate]="'post.no'"></span></mat-radio-button>
+            </mat-radio-group>
+         </section>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="postalCode" [translate]="'post.postalcode'"></label>
+            <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="appad.postalcode" #postalcode="ngModel">
+            <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
+                class="alert alert-danger">
+             <div *ngIf="postalcode.errors.required">
+                Postal code is required.
+             </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-sm-6">
+         <div class="form-group">
+           <label for="Address" [translate]="'post.address'"></label>
+           <input  type="text" class="form-control" [(ngModel)]="appad.address" id="Address" name="Address"/>
+         </div>
+        </div>
+
+
+        <div class="col-sm-6">
+         <div class="form-group">
+          <label for="areacode" [translate]="'post.adarea'"></label>
+             <select class="form-control" name="areacode" [(ngModel)]="appad.areacode">
+             <option [ngValue]="null" [translate]="'post.oth'"></option>
+             <option *ngFor="let area of areaList" [ngValue]="area.value">
+              {{ area.name }}
+             </option>
+            </select>
+           </div>
+         </div>
+
+        <div class="row well">
+          <div class="col-sm-12">
+             <label for="appdesc" [translate]="'post.description'"></label>
+             <textarea  class="form-control"  name="appaddescr" [(ngModel)]="appad.descr">
+             </textarea>
+           </div>
+        </div>
+
+
+      <div class="album text-muted">
+      <div calss="container">
+      <div class="fileinput fileinput-new" data-provides="fileinput">
+        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+        <div>
+          <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
+          (change)="uploadImageService.fileChangeEvent($event)"></span>
+          <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput" name="file1" (click)="uploadImageService.removeImage($event)">Remove</a>
+        </div>
+      </div>
+
+      <div class="fileinput fileinput-new" data-provides="fileinput">
+        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+        <div>
+          <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
+          (change)="uploadImageService.fileChangeEvent2($event)"></span>
+          <a href="#" name="file2" class="btn btn-default fileinput-exists" data-dismiss="fileinput" (click)="uploadImageService.removeImage($event)">Remove</a>
+        </div>
+      </div>
+      </div>
+        <br><br>
+      </div>
+
+      <div class="col-sm-6">
+          <mat-grid-list cols="20" rowHeight="60px">
+          <mat-grid-tile [colspan]="4" [rowspan]="1">
+              <button (click)="onSubmit()"     class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="6" [rowspan]="1">
+            <a class="mat-warn" mat-raised-button routerLink="/">Cancel</a>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      </form>
     </div>
   </div>
-
- <div class="col-sm-6">
-   <div class="form-group">
-     <label for="Address" [translate]="'post.address'"></label>
-     <input  type="text" class="form-control" [(ngModel)]="appad.address" id="Address" name="Address"/>
-   </div>
-  </div>
-
-
-  <div class="col-sm-6">
-   <div class="form-group">
-    <label for="areacode" [translate]="'post.adarea'"></label>
-       <select class="form-control" name="areacode" [(ngModel)]="appad.areacode">
-       <option [ngValue]="null" [translate]="'post.oth'"></option>
-       <option *ngFor="let area of areaList" [ngValue]="area.value">
-        {{ area.name }}
-       </option>
-      </select>
-     </div>
-   </div>
-
-  <div class="row well">
-    <div class="col-sm-12">
-       <label for="appdesc" [translate]="'post.description'"></label>
-       <textarea  class="form-control"  name="appaddescr" [(ngModel)]="appad.descr">
-       </textarea>
-     </div>
-  </div>
-
-
-<div class="album text-muted">
-<div calss="container">
-<div class="fileinput fileinput-new" data-provides="fileinput">
-  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-  <div>
-    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
-    (change)="uploadImageService.fileChangeEvent($event)"></span>
-    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput" name="file1" (click)="uploadImageService.removeImage($event)">Remove</a>
-  </div>
-</div>
-
-<div class="fileinput fileinput-new" data-provides="fileinput">
-  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-  <div>
-    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="file"
-    (change)="uploadImageService.fileChangeEvent2($event)"></span>
-    <a href="#" name="file2" class="btn btn-default fileinput-exists" data-dismiss="fileinput" (click)="uploadImageService.removeImage($event)">Remove</a>
-  </div>
-</div>
-</div>
-  <br><br>
-</div>
-
-<div class="col-sm-6">
-    <mat-grid-list cols="20" rowHeight="60px">
-    <mat-grid-tile [colspan]="4" [rowspan]="1">
-        <button (click)="onSubmit()"     class="mat-primary" mat-raised-button type="submit">Submit Ad</button>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="6" [rowspan]="1">
-      <a class="mat-warn" mat-raised-button routerLink="/">Cancel</a>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
-</form>
-</div>
 </div>
