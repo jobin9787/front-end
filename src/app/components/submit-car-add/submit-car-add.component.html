@@ -5,22 +5,23 @@
 
 <form    #carForm="ngForm" >
 
-	  <div class="row well">
-     <label for="title" [translate]="'post.adtitle'"></label>
-    	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="title" name="firstName"/>
-    </div>
+  	  <div class="row well">
+       <label for="adtitle" [translate]="'post.adtitle'"></label>
+      	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="adtitle" name="adtitle"/>
+       <label for="adprice" [translate]="'post.adtitle'"></label>
+       <input type="text" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/>
 
+      </div>
 
-   <div class="row well">
-    <label for="soldby"  [translate]="'post.saleby'"></label>
-     <section>
-      <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
-         <mat-radio-button value="own" color="accent" ><span  [translate]="'post.owner'"></span> </mat-radio-button>
-         <mat-radio-button value="deal" color="primary" [translate]="'post.dealer'"><span  [translate]="'post.dealer'"></span></mat-radio-button><br/>
-      </mat-radio-group>
-    </section>
-   </div>
-
+       <div class="row well">
+        <label for="soldby"  [translate]="'post.saleby'"></label>
+         <section>
+          <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
+             <mat-radio-button value="own" color="accent" ><span  [translate]="'post.owner'"></span> </mat-radio-button>
+             <mat-radio-button value="deal" color="primary" [translate]="'post.dealer'"><span  [translate]="'post.dealer'"></span></mat-radio-button><br/>
+          </mat-radio-group>
+        </section>
+       </div>
 
         <div class="row well">
             <div class="col-sm-6">
