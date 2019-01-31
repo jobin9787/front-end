@@ -161,8 +161,14 @@
            <div class="col-sm-6">
              <div class="form-group">
                <label for="Email" [translate]="'post.email'"></label>
-               <input  type="email" class="form-control" [(ngModel)]="carad.email" id="Email" name="Email"/>
+               <input  type="email" class="form-control" [(ngModel)]="carad.email" id="Email" name="Email"
+                #emailad="ngModel"/>
             </div>
+            <div [hidden]="emailad.valid || emailad.pristine"
+                				 class="alert alert-danger">
+              						Enter a valid email
+            </div>
+
            </div>
 
            <div class="col-sm-6">
