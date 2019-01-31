@@ -145,6 +145,27 @@
              </div>
             </div>
 
+
+
+           <div class="col-sm-6">
+             <div class="form-group">
+               <label for="emailad" [translate]="'post.email'"></label>
+               <input  type="email" class="form-control" [(ngModel)]="carad.email" id="emailad" name="emailad"
+                #emailad="ngModel" required/>
+            </div>
+            <div [hidden]="emailad.valid || emailad.pristine"
+                				 class="alert alert-danger">
+              						Enter a valid email
+            </div>
+           </div>
+
+           <div class="col-sm-6">
+             <div class="form-group">
+               <label for="PhoneNumber" [translate]="'post.phone'"></label>
+               <input  type="text" class="form-control" [(ngModel)]="carad.phone" id="PhoneNumber" name="PhoneNumber"/>
+            </div>
+           </div>
+
            <div class="col-sm-6">
              <div class="form-group">
                <label for="postalCode" [translate]="'post.postalcode'"></label>
@@ -157,27 +178,6 @@
                </div>
              </div>
            </div>
-
-           <div class="col-sm-6">
-             <div class="form-group">
-               <label for="emailad" [translate]="'post.email'"></label>
-               <input  type="email" class="form-control" [(ngModel)]="carad.email" id="emailad" name="emailad"
-                #emailad="ngModel" required/>
-            </div>
-            <div [hidden]="emailad.valid || emailad.pristine"
-                				 class="alert alert-danger">
-              						Enter a valid email
-            </div>
-
-           </div>
-
-           <div class="col-sm-6">
-             <div class="form-group">
-               <label for="PhoneNumber" [translate]="'post.phone'"></label>
-               <input  type="text" class="form-control" [(ngModel)]="carad.phone" id="PhoneNumber" name="PhoneNumber"/>
-            </div>
-           </div>
-
 
           <div class="col-sm-6">
             <div class="form-group">
