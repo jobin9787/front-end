@@ -178,6 +178,7 @@
                <input type="text"  class="form-control" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$"  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
                <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
                    class="alert alert-danger">
+                   test test 
                 <div *ngIf="postalcode.errors.required">
                    Postal code is required.
                 </div>
