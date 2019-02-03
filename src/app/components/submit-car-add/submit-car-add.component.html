@@ -151,11 +151,10 @@
              <div class="form-group">
                <label for="emailad" [translate]="'post.email'"></label>
                <input  type="email" class="form-control" [(ngModel)]="carad.email" id="emailad" name="emailad"
-                #emailad="ngModel" required/>
+                #emailad="ngModel" [email]="carad.email!='' && carad.email!=null"/>
             </div>
-            <div [hidden]="emailad.valid || emailad.pristine"
-                				 class="alert alert-danger">
-              						Enter a valid email
+            <div class= "alert alert-danger" *ngIf="emailad.errors?.email && emailad.touched">
+                  email invalid
             </div>
            </div>
 
