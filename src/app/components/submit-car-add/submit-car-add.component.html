@@ -7,11 +7,21 @@
 
   	  <div class="row well">
        <label for="adtitle" [translate]="'post.adtitle'"></label>
-      	<input type="text" [(ngModel)]="carad.adtitle" class="form-control" id="adtitle" name="adtitle"/>
-       <label for="adprice" [translate]="'post.adtitle'"></label>
-       <input type="text" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/>
+      	<input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
+       <label for="adprice" [translate]="'post.price'"></label>
+       <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/>
 
+       <label><input  class= "price" type="radio" name="optradio" checked><input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/></label>
+     </div>
+     <div class="radio">
+       <label><input class= "noprice" type="radio" name="optradio">Option 2</label>
+     </div>
+     <div class="radio">
+       <label><input class= "noprice" type="radio" name="optradio" disabled>Option 3</label>
+     </div>
       </div>
+
+
 
        <div class="row well">
         <label for="soldby"  [translate]="'post.saleby'"></label>
@@ -178,7 +188,7 @@
                <input type="text"  class="form-control" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$"  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
                <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
                    class="alert alert-danger">
-                   test test 
+                   test test
                 <div *ngIf="postalcode.errors.required">
                    Postal code is required.
                 </div>

@@ -91,4 +91,15 @@
   	this.modelListMap.set('kia',this.modelarray);
   	this.modelarray=[];
    }
+
+   $(document).ready(function(){
+     $(".noprice").on("clicked", function(){
+       $("#adprice2").attr('disabled', true);
+      });
+
+     $(".price").on("clicked", function(){
+        $("#adprice2").attr('disabled', false);
+       });
+    }
+
   }
