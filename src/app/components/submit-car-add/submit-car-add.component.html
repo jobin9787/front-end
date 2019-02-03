@@ -175,7 +175,7 @@
            <div class="col-sm-6">
              <div class="form-group">
                <label for="postalCode" [translate]="'post.postalcode'"></label>
-               <input type="text"  class="form-control" required  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
+               <input type="text"  class="form-control" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$"  id="postalCode" name="postalCode" [(ngModel)]="carad.postalcode" #postalcode="ngModel">
                <div *ngIf="postalcode.invalid && (postalcode.dirty || postalcode.touched)"
                    class="alert alert-danger">
                 <div *ngIf="postalcode.errors.required">
