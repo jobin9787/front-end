@@ -154,17 +154,19 @@
                 #emailad="ngModel" [email]="carad.email!='' && carad.email!=null"/>
             </div>
             <div class= "alert alert-danger" *ngIf="emailad.errors?.email && emailad.touched">
-                  email invalid
+                Please, enter a valid phone number email
             </div>
            </div>
 
-           <div class="col-sm-6">
+           <div class="col-sm-3">
              <div class="form-group">
                <label for="PhoneNumber" [translate]="'post.phone'"></label>
                <input  type="text" class="form-control" pattern ="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$" [(ngModel)]="carad.phone" id="PhoneNumber" name="PhoneNumber" #phonenumber="ngModel"/>
             </div>
-            <div class= "alert alert-danger" *ngIf="phonenumber.invalid && phonenumber.touched">
-                  Phone number
+            <div class="col-sm-3">
+              <div class= "alert alert-danger" *ngIf="phonenumber.invalid && phonenumber.touched">
+                Please, enter a valid phone number
+              </div>
             </div>
            </div>
 
