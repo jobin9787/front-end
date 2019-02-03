@@ -154,7 +154,7 @@
                 #emailad="ngModel" [email]="carad.email!='' && carad.email!=null"/>
             </div>
             <div class= "alert alert-danger" *ngIf="emailad.errors?.email && emailad.touched">
-                Please, enter a valid phone number email
+                Invalid email
             </div>
            </div>
 
@@ -166,7 +166,7 @@
             </div>
             <div class="col-sm-4">
               <div class= "alert alert-danger" *ngIf="phonenumber.invalid && phonenumber.touched">
-                Please, enter a valid phone number
+                Invalid phone number
               </div>
             </div>
 
