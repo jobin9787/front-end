@@ -1,7 +1,7 @@
 <div class="container">
 
 
- <div class="col-xs-12" >
+ <div class="col-xs-9" >
 
 <form    #carForm="ngForm" >
 
@@ -163,12 +163,13 @@
                <label for="PhoneNumber" [translate]="'post.phone'"></label>
                <input  type="text" class="form-control" pattern ="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$" [(ngModel)]="carad.phone" id="PhoneNumber" name="PhoneNumber" #phonenumber="ngModel"/>
             </div>
+            </div>
             <div class="col-sm-4">
               <div class= "alert alert-danger" *ngIf="phonenumber.invalid && phonenumber.touched">
                 Please, enter a valid phone number
               </div>
             </div>
-           </div>
+
 
            <div class="col-sm-6">
              <div class="form-group">
