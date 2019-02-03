@@ -27,6 +27,7 @@
    modelListMap : Map<String, Carmodel[]>;
     carad:Carad = new Carad();
     private serverPath:string = AppConst.serverPath;
+    declare var $: any;
    // carForm: FormGroup;
 
     constructor(private carmakeService: CarmakeService, private carAdService :CarAdService, public uploadImageService: UploadImageService,private router: Router)
