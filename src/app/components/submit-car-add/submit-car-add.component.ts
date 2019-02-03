@@ -12,7 +12,7 @@
   import { Response } from '@angular/http';
   import {AppConst} from '../../const/app-const';
   declare var $: any;
-  
+
   @Component({
     selector: 'app-submit-car-add',
     templateUrl: './submit-car-add.component.html',
@@ -42,6 +42,17 @@
      //  'postalcode': new FormControl(this.carad.postalcode, Validators.required)
      //
      // })
+
+
+     $(document).ready(function(){
+       $(".noprice").on("clicked", function(){
+         $("#adprice2").attr('disabled', true);
+        });
+
+       $(".price").on("clicked", function(){
+          $("#adprice2").attr('disabled', false);
+         });
+      }
      }
 
 
@@ -93,14 +104,6 @@
   	this.modelarray=[];
    }
 
-   $(document).ready(function(){
-     $(".noprice").on("clicked", function(){
-       $("#adprice2").attr('disabled', true);
-      });
 
-     $(".price").on("clicked", function(){
-        $("#adprice2").attr('disabled', false);
-       });
-    }
 
   }
