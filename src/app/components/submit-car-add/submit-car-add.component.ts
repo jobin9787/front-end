@@ -11,7 +11,7 @@
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
   import {AppConst} from '../../const/app-const';
-
+  declare var $: any;
   @Component({
     selector: 'app-submit-car-add',
     templateUrl: './submit-car-add.component.html',
@@ -27,7 +27,7 @@
    modelListMap : Map<String, Carmodel[]>;
     carad:Carad = new Carad();
     private serverPath:string = AppConst.serverPath;
-    declare var $: any;
+
    // carForm: FormGroup;
 
     constructor(private carmakeService: CarmakeService, private carAdService :CarAdService, public uploadImageService: UploadImageService,private router: Router)
