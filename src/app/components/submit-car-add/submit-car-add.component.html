@@ -5,23 +5,33 @@
 
 <form    #carForm="ngForm" >
 
+      <div class="row">
+         <div class="col-xs-4">Menu</div>
+         <div class="col-xs-8">
+           <div class="row">
+             <div class="col-md-4 col-md-push-8">Right Content</div>
+             <div class="col-md-8 col-md-pull-4">Content</div>
+           </div>
+         </div>
+       </div>
+
   	  <div class="row well">
-       <label for="adtitle" [translate]="'post.adtitle'"></label>
-      	<input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
-       <label for="adprice" [translate]="'post.price'"></label>
-       <div class="radio">
-        <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>
-         <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/>
-       </div>
-       <div class="radio">
-        <input class= "noprice" [(ngModel)]="carad.pricetype" value="free" type="radio" name="optradio"><span [translate]="'post.free'"></span>
-       </div>
-       <div class="radio">
-         <input class= "noprice" [(ngModel)]="carad.pricetype" value="cont" type="radio" name="optradio" ><span [translate]="'post.contactme'"></span>
-       </div>
-       <div class="radio">
-         <input class= "noprice" [(ngModel)]="carad.pricetype" value="swap" type="radio" name="optradio" ><span [translate]="'post.swap'"></span>
-       </div>
+         <label for="adtitle" [translate]="'post.adtitle'"></label>
+        	<input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
+         <label for="adprice" [translate]="'post.price'"></label>
+         <div class="radio">
+          <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>
+           <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/>
+         </div>
+         <div class="radio">
+          <input class= "noprice" [(ngModel)]="carad.pricetype" value="free" type="radio" name="optradio"><span [translate]="'post.free'"></span>
+         </div>
+         <div class="radio">
+           <input class= "noprice" [(ngModel)]="carad.pricetype" value="cont" type="radio" name="optradio" ><span [translate]="'post.contactme'"></span>
+         </div>
+         <div class="radio">
+           <input class= "noprice" [(ngModel)]="carad.pricetype" value="swap" type="radio" name="optradio" ><span [translate]="'post.swap'"></span>
+         </div>
      </div>
 
 
