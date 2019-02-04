@@ -6,9 +6,9 @@
 <form    #carForm="ngForm" >
   	  <div class="row well">
         <div class="row">
-           <div class="col-xs-4"><label for="adtitle" [translate]="'post.adtitle'"></label>
+           <div class="col-xs-6"><label for="adtitle" [translate]="'post.adtitle'"></label>
            </div>
-           <div class="col-xs-8">
+           <div class="col-xs-6">
              <div class="row">
                <div class="col-md-4 col-md-push-4"></div>
                <div class="col-md-8 col-md-pull-8">
@@ -29,7 +29,7 @@
        <div class="col-md-8 col-md-pull-8">
 
          <div class="radio">
-           <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>
+           <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>$
            <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/>
         </div>
         <div class="radio">
