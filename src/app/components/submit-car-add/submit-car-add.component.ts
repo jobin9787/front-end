@@ -11,7 +11,6 @@
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
   import {AppConst} from '../../const/app-const';
-  declare var $: any;
 
   @Component({
     selector: 'app-submit-car-add',
@@ -33,7 +32,7 @@
     constructor(private carmakeService: CarmakeService, private carAdService :CarAdService, public uploadImageService: UploadImageService,private router: Router)
      { }
 
-    ngOnInit(): void{
+    ngOnInit(){
      this.allCarmake = this.carmakeService.getCarmake();
      this.cartransmission=this.carmakeService.getTransmission()
      this.yearsList=Array.from(years);
@@ -42,17 +41,20 @@
      //  'postalcode': new FormControl(this.carad.postalcode, Validators.required)
      //
      // })
-
-
      $(document).ready(function(){
        $(".noprice").on("clicked", function(){
+
          $("#adprice2").attr('disabled', true);
         });
 
-       $(".price").on("clicked", function(){
-          $("#adprice2").attr('disabled', false);
-         });
-      }
+        $(".price").on("clicked", function(){
+           $("#adprice2").attr('disabled', false);
+          });
+
+		   });
+
+
+
      }
 
 
@@ -62,7 +64,6 @@
 
 
     onSubmit(){
-    //  console.log('Car add --->' + this.carad)
      this.carAdService.sendAd(this.carad).subscribe(
       (res:Response)=>{
      this.uploadImageService.upload(this.serverPath+"/carad/add/image?id=",JSON.parse(JSON.parse(JSON.stringify(res))._body).id);
@@ -103,7 +104,4 @@
   	this.modelListMap.set('kia',this.modelarray);
   	this.modelarray=[];
    }
-
-
-
   }

@@ -107,25 +107,10 @@ export class CaradListComponent implements OnInit {
 		    this.allCarmake = this.carmakeService.getCarmake();
 	    	this.route.queryParams.subscribe(params => {
 		    if(params['caradList']){
-		   /*  console.log("Filtred car ad list---> "+ params['caradList']);*/
+
 	      	this.caradList=JSON.parse(params['caradList']);
 		    }
-
-		 /*else{
-		   this.carAdService.getCaradList().subscribe(
-			 res=>{
-			 console.log(res.json());
-			 this.caradList=res.json()
-			 	console.log("Back ---> ");
-			},
-			 err=>{
-			 console.log(err);
-			 }
-		)
-	}*/
 		 });
-
-
 
 		 $(document).ready(function(){
 		   $("#collapseAdSearch").on("hide.bs.collapse", function(){
@@ -135,7 +120,8 @@ export class CaradListComponent implements OnInit {
 		     $("#optionsec").html('<span class="glyphicon glyphicon-collapse-up"></span> - Options');
 		    });
 		   });
-  		}
+
+			}
 
 	onMakeChange(makeid){
 		console.log('onMakeChange '+ this.search.element1);
