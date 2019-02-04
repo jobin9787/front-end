@@ -50,8 +50,17 @@
         $(".price").on("clicked", function(){
            $("#adprice2").attr('disabled', false);
           });
-
 		   });
+
+       $('.noprice').click(function(e){
+         console.log("No price clicked")
+         $("#adprice2").attr('disabled', true);
+       });
+
+       $('.price').click(function(e){
+         console.log(" price clicked")
+         $("#adprice2").attr('disabled', false);
+       });
      }
 
 
