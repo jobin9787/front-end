@@ -7,6 +7,7 @@ export class Carad {
 		public  type: string;
 		public  year: number;
 		public  price: number;
+		public pricetype:string
 		public  kilometers: number;
 		public  fuel: string ;
 		public  iduser: String;

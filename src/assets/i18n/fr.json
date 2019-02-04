@@ -78,7 +78,10 @@
             "looking":"Je cherche",
             "adarea":"Votre annonce sera affichée à",
             "email":"Adresse Couriel",
-            "phone":"Numéro de téléphone"
+            "phone":"Numéro de téléphone",
+            "free":"Gratuit",
+            "contactme":"Sur demande",
+            "swap":"Échange"
       },
       "info":{"name":"Nom",
               "username":"Nom utilisateur *",

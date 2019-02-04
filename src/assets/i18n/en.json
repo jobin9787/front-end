@@ -78,7 +78,11 @@
     "looking":"Looking for",
     "adarea":"Your ad will be posted in",
     "email":"Email Address",
-    "phone":"Phone number"
+    "phone":"Phone number",
+    "free":"Free",
+    "contactme":"Please Contact me",
+    "swap":"Swap"
+
   },
   "info":{"name":"Name",
           "username":"User name *",
