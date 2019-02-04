@@ -44,12 +44,12 @@
      $(document).ready(function(){
        $(".noprice").on("click", function(){
          console.log("No price clicked")
-         $("#adprice2").val(null);
-         $("#adprice2").attr('disabled', true);
+         $("#adprice").val(null);
+         $("#adprice").attr('disabled', true);
         });
 
         $(".price").on("click", function(){
-           $("#adprice2").attr('disabled', false);
+           $("#adprice").attr('disabled', false);
           });
 		   });
 

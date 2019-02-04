@@ -9,10 +9,9 @@
        <label for="adtitle" [translate]="'post.adtitle'"></label>
       	<input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
        <label for="adprice" [translate]="'post.price'"></label>
-       <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/>
        <div class="radio">
          <label><input  class= "price" type="radio" name="optradio" checked>
-         <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice2" min="0" name="adprice"/></label>
+         <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/></label>
        </div>
        <div class="radio">
          <label><input class= "noprice" type="radio" name="optradio">Option 2</label>
