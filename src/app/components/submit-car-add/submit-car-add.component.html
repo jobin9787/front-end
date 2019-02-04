@@ -16,6 +16,16 @@
        </div>
 
   	  <div class="row well">
+        <div class="row">
+           <div class="col-xs-4"><label for="adtitle" [translate]="'post.adtitle'"></label></div>
+           <div class="col-xs-8">
+             <div class="row">
+               <div class="col-md-4 col-md-push-8"><input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/></div>
+               <div class="col-md-8 col-md-pull-4">Content</div>
+             </div>
+           </div>
+
+
          <label for="adtitle" [translate]="'post.adtitle'"></label>
         	<input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
          <label for="adprice" [translate]="'post.price'"></label>
