@@ -43,7 +43,7 @@
      // })
      $(document).ready(function(){
        $(".noprice").on("clicked", function(){
-
+         console.log("No price clicked")
          $("#adprice2").attr('disabled', true);
         });
 
