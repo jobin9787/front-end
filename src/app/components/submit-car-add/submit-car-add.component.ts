@@ -42,25 +42,25 @@
      //
      // })
      $(document).ready(function(){
-       $(".noprice").on("clicked", function(){
+       $(".noprice").on("click", function(){
          console.log("No price clicked")
          $("#adprice2").attr('disabled', true);
         });
 
-        $(".price").on("clicked", function(){
+        $(".price").on("click", function(){
            $("#adprice2").attr('disabled', false);
           });
 		   });
 
-       $('.noprice').click(function(e){
-         console.log("No price clicked")
-         $("#adprice2").attr('disabled', true);
-       });
-
-       $('.price').click(function(e){
-         console.log(" price clicked")
-         $("#adprice2").attr('disabled', false);
-       });
+       // $('.noprice').click(function(e){
+       //   console.log("No price clicked")
+       //   $("#adprice2").attr('disabled', true);
+       // });
+       //
+       // $('.price').click(function(e){
+       //   console.log(" price clicked")
+       //   $("#adprice2").attr('disabled', false);
+       // });
      }
 
 
