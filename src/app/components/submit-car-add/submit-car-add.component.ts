@@ -11,7 +11,7 @@
   import { FormControl, FormGroup, Validators } from '@angular/forms';
   import { Response } from '@angular/http';
   import {AppConst} from '../../const/app-const';
-
+  declare var $: any;
   @Component({
     selector: 'app-submit-car-add',
     templateUrl: './submit-car-add.component.html',
@@ -52,9 +52,6 @@
           });
 
 		   });
-
-
-
      }
 
 
