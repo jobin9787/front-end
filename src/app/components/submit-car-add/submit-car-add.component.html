@@ -11,7 +11,7 @@
        <label for="adprice" [translate]="'post.price'"></label>
        <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" name="adprice"/>
 
-     <label><input  class= "price" type="radio" name="optradio" checked><input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice2" name="adprice"/></label>
+     <label><input  class= "price" type="radio" name="optradio" checked><input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice2" min="0" name="adprice"/></label>
 
      <div class="radio">
        <label><input class= "noprice" type="radio" name="optradio">Option 2</label>
