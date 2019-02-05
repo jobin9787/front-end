@@ -45,3 +45,8 @@
 .ng-invalid:not(form)  {
   border: 1px solid #a94442; /* red */
 }
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
