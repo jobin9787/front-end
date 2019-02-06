@@ -34,7 +34,7 @@
 	.imagelist{
 		margin: 5px;
 		width:150px;
-		height:100px;
+		height:100px !important;
 	}
 
 
