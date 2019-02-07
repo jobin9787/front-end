@@ -42,6 +42,12 @@ useLanguage(language: string) {
      );
 
      console.log('language --->  '+navigator.language);
+
+     if (navigator.language != "fr") {
+         useLanguage("en")
+       }else{
+            useLanguage("fr");
+       }
   }
 
 }
