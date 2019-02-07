@@ -111,30 +111,35 @@
     		    <div class="adcontainer">
     			<!-- <a href="javascript:;" class="fcbx_ajouterFavoris ajouterAuxFavoris ergov3-favoris " url="https://www.paruvendu.fr/auto-moto/popincommunfo/default/fcbx?boxtype=ajouteramaselection&amp;id_annonce=1222225119&amp;id_user=" onclick="xt_click(this,&#39;C&#39;,xtn2,&#39;Ajout-Selection-Detail&#39;,&#39;A&#39;);" title="Ajouter aux favoris">&nbsp;</a> -->
     				<a [routerLink]=""  (click)="onSelect(caraditem)" class="list-group-item clearfix" title="BMW Série 3 46100 Figeac">
-    					<div class="adimage">
-    				  	<img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="responsive imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
-    					</div>
-    					<div class="adetails">
-    						<div>
-    							<h3 style="padding:10 !important;">
-    						  	{{caraditem.adtitle}} - <span [innerText]="getCarLabel(caraditem.make)"> </span>- <span [innerText]="getCarLabel(caraditem.model)"></span>
-    							</h3>
-    							<cite>
-    							<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
-    								<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
-    							</cite>
-    							<h3 class="lo">
-    						    	Figeac
-    						    	(46100)
-    							</h3>
-    						</div>
-    						<div class="ergov3-priceannonce">
-    					  <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
-    						</div>
-    						<div class="fin"></div>
-    					</div>
-    					<div class="fin"></div>
-    				</a>
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="adimage">
+      				  	   <img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="responsive imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
+      					 </div>
+              </div>
+              <div lass="8">
+                 <div class="adetails">
+      						<div>
+      							<h3 style="padding:10 !important;">
+      						  	{{caraditem.adtitle}} - <span [innerText]="getCarLabel(caraditem.make)"> </span>- <span [innerText]="getCarLabel(caraditem.model)"></span>
+      							</h3>
+      							<cite>
+      							<span [innerText]="getCarLabel(caraditem.model)"></span>-	<span [innerText]="getBodyTypeLabel(caraditem.body)"></span> - <span [translate]="'post.year'"></span>: {{caraditem.year}} - {{caraditem.kilometers}} Km
+      								<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
+      							</cite>
+      							<h3 class="lo">
+      						    	Figeac
+      						    	(46100)
+      							</h3>
+      						</div>
+      						<div class="pricead">
+      					  <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
+      						</div>
+      					</div>
+             </div>
+            </div>
+    			 </a>
     	  	</div>
       	</div>
         <div class="clear"></div>
