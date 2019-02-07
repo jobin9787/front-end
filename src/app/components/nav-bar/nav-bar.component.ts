@@ -32,14 +32,16 @@ useLanguage(language: string) {
 
   ngOnInit() {
        this.loginService.checkSession().subscribe(
-        res => {
-             this.loggedIn=true;
-            },
-       err=>{
-            this.loggedIn=false;
-            console.log(err);
-          }
+          res => {
+              this.loggedIn=true;
+                },
+          err=>{
+              this.loggedIn=false;
+              console.log(err);
+              }
      );
+
+     console.log('language --->  '+navigator.language);
   }
 
 }
