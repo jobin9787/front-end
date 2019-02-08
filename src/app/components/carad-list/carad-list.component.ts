@@ -156,4 +156,6 @@ export class CaradListComponent implements OnInit {
 				 return this.carmakeService.getFuelTypeLabels(label);
 		  }
 
+			getPriceLabel
+
 }

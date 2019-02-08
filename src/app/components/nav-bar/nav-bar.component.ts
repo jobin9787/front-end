@@ -31,23 +31,21 @@ useLanguage(language: string) {
    }
 
   ngOnInit() {
-       this.loginService.checkSession().subscribe(
-          res => {
-              this.loggedIn=true;
-                },
-          err=>{
-              this.loggedIn=false;
-              console.log(err);
-              }
-     );
+         this.loginService.checkSession().subscribe(
+            res => {
+                this.loggedIn=true;
+                  },
+            err=>{
+                this.loggedIn=false;
+                console.log(err);
+                }
+       );
 
-     console.log('language --->  '+navigator.language);
-
-     if (navigator.language != "fr") {
-         this.useLanguage("en")
-       }else{
-            this.useLanguage("fr");
-       }
-  }
+       if (navigator.language != "fr") {
+             this.useLanguage("en")
+           }else{
+                this.useLanguage("fr");
+           }
+     }
 
 }

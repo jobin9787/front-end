@@ -132,7 +132,22 @@
       						    	(46100)
       							</h3>
                     <div class="pricead">
-        					      <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
+                       <div *ngIf="caraditem.pricetype=='pric' || caraditem.pricetype=='null'">
+                         <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
+                       </div>
+                       <div *ngIf="caraditem.pricetype!='pric'">
+                          <div *ngIf="caraditem.pricetype=='cont'">
+                            <span [translate]="'post.cont'">:</span>
+                          </div>
+                          <div *ngIf="caraditem.pricetype=='free'">
+                            <span [translate]="'post.free'">:</span>
+                          </div>
+                          <div *ngIf="caraditem.pricetype=='swap'">
+                            <span [translate]="'post.swap'">:</span>
+                          </div>
+
+                       </div>
+
         						</div>
       					</div>
              </div>
