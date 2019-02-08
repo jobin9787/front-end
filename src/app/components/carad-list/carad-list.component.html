@@ -137,13 +137,13 @@
                        </div>
                        <div *ngIf="caraditem.pricetype!='pric'">
                           <div *ngIf="caraditem.pricetype=='cont'">
-                             <span [translate]="'post.price'">:</span><span [translate]="'post.cont'"></span>
+                             <label [translate]="'post.price'">: </label><span [translate]="'post.cont'"></span>
                           </div>
                           <div *ngIf="caraditem.pricetype=='free'">
                              <span [translate]="'post.price'">:</span><span [translate]="'post.free'"></span>
                           </div>
                           <div *ngIf="caraditem.pricetype=='swap'">
-                             <span [translate]="'post.price'">:</span><span [translate]="'post.swap'"></span>
+                             <label [translate]="'post.price'">: </label><span [translate]="'post.swap'"></span>
                           </div>
                        </div>
 
