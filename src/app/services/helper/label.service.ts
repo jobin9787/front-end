@@ -5,9 +5,9 @@ export class LabelService {
 
 
 
-  getColorLabels(label:string){
-     return this.colorLabelsMap.get(localStorage.getItem('language')).get(label);
-   }
+  // getColorLabels(label:string){
+  //    return this.colorLabelsMap.get(localStorage.getItem('language')).get(label);
+  //  }
 
 
   constructor() { }
