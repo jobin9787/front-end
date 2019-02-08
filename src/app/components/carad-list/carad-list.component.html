@@ -133,7 +133,7 @@
       							</h3>
                     <div class="pricead">
                        <div *ngIf="caraditem.pricetype=='pric'">
-                         <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
+                         <span [translate]="'post.price'">:</span>	{{caraditem.price}} $ {{caraditem.pricetype}}
                        </div>
                        <div *ngIf="caraditem.pricetype!='pric'">
                           <div *ngIf="caraditem.pricetype=='cont'">
