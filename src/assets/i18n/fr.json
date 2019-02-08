@@ -80,7 +80,7 @@
             "email":"Adresse Couriel",
             "phone":"Numéro de téléphone",
             "free":"Gratuit",
-            "contactme":"Sur demande",
+            "cont":"Sur demande",
             "swap":"Échange"
       },
       "info":{"name":"Nom",
