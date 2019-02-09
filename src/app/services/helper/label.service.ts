@@ -3,7 +3,7 @@ import {AreaCode} from '../../const/data-area';
 
 @Injectable()
 export class LabelService {
-private areacodeMap=AreaCode.AreaCodeMap;
+private areaCodeMap=AreaCode.AreaCodeMap;
 
 
   getAreaCodeLabels(label:string){
