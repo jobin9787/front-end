@@ -133,14 +133,14 @@
                     </h3>
                     <div class="pricead">
                        <div *ngIf="caraditem.pricetype=='pric'">
-                         <span [translate]="'post.price'">:</span>	{{caraditem.price}} $
+                         <label [translate]="'post.price'">:</label>	{{caraditem.price}} $
                        </div>
                        <div *ngIf="caraditem.pricetype!='pric'">
                           <div *ngIf="caraditem.pricetype=='cont'">
                              <label style="margin-right:1em" [translate]="'post.price'"> : </label><span [translate]="'post.cont'"></span>
                           </div>
                           <div *ngIf="caraditem.pricetype=='free'">
-                             <span style="margin-right:1em" [translate]="'post.price'"> : </span><span [translate]="'post.free'"></span>
+                             <label style="margin-right:1em" [translate]="'post.price'"> : </label><span [translate]="'post.free'"></span>
                           </div>
                           <div *ngIf="caraditem.pricetype=='swap'">
                              <label style="margin-right:1em" [translate]="'post.price'"> :  </label><span [translate]="'post.swap'"></span>
