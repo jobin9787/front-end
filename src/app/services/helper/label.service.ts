@@ -3,11 +3,11 @@ import {AreaCode} from '../../const/data-area';
 
 @Injectable()
 export class LabelService {
-private areaCodeMap=AreaCode.AreaCodeMap;
+private areaCodeMaps=AreaCode.AreaCodeMaps;
 
 
   getAreaCodeLabels(label:string){
-     return this.areaCodeMap.get(localStorage.getItem('language')).get(label);
+     return this.areaCodeMaps.get(localStorage.getItem('language')).get(label);
    }
 
 
