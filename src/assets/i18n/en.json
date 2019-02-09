@@ -6,7 +6,10 @@
         "realestate":"Real Estate",
         "postAd":"Post Ad",
         "myprofile":"My Profile",
-        "logout":"Logout"
+        "logout":"Logout",
+        "free":"To give for Free",
+        "swap":"Swap & Trade",
+        "serv":"Services"
     },
 
     "home":{

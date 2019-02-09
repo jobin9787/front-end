@@ -6,7 +6,10 @@
         "realestate":"Immobilier",
         "postAd":"Poster une annonce",
         "myprofile":"Mom profile",
-        "logout":"Quitter"
+        "logout":"Quitter",
+        "free":"Donner gratuitement",
+        "swap":"Échange & Troc",
+        "serv":"Services"
     },
 
         "home":{
