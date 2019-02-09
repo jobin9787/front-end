@@ -25,7 +25,7 @@ areaList=[{value:'',name:''}];
               public uploadImageService:UploadImageService) { }
 
   ngOnInit() {
-         this.areaList=Array.from(AreaCode.areaCodeMap.get('en'));
+         this.areaList=Array.from(AreaCode.AreaCodeMap.get('en'));
    }
 
     onSubmit()

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {AreaCode} from '../../const/car-labels';
+import {AreaCode} from '../../const/data-area';
 
 @Injectable()
 export class LabelService {
