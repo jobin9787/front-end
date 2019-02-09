@@ -36,7 +36,7 @@
      this.allCarmake = this.carmakeService.getCarmake();
      this.cartransmission=this.carmakeService.getTransmission()
      this.yearsList=Array.from(years);
-     this.areaList=Array.from(AreaCode.areaCodeMap.get('en'));
+     this.areaList=Array.from(AreaCode.AreaCodeMap.get('en'));
      // this.carForm=new FormGroup({
      //  'postalcode': new FormControl(this.carad.postalcode, Validators.required)
      //

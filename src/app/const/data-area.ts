@@ -1,7 +1,7 @@
 export class AreaCode {
 
 
-public static areaCodeMap = new Map([
+public static AreaCodeMap = new Map([
 ["en", [{value:"H1A",name:"Pointe-aux-Trembles"},
 {value:"H1B",name:"Montréal-Est"},
 {value:"H1C",name:"Rivière-des-Prairies"},
