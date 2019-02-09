@@ -7,7 +7,7 @@ private areaCodeMap=AreaCode.AreaCodeMap;
 
 
   getAreaCodeLabels(label:string){
-     return this.areaCodeMap .get(localStorage.getItem('language')).get(label);
+     return this.areaCodeMap.get(localStorage.getItem('language')).get(label);
    }
 
 
