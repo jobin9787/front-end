@@ -128,8 +128,7 @@
       								<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
       							</cite>
       							<h3 class="lo">
-      						    	Figeac
-      						    	(46100)
+      						   <span [innerText]="getAreaLabel(caraditem.areacode)"> </span> 
                     </h3>
                     <div class="pricead">
                        <div *ngIf="caraditem.pricetype=='pric'">

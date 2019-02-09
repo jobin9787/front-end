@@ -8,7 +8,7 @@ import {CarAdService} from '../../services/car-ad.service';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 import {Http} from '@angular/http';
 import {AppConst} from '../../const/app-const';
-
+import {LabelService} from '../../services/helper/label.service'
 
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
@@ -37,20 +37,20 @@ export class CaradListComponent implements OnInit {
 	private router: Router,
 	private http:Http,
 	private route: ActivatedRoute,
-	private carmakeService: CarmakeService
+	private carmakeService: CarmakeService,
+	private labelService: LabelService
 	) {
 
 		let currentPage = localStorage.getItem('currentPage');
-		this.config = {
+	 	this.config = {
 				currentPage: currentPage ? currentPage : 1 ,
 						};
 
-  let lcaradList : Carad[];
-	 lcaradList = JSON.parse(localStorage.getItem("caradList"));
+   let lcaradList : Carad[];
+	  lcaradList = JSON.parse(localStorage.getItem("caradList"));
 				if (lcaradList){
 					this.caradList=lcaradList;
 						}
-
 	 }
 
 /*
@@ -156,6 +156,8 @@ export class CaradListComponent implements OnInit {
 				 return this.carmakeService.getFuelTypeLabels(label);
 		  }
 
-			getPriceLabel
+			getAreaLabel(label:string){
+				return this.labelService.getAreaCodeLabels(label);
+			}
 
 }

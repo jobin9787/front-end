@@ -12,9 +12,9 @@ public static areaCodeMap = new Map([
 {value:"H4A",name:"Notre-Dame-de-Grâce"},
 {value:"H8Y",name:"Roxboro"},
 {value:"H7V",name:"Chomedey"},
-{value:"H7Y",name:"les-Laval"},
-{value:"",name:""},{value:"undefined",name:""},
-{value:"other",name:""}]],
+{value:"H7Y",name:"les-Laval"}
+//,{value:"",name:""},{value:"undefined",name:""},{value:"other",name:""}
+]],
 ["fr", [{value:"H1A",name:"Pointe-aux-Trembles"},
 {value:"H1B",name:"Montréal-Est"},
 {value:"H1C",name:"Rivière-des-Prairies"},
@@ -25,9 +25,9 @@ public static areaCodeMap = new Map([
 {value:"H4A",name:"Notre-Dame-de-Grâce"},
 {value:"H8Y",name:"Roxboro"},
 {value:"H7V",name:"Chomedey"},
-{value:"H7Y",name:"les-Laval"},
-{value:"",name:""},{value:"undefined",name:""},
-{value:"other",name:""}]]
+{value:"H7Y",name:"les-Laval"}
+//,{value:"",name:""},{value:"undefined",name:""},{value:"other",name:""}
+]]
 ]);
 
 }
