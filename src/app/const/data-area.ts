@@ -33,10 +33,10 @@ public static AreaCodeMap = new Map([
 
 public static AreaCodeMaps = new Map([
 ["en",new Map([["H1A","Pointe-aux-Trembles"],["H1C","Montréal-Est"],["H1C","Rivière-des-Prairies"],["H1G","Montréal-Nord"],["H2A","Saint-Michel"],["H3A","Centre-ville de Montréal"], ["H4A","Notre-Dame-de-Grâce"],
-["H8Y","Roxboro"],["H7V","Chomedey"], ["H7Y","les-Laval"], ["null","Gread Montreal"], ["","Gread Montreal"]  ])],
+["H8Y","Roxboro"],["H7V","Chomedey"], ["H7Y","les-Laval"], ["null","Gread Montreal"], ["","Gread Montreal"],["null","Grand Montréal"]   ])],
 
 ["fr",new Map([["H1A","Pointe-aux-Trembles"],["H1C","Montréal-Est"],["H1C","Rivière-des-Prairies"],["H1G","Montréal-Nord"],["H2A","Saint-Michel"],["H3A","Centre-ville de Montréal"], ["H4A","Notre-Dame-de-Grâce"],
-["H8Y","Roxboro"],["H7V","Chomedey"], ["H7Y","les-Laval"], ["null","Grand Montréal"], ["","Grand Montréal"] ])]
+["H8Y","Roxboro"],["H7V","Chomedey"], ["H7Y","les-Laval"], ["null","Grand Montréal"], ["","Grand Montréal"],["null","Grand Montréal"]  ])]
 
 ]);
 
