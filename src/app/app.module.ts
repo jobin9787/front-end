@@ -14,6 +14,7 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { SubmitCarAddComponent } from './components/submit-car-add/submit-car-add.component';
 import {CarAdService} from './services/car-ad.service';
 import {AppAdService} from './services/app-ad.service';
+import {LabelService} from './services/helper/label.service';
 
 import {CarmakeService} from './services/helper/carmake.service';
 import {UploadImageService} from './services/upload-image.service';
@@ -96,7 +97,8 @@ import { PostAdComponent } from './components/post-ad/post-ad.component';
               CarmakeService,
               UploadImageService,
               GoogleMapService,
-             EmailHelperService],
+              EmailHelperService,
+              LabelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
