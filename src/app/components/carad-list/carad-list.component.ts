@@ -157,6 +157,7 @@ export class CaradListComponent implements OnInit {
 		  }
 
 			getAreaLabel(label:string){
+				console.log('area ---> '+ label)
 				return this.labelService.getAreaCodeLabels(label);
 			}
 
