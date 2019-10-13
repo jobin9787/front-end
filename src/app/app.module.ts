@@ -15,6 +15,7 @@ import { SubmitCarAddComponent } from './components/submit-car-add/submit-car-ad
 import {CarAdService} from './services/car-ad.service';
 import {AppAdService} from './services/app-ad.service';
 import {LabelService} from './services/helper/label.service';
+import {GivefreeService} from './services/givefree.service';
 
 import {CarmakeService} from './services/helper/carmake.service';
 import {UploadImageService} from './services/upload-image.service';
@@ -44,6 +45,10 @@ import { AppadListComponent } from './components/appad-list/appad-list.component
 import { AppadDetailComponent } from './components/appad-detail/appad-detail.component';
 import { CaradSearchComponent } from './components/carad-search/carad-search.component';
 import { PostAdComponent } from './components/post-ad/post-ad.component';
+import { GivefreeListComponent } from './components/givefree-list/givefree-list.component';
+import { GivefreeDetailComponent } from './components/givefree-detail/givefree-detail.component';
+import { SubmitFreeAddComponent } from './components/submit-free-add/submit-free-add.component';
+
 
 
 
@@ -65,7 +70,10 @@ import { PostAdComponent } from './components/post-ad/post-ad.component';
     AppadListComponent,
     AppadDetailComponent,
     CaradSearchComponent,
-    PostAdComponent
+    PostAdComponent,
+    GivefreeListComponent,
+    GivefreeDetailComponent,
+    SubmitFreeAddComponent
 
   ],
   imports: [
@@ -98,7 +106,8 @@ import { PostAdComponent } from './components/post-ad/post-ad.component';
               UploadImageService,
               GoogleMapService,
               EmailHelperService,
-              LabelService],
+              LabelService,
+              GivefreeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

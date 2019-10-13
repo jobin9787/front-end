@@ -1,77 +1,76 @@
 <div class="container">
 
-
  <div class="col-xs-9" >
 
-<form    #carForm="ngForm" >
-  	  <div class="row well">
-        <div class="row">
-           <div class="col-xs-4"><label for="adtitle" [translate]="'post.adtitle'"></label>
-           </div>
-           <div class="col-xs-8">
-             <div class="row">
-               <div class="col-md-4 col-md-push-4"></div>
-               <div class="col-md-8 col-md-pull-8">
-                 <input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
+  <form    #carForm="ngForm" >
+    	<div class="row well">
+          <div class="row">
+             <div class="col-xs-4"><label for="adtitle" [translate]="'post.adtitle'"></label>
+             </div>
+             <div class="col-xs-8">
+               <div class="row">
+                 <div class="col-md-4 col-md-push-4"></div>
+                 <div class="col-md-8 col-md-pull-8">
+                   <input type="text" [(ngModel)]="carad.adtitle" required class="form-control" id="adtitle" name="adtitle"/>
+                 </div>
                </div>
              </div>
+             <hr />
            </div>
-           <hr />
+
+    <!-- -->
+    <div class="row">
+       <div class="col-xs-4"><label for="adprice" [translate]="'post.price'"></label>
+       </div>
+       <div class="col-xs-8">
+         <div class="row">
+           <div class="col-md-4 col-md-push-4"></div>
+           <div class="col-md-8 col-md-pull-8">
+
+             <div class="radio">
+               <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>
+               <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/>$
+            </div>
+            <div class="radio">
+             <input class= "noprice" [(ngModel)]="carad.pricetype" value="free" type="radio" name="optradio"><span [translate]="'post.free'"></span>
+            </div>
+            <div class="radio">
+              <input class= "noprice" [(ngModel)]="carad.pricetype" value="cont" type="radio" name="optradio" ><span [translate]="'post.cont'"></span>
+            </div>
+            <div class="radio">
+              <input class= "noprice" [(ngModel)]="carad.pricetype" value="swap" type="radio" name="optradio" ><span [translate]="'post.swap'"></span>
+            </div>
+           </div>
          </div>
-
-<!-- -->
-<div class="row">
-   <div class="col-xs-4"><label for="adprice" [translate]="'post.price'"></label>
-   </div>
-   <div class="col-xs-8">
-     <div class="row">
-       <div class="col-md-4 col-md-push-4"></div>
-       <div class="col-md-8 col-md-pull-8">
-
-         <div class="radio">
-           <input  value="pric" [(ngModel)]="carad.pricetype" class= "price" type="radio" name="optradio" checked>
-           <input type="number" [(ngModel)]="carad.price" class="form-control" id="adprice" min="0" name="adprice"/>$
-        </div>
-        <div class="radio">
-         <input class= "noprice" [(ngModel)]="carad.pricetype" value="free" type="radio" name="optradio"><span [translate]="'post.free'"></span>
-        </div>
-        <div class="radio">
-          <input class= "noprice" [(ngModel)]="carad.pricetype" value="cont" type="radio" name="optradio" ><span [translate]="'post.cont'"></span>
-        </div>
-        <div class="radio">
-          <input class= "noprice" [(ngModel)]="carad.pricetype" value="swap" type="radio" name="optradio" ><span [translate]="'post.swap'"></span>
-        </div>
        </div>
      </div>
-   </div>
- </div>
 
-<!-- -->
+    <!-- -->
 
-     </div>
+    </div>
 
 
 
-       <div class="row well">
-        <label for="soldby"  [translate]="'post.saleby'"></label>
-         <section>
-          <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
-             <mat-radio-button value="own" color="accent" ><span  [translate]="'post.owner'"></span> </mat-radio-button>
-             <mat-radio-button value="deal" color="primary" [translate]="'post.dealer'"><span  [translate]="'post.dealer'"></span></mat-radio-button><br/>
-          </mat-radio-group>
-        </section>
-       </div>
+           <div class="row well">
+            <label for="soldby"  [translate]="'post.saleby'"></label>
+             <section>
+              <mat-radio-group [(ngModel)]="carad.soldby" name="soldby">
+                 <mat-radio-button value="own" color="accent" ><span  [translate]="'post.owner'"></span> </mat-radio-button>
+                 <mat-radio-button value="deal" color="primary" [translate]="'post.dealer'"><span  [translate]="'post.dealer'"></span></mat-radio-button><br/>
+              </mat-radio-group>
+            </section>
+           </div>
 
-        <div class="row well">
-            <div class="col-sm-6">
-          		 <label for="carmake" [translate]="'post.make'"></label>
-               <select class="form-control" name="carmake" [(ngModel)]="carad.make" (change)="onMakeChange($event.target.value)">
-                <option [ngValue]="null"  [translate]="'post.oth'"></option>
-                <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
-                 {{ crm.makeName }}
-                </option>
-               </select>
-             </div>
+            <div class="row well">
+                <div class="col-sm-6">
+              		 <label for="carmake" [translate]="'post.make'"></label>
+                   <select class="form-control" name="carmake" [(ngModel)]="carad.make" (change)="onMakeChange($event.target.value)">
+                    <option [ngValue]="null"  [translate]="'post.oth'"></option>
+                    <option *ngFor="let crm of allCarmake" [ngValue]="crm.makeId">
+                     {{ crm.makeName }}
+                    </option>
+                   </select>
+                 </div>
 
            <div class="col-sm-6">
           	<div class="form-group">
@@ -236,7 +235,7 @@
             <div class="form-group">
              <label for="areacode" [translate]="'post.adarea'"></label>
                 <select class="form-control" name="areacode" [(ngModel)]="carad.areacode">
-                <option [ngValue]="GRDM" [translate]="'post.oth'"></option>
+                <option value="GRDM" [translate]="'post.oth'"></option>
                 <option *ngFor="let area of areaList" [ngValue]="area.value">
                  {{ area.name }}
                 </option>

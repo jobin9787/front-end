@@ -34,7 +34,8 @@
 	.imagelist{
 		margin: 5px;
 		width:150px;
-		height:100px !important;
+		height:150px !important;
+		object-fit:contain;
 	}
 
 

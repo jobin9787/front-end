@@ -14,6 +14,8 @@ import {AppadListComponent} from './components/appad-list/appad-list.component';
 import {AppadDetailComponent} from './components/appad-detail/appad-detail.component';
 import {CaradSearchComponent} from './components/carad-search/carad-search.component';
 import {PostAdComponent} from './components/post-ad/post-ad.component';
+import {SubmitFreeAddComponent} from './components/submit-free-add/submit-free-add.component';
+import {GivefreeListComponent} from './components/givefree-list/givefree-list.component';
 
 const appRoutes : Routes = [
 
@@ -74,7 +76,15 @@ const appRoutes : Routes = [
 {
   path:'postAd',
   component:PostAdComponent
+},
+
+{path:'postFree',
+component:SubmitFreeAddComponent
+},
+{path:'listFree',
+ component:GivefreeListComponent
 }
+
 
 
 ];
