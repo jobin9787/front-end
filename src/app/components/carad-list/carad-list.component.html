@@ -115,7 +115,7 @@
 
                 <div class="col-md-4">
                   <div class="adimage">
-      				  	   <img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="{{serverPath}}/image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="responsive imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
+      				  	   <img src="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png"  alt="../../../image/carad/{{caraditem.id}}/{{caraditem.id}}1.png" class="responsive imagelist" title="{{caraditem.adtitle}}" onerror="this.src='../../../assets/image/no-image.jpg'">
       					 </div>
               </div>
               <div lass="8">
@@ -128,7 +128,7 @@
       								<span [innerText]="getFuelTypeLabel(caraditem.fuel)"></span>
       							</cite>
       							<h3 class="lo">
-      						   <span [innerText]="getAreaLabel(caraditem.areacode)"> </span> 
+      						   <span [innerText]="getAreaLabel(caraditem.areacode)"> </span>
                     </h3>
                     <div class="pricead">
                        <div *ngIf="caraditem.pricetype=='pric'">

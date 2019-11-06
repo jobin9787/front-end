@@ -21,6 +21,7 @@ export class LoginService {
   	let basicHeader = "Basic "+encodedCredentials;
   	let headers = new Headers({
   		'Content-Type' : 'application/x-www-form-urlencoded',
+    /*  'Access-Control-Allow-Origin':'http://18.188.26.113',*/
   		'Authorization' : basicHeader
   	});
 
@@ -31,6 +32,7 @@ export class LoginService {
   	let url = this.serverPath+'/checkSession';
   	let headers = new Headers({
   		'x-auth-token' : localStorage.getItem('xAuthToken')
+      /*,'Access-Control-Allow-Origin':'http://18.188.26.113'*/
   	});
 
   	return this.http.get(url, {headers: headers});
